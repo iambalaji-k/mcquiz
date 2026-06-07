@@ -12,11 +12,13 @@ import {
   AlertCircle, 
   CheckCircle,
   HelpCircle,
-  Code
+  Code,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 export const CsvConverter: React.FC = () => {
-  const { loadNewQuiz } = useQuiz();
+  const { loadNewQuiz, theme, toggleTheme } = useQuiz();
   const navigate = useNavigate();
 
   // Inputs
@@ -170,7 +172,13 @@ export const CsvConverter: React.FC = () => {
           CSV to JSON Converter
         </h1>
 
-        <div className="w-12 h-1 bg-transparent"></div> {/* Spacer */}
+        <button
+          onClick={toggleTheme}
+          aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          className="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+          {theme === 'dark' ? <Sun className="h-4.5 w-4.5" /> : <Moon className="h-4.5 w-4.5" />}
+        </button>
       </header>
 
       {/* Main Form Area */}

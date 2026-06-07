@@ -17,7 +17,10 @@ import {
   Check,
   X,
   Printer,
-  FileText
+  FileText,
+  Home,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 export const ResultSummary: React.FC = () => {
@@ -27,6 +30,8 @@ export const ResultSummary: React.FC = () => {
     score,
     timeSpent,
     discardQuiz,
+    theme,
+    toggleTheme,
   } = useQuiz();
 
   const navigate = useNavigate();
@@ -226,6 +231,33 @@ export const ResultSummary: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 md:py-12 flex flex-col min-h-screen print:bg-white print:text-black">
       
+      {/* Top Navigation Header */}
+      <header className="flex items-center justify-between mb-6 border-b border-slate-200 dark:border-slate-800 pb-4 print:hidden">
+        <button
+          onClick={() => {
+            if (window.confirm('Exit to home? Your quiz summary is reviewed.')) {
+              navigate('/');
+            }
+          }}
+          className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors focus:outline-none cursor-pointer"
+        >
+          <Home className="h-4 w-4" />
+          <span>Exit to Home</span>
+        </button>
+
+        <h2 className="text-xs md:text-sm font-bold text-slate-800 dark:text-slate-300 font-outfit">
+          Quiz Completed
+        </h2>
+
+        <button
+          onClick={toggleTheme}
+          aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          className="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+          {theme === 'dark' ? <Sun className="h-4.5 w-4.5" /> : <Moon className="h-4.5 w-4.5" />}
+        </button>
+      </header>
+      
       {/* Print-Only Header */}
       <div className="hidden print:flex justify-between items-center border-b-2 border-slate-350 pb-4 mb-8">
         <div>
@@ -358,7 +390,7 @@ export const ResultSummary: React.FC = () => {
             className="w-full sm:w-auto px-6 py-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-bold text-sm cursor-pointer transition-all active:scale-95 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-slate-500"
           >
             <FileText className="h-4 w-4" />
-            Download Markdown Report
+            Download Report as text
           </button>
 
           <button
