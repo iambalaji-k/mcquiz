@@ -109,7 +109,7 @@ Follow these steps to run the application in development mode:
    ```bash
    npm run dev
    ```
-   *The application will boot up under `http://localhost:5173/mcqquiz/` (respecting the base routing path).*
+   *The application will boot up under `http://localhost:5173/` (respecting the base routing path).*
 
 4. **Verify production building**:
    ```bash
@@ -131,10 +131,10 @@ npm run test
 
 ## ⚙️ GitHub Pages Deployment
 
-The application compiles assets using `HashRouter` and a base path prefix `/mcqquiz/` which matches the GitHub Pages directory.
+The application compiles assets using `HashRouter` and a relative base path (`./`) which makes it fully portable and compatible with both subdirectories (e.g., `https://<username>.github.io/mcqquiz/`) and custom domains or subdomains (e.g., `https://mcqquiz.balajik.in/`).
 
 A GitHub Actions workflow is preconfigured in `.github/workflows/deploy.yml`:
 1. Triggers automatically on push to the `main` branch.
 2. Runs the test suite to verify quality.
 3. Runs the production compiler.
-4. Deploys the built files automatically to your GitHub Pages URL: `https://<username>.github.io/mcqquiz/`.
+4. Deploys the built files automatically to your GitHub Pages URL.

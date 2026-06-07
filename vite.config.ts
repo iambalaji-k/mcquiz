@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/mcqquiz/',
+  base: './',
   test: {
     globals: true,
     environment: 'jsdom',

@@ -1,12 +1,15 @@
 const CACHE_NAME = 'quiz-player-v1';
 const DYNAMIC_CACHE_NAME = 'quiz-player-dynamic-v1';
 
+// Dynamically determine the base path from the service worker's own location
+const BASE_PATH = self.location.pathname.substring(0, self.location.pathname.lastIndexOf('/') + 1);
+
 // Base resources to precache
 const PRECACHE_RESOURCES = [
-  '/mcqquiz/',
-  '/mcqquiz/index.html',
-  '/mcqquiz/favicon.svg',
-  '/mcqquiz/manifest.json'
+  BASE_PATH,
+  `${BASE_PATH}index.html`,
+  `${BASE_PATH}favicon.svg`,
+  `${BASE_PATH}manifest.json`
 ];
 
 // Install Event
@@ -55,7 +58,7 @@ self.addEventListener('fetch', (event) => {
           });
         })
         .catch(() => {
-          return caches.match('/mcqquiz/index.html');
+          return caches.match(`${BASE_PATH}index.html`);
         })
     );
     return;

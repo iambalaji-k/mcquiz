@@ -7,7 +7,8 @@ import { QuizProvider } from './context/QuizContext'
 // Register Service Worker for Offline PWA support
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/mcqquiz/sw.js')
+    const swUrl = `${import.meta.env.BASE_URL}sw.js`;
+    navigator.serviceWorker.register(swUrl)
       .then((reg) => console.log('Service Worker registered with scope: ', reg.scope))
       .catch((err) => console.error('Service Worker registration failed: ', err));
   });

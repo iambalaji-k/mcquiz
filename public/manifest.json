@@ -22,8 +22,8 @@
       "purpose": "any"
     }
   ],
-  "start_url": "/mcqquiz/",
-  "scope": "/mcqquiz/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "theme_color": "#6366f1",
