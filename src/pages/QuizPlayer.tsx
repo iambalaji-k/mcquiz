@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuiz } from '../hooks/useQuiz';
 import { 
@@ -29,6 +29,13 @@ export const QuizPlayer: React.FC = () => {
 
   const navigate = useNavigate();
 
+  const [palettePage, setPalettePage] = useState(0);
+
+  // Sync palette page with current question index
+  useEffect(() => {
+    setPalettePage(Math.floor(currentQuestionIndex / 20));
+  }, [currentQuestionIndex]);
+
   // Redirect to home if no quiz is loaded
   useEffect(() => {
     if (!quiz) {
@@ -42,6 +49,14 @@ export const QuizPlayer: React.FC = () => {
   const totalQuestions = quiz.questions.length;
   const progressPercent = Math.round(((currentQuestionIndex + 1) / totalQuestions) * 100);
   const totalAnswered = Object.keys(answers).length;
+
+  // Pagination details for Question Palette
+  const PAGE_SIZE = 20;
+  const totalPages = Math.ceil(totalQuestions / PAGE_SIZE);
+  const currentPage = Math.max(0, Math.min(palettePage, totalPages - 1));
+  const startIndex = currentPage * PAGE_SIZE;
+  const endIndex = Math.min(startIndex + PAGE_SIZE, totalQuestions);
+  const pageQuestions = quiz.questions.slice(startIndex, endIndex);
 
   const currentSelection = answers[currentQuestion.id];
   const isAnswered = currentSelection !== undefined;
@@ -302,11 +317,37 @@ export const QuizPlayer: React.FC = () => {
             </span>
           </div>
 
+          {/* Palette Pagination Controls (Conditional) */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-between gap-2 bg-slate-50 dark:bg-slate-950 p-2.5 rounded-2xl border border-slate-100 dark:border-slate-800/60 print:hidden mb-2">
+              <button
+                onClick={() => setPalettePage(p => Math.max(0, p - 1))}
+                disabled={currentPage === 0}
+                className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-900 disabled:opacity-40 transition-all cursor-pointer"
+                aria-label="Previous palette page"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              <span className="text-[10px] md:text-xs font-bold text-slate-700 dark:text-slate-300">
+                Page {currentPage + 1} of {totalPages} (Q{startIndex + 1}-{endIndex})
+              </span>
+              <button
+                onClick={() => setPalettePage(p => Math.min(totalPages - 1, p + 1))}
+                disabled={currentPage === totalPages - 1}
+                className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-900 disabled:opacity-40 transition-all cursor-pointer"
+                aria-label="Next palette page"
+              >
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
+          )}
+
           {/* Palette Grid */}
           <div className="grid grid-cols-5 xs:grid-cols-6 md:grid-cols-8 lg:grid-cols-4 gap-2">
-            {quiz.questions.map((q, idx) => {
+            {pageQuestions.map((q, localIdx) => {
+              const actualIdx = startIndex + localIdx;
               const qAns = answers[q.id];
-              const isCurrent = idx === currentQuestionIndex;
+              const isCurrent = actualIdx === currentQuestionIndex;
               const isQAnswered = qAns !== undefined;
               const isQCorrect = isQAnswered && qAns === q.answer;
 
@@ -323,15 +364,15 @@ export const QuizPlayer: React.FC = () => {
               return (
                 <button
                   key={q.id}
-                  onClick={() => jumpToQuestion(idx)}
-                  aria-label={`Jump to question ${idx + 1}`}
+                  onClick={() => jumpToQuestion(actualIdx)}
+                  aria-label={`Jump to question ${actualIdx + 1}`}
                   className={`aspect-square rounded-xl border flex items-center justify-center text-xs md:text-sm font-extrabold transition-all cursor-pointer ${btnStyle} ${
                     isCurrent 
                       ? 'ring-2 ring-indigo-500 ring-offset-2 dark:ring-offset-slate-950 font-black scale-105 border-indigo-500' 
                       : ''
                   }`}
                 >
-                  {idx + 1}
+                  {actualIdx + 1}
                 </button>
               );
             })}
