@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QuizPlayer Schema",
+  "description": "JSON Schema for QuizPlayer multiple-choice question (MCQ) practice files",
+  "type": "object",
+  "required": [
+    "title",
+    "questions"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The title of the MCQ practice set."
+    },
+    "description": {
+      "type": "string",
+      "description": "A brief overview or description of what the quiz covers."
+    },
+    "version": {
+      "type": "string",
+      "description": "Version identifier for this practice set (e.g. '1.0')."
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "description": "List of practice questions in the quiz.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "question",
+          "options",
+          "answer",
+          "explanation"
+        ],
+        "properties": {
+          "id": {
+            "type": [
+              "integer",
+              "string"
+            ],
+            "description": "A unique question identifier (can be a number or string)."
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The category topic of this question (e.g. 'Income Tax', 'Deductions')."
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The question statement text displayed to the user."
+          },
+          "options": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 6,
+            "description": "A list of 2 to 6 options to choose from.",
+            "items": {
+              "type": [
+                "string",
+                "number"
+              ]
+            }
+          },
+          "answer": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "The 0-based index of the correct answer in the options array (e.g., 0 for the first option)."
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1,
+            "description": "A detailed explanation of why the correct option is the right answer."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

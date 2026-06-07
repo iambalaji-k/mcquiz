@@ -1,0 +1,111 @@
+{
+  "title": "Income Tax & Financial Planning Practice Set",
+  "description": "Comprehensive practice questions to test your knowledge of individual tax exemptions, capital gains, deductions, and tax compliance.",
+  "version": "1.0",
+  "questions": [
+    {
+      "id": 1,
+      "category": "Income Tax",
+      "question": "What is the standard deduction limit available to salaried individuals for the financial year under the default tax regime?",
+      "options": [
+        "40,000",
+        "50,000",
+        "60,000",
+        "75,000"
+      ],
+      "answer": 1,
+      "explanation": "Salaried individuals are entitled to a flat standard deduction of 50,000 from their gross salary income under both old and new regimes."
+    },
+    {
+      "id": 2,
+      "category": "Capital Gains",
+      "question": "Which section of the Income Tax Act allows exemption on long-term capital gains arising from the sale of a residential house property if reinvested in another residential house?",
+      "options": [
+        "Section 54",
+        "Section 54F",
+        "Section 54EC",
+        "Section 54B"
+      ],
+      "answer": 0,
+      "explanation": "Section 54 provides tax exemption on long-term capital gains from selling a residential property, provided the gains are reinvested in buying or constructing another residential house within the specified time."
+    },
+    {
+      "id": 3,
+      "category": "General Finance",
+      "question": "What is the maximum annual contribution limit in a Public Provident Fund (PPF) account to claim tax benefits?",
+      "options": [
+        "1,000,000",
+        "1,500,000",
+        "2,000,000",
+        "2,500,000"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 80C, the maximum investment limit allowed in a Public Provident Fund (PPF) account is 150,000 per financial year."
+    },
+    {
+      "id": 4,
+      "category": "Corporate Tax",
+      "question": "Which of the following describes the Minimum Alternate Tax (MAT) rate applied to book profits of companies under Section 115JB?",
+      "options": [
+        "10.0%",
+        "12.5%",
+        "15.0%",
+        "18.5%"
+      ],
+      "answer": 2,
+      "explanation": "The basic rate of Minimum Alternate Tax (MAT) under Section 115JB is 15.0% of the book profits of the corporation, plus applicable surcharge and cess."
+    },
+    {
+      "id": 5,
+      "category": "Tax Compliance",
+      "question": "What is the penalty for filing an Income Tax Return (ITR) after the due date, if the total income exceeds 500,000?",
+      "options": [
+        "1,000",
+        "5,000",
+        "10,000",
+        "No penalty applies"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 234F, the late filing fee is 5,000 if the return is filed after the due date, and restricted to 1,000 if the total income does not exceed 500,000."
+    },
+    {
+      "id": 6,
+      "category": "Income Tax",
+      "question": "In which head of income are the earnings of a professional partner from a partnership firm taxed?",
+      "options": [
+        "Income from Salaries",
+        "Profits and Gains of Business or Profession (PGBP)",
+        "Income from Other Sources",
+        "Capital Gains"
+      ],
+      "answer": 1,
+      "explanation": "Salary, bonus, commission, or interest received by a partner from a firm is taxed under the head 'Profits and Gains of Business or Profession (PGBP)' rather than 'Salaries'."
+    },
+    {
+      "id": 7,
+      "category": "Deductions",
+      "question": "What is the maximum deduction allowed for interest paid on a home loan for a self-occupied property under Section 24(b)?",
+      "options": [
+        "150,000",
+        "200,000",
+        "250,000",
+        "Unlimited"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 24(b), the deduction for interest on housing loan for a self-occupied property is capped at a maximum of 200,000 per financial year."
+    },
+    {
+      "id": 8,
+      "category": "Tax Compliance",
+      "question": "TDS on payments to contractors is deducted under which section of the Income Tax Act?",
+      "options": [
+        "Section 194A",
+        "Section 194C",
+        "Section 194J",
+        "Section 194I"
+      ],
+      "answer": 1,
+      "explanation": "Section 194C of the Income Tax Act governs Tax Deducted at Source (TDS) for payments made to resident contractors or sub-contractors."
+    }
+  ]
+}
