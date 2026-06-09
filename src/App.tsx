@@ -3,6 +3,7 @@ import { Home } from './pages/Home';
 import { QuizPlayer } from './pages/QuizPlayer';
 import { ResultSummary } from './pages/ResultSummary';
 import { CsvConverter } from './pages/CsvConverter';
+import { QuizExplorer } from './pages/QuizExplorer';
 import { useQuiz } from './hooks/useQuiz';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
@@ -13,6 +14,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/converter" element={<CsvConverter />} />
+      <Route path="/explore" element={<QuizExplorer />} />
       
       <Route 
         path="/quiz" 

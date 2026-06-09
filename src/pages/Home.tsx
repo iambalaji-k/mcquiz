@@ -13,7 +13,8 @@ import {
   FileText,
   RefreshCw,
   HelpCircle,
-  FileSpreadsheet
+  FileSpreadsheet,
+  Globe
 } from 'lucide-react';
 
 export const Home: React.FC = () => {
@@ -222,7 +223,7 @@ export const Home: React.FC = () => {
         )}
 
         {/* Info & Schema / Download section */}
-        <section className="grid md:grid-cols-3 gap-6 mt-4">
+        <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
           {/* Download Sample */}
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 md:p-6 flex flex-col justify-between gap-4 shadow-sm">
             <div className="space-y-1.5">
@@ -231,7 +232,7 @@ export const Home: React.FC = () => {
                 <h4 className="text-sm md:text-base">Need a sample file?</h4>
               </div>
               <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                Download a fully structured MCQ quiz file focused on individual income tax, capital gains, and financial exemptions to try it out.
+                Download a fully sample MCQ quiz file on capital gains under income tax to try it out.
               </p>
             </div>
             <a
@@ -252,7 +253,7 @@ export const Home: React.FC = () => {
                 <h4 className="text-sm md:text-base">JSON Schema Format</h4>
               </div>
               <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                Your JSON file must contain a title and an array of questions. Each question requires a category, unique ID, list of options, explanation, and correct answer index.
+                JSON file must contain a title and an array of questions.
               </p>
             </div>
             
@@ -273,7 +274,7 @@ export const Home: React.FC = () => {
                 <h4 className="text-sm md:text-base">Convert Excel / CSV</h4>
               </div>
               <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                Have questions in a spreadsheet? Convert CSV data directly to our validated JSON format and play it immediately.
+                Convert CSV data directly to validated JSON format.
               </p>
             </div>
             
@@ -283,6 +284,27 @@ export const Home: React.FC = () => {
             >
               <FileSpreadsheet className="h-4 w-4" />
               Open CSV Converter
+            </button>
+          </div>
+
+          {/* GitHub Repo Quiz Explorer */}
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 md:p-6 flex flex-col justify-between gap-4 shadow-sm">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2 text-slate-800 dark:text-slate-200 font-bold">
+                <Globe className="h-5 w-5 text-indigo-500" />
+                <h4 className="text-sm md:text-base">Browse readymade Quizzes</h4>
+              </div>
+              <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                Browse exam sets, Select folders, preview questions, and practice offline.
+              </p>
+            </div>
+            
+            <button
+              onClick={() => navigate('/explore')}
+              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50 text-slate-700 dark:text-slate-300 font-semibold text-sm transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <Globe className="h-4 w-4" />
+              Open Quiz Explorer
             </button>
           </div>
         </section>
