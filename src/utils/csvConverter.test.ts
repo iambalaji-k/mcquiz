@@ -98,4 +98,38 @@ describe('convertCsvToQuiz', () => {
     expect(result.quiz).toBeNull();
     expect(result.errors[0]).toContain('out of range');
   });
+
+  it('should reject answer 0 in 1-indexed mode', () => {
+    const rows = [
+      ['id', 'category', 'question', 'option_1', 'option_2', 'answer', 'explanation'],
+      ['1', 'Tax', 'Q1', 'A', 'B', '0', 'Exp'],
+    ];
+
+    const result = convertCsvToQuiz(rows, {
+      title: 'Zero 1-indexed test',
+      description: 'Desc',
+      answerIndexing: '1-indexed',
+      autoGenerateIds: false,
+    });
+
+    expect(result.quiz).toBeNull();
+    expect(result.errors[0]).toContain('Invalid 1-indexed answer');
+  });
+
+  it('should not treat optional_notes or optin_link as option columns', () => {
+    const rows = [
+      ['id', 'category', 'question', 'option_1', 'option_2', 'optional_notes', 'answer', 'explanation'],
+      ['1', 'Tax', 'Q1', 'Opt 1', 'Opt 2', 'Some notes', '1', 'Exp'],
+    ];
+
+    const result = convertCsvToQuiz(rows, {
+      title: 'Header Test',
+      description: 'Desc',
+      answerIndexing: '1-indexed',
+      autoGenerateIds: false,
+    });
+
+    expect(result.errors).toHaveLength(0);
+    expect(result.quiz?.questions[0].options).toEqual(['Opt 1', 'Opt 2']);
+  });
 });

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import type { Quiz } from '../types/quiz';
 import { getCategoryBreakdown, prepareQuizAttempt } from '../utils/quizUtils';
 import { 
@@ -26,28 +26,30 @@ export const StartQuizModal: React.FC<StartQuizModalProps> = ({
   onClose,
   onConfirm,
 }) => {
-  if (!isOpen || !quiz) return null;
-
-  const totalQuestions = quiz.questions.length;
-  const [selectedCount, setSelectedCount] = useState<number>(totalQuestions);
+  const totalQuestions = quiz?.questions.length ?? 0;
+  const [customCount, setCustomCount] = useState<number | null>(null);
   const [randomizeOrder, setRandomizeOrder] = useState<boolean>(true);
+  const [prevQuiz, setPrevQuiz] = useState<Quiz | null>(quiz);
+  const [prevOpen, setPrevOpen] = useState<boolean>(isOpen);
 
-  // Reset to all questions whenever modal opens with a new quiz
-  useEffect(() => {
-    if (quiz) {
-      setSelectedCount(quiz.questions.length);
-    }
-  }, [quiz]);
+  if (quiz !== prevQuiz || isOpen !== prevOpen) {
+    setPrevQuiz(quiz);
+    setPrevOpen(isOpen);
+    setCustomCount(null);
+  }
+
+  const selectedCount = customCount !== null ? customCount : totalQuestions;
 
   // Topic breakdown
   const categoryBreakdown = useMemo(() => {
-    return getCategoryBreakdown(quiz.questions);
+    return getCategoryBreakdown(quiz?.questions ?? []);
   }, [quiz]);
 
   const categoryNames = Object.keys(categoryBreakdown);
 
   // Dynamic quick presets
   const presets = useMemo(() => {
+    if (totalQuestions === 0) return [];
     const list: number[] = [];
     if (totalQuestions <= 10) {
       if (totalQuestions >= 5) list.push(5);
@@ -65,13 +67,16 @@ export const StartQuizModal: React.FC<StartQuizModalProps> = ({
 
   const handleCountChange = (value: number) => {
     const clamped = Math.max(1, Math.min(value, totalQuestions));
-    setSelectedCount(clamped);
+    setCustomCount(clamped);
   };
 
   const handleConfirm = () => {
+    if (!quiz) return;
     const prepared = prepareQuizAttempt(quiz, selectedCount, randomizeOrder);
     onConfirm(prepared);
   };
+
+  if (!isOpen || !quiz) return null;
 
   return (
     <div 
@@ -162,7 +167,7 @@ export const StartQuizModal: React.FC<StartQuizModalProps> = ({
                   className={`py-2 px-1 text-xs font-bold rounded-xl border transition-all cursor-pointer focus:outline-none ${
                     isSelected
                       ? 'bg-indigo-600 text-white border-indigo-600 shadow-md shadow-indigo-500/20'
-                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-750'
+                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700'
                   }`}
                 >
                   {label}
@@ -179,7 +184,7 @@ export const StartQuizModal: React.FC<StartQuizModalProps> = ({
                 onClick={() => handleCountChange(selectedCount - 1)}
                 disabled={selectedCount <= 1}
                 aria-label="Decrease question count"
-                className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-750 disabled:opacity-40 cursor-pointer transition-all focus:outline-none"
+                className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 disabled:opacity-40 cursor-pointer transition-all focus:outline-none"
               >
                 <Minus className="h-4 w-4" />
               </button>
@@ -200,7 +205,7 @@ export const StartQuizModal: React.FC<StartQuizModalProps> = ({
                 onClick={() => handleCountChange(selectedCount + 1)}
                 disabled={selectedCount >= totalQuestions}
                 aria-label="Increase question count"
-                className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-750 disabled:opacity-40 cursor-pointer transition-all focus:outline-none"
+                className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 disabled:opacity-40 cursor-pointer transition-all focus:outline-none"
               >
                 <Plus className="h-4 w-4" />
               </button>

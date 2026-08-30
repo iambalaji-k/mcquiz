@@ -125,6 +125,7 @@ export function buildHierarchyTree(items: { path: string; size?: number; sha: st
       accumulatedPath += '/' + segment;
 
       if (isFile) {
+        const encodedPath = item.path.split('/').map(encodeURIComponent).join('/');
         currentDir.files.push({
           id: accumulatedPath,
           name: segment,
@@ -132,7 +133,7 @@ export function buildHierarchyTree(items: { path: string; size?: number; sha: st
           type: 'file',
           size: item.size,
           sha: item.sha,
-          downloadUrl: `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${branch}/${encodeURI(item.path)}`,
+          downloadUrl: `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${branch}/${encodedPath}`,
         });
       } else {
         if (!currentDir.subdirs.has(segment)) {
@@ -181,12 +182,16 @@ export async function fetchQuizTree(forceRefresh = false): Promise<QuizTreeNode[
     throw new Error('Invalid response structure from GitHub Trees API.');
   }
 
+  if (data.truncated) {
+    console.warn('GitHub Trees API response was truncated because the repository is very large.');
+  }
+
   const tree = buildHierarchyTree(data.tree, DEFAULT_BRANCH);
   setCache(cacheKey, tree);
   return tree;
 }
 
-export async function fetchQuizJson(downloadUrl: string): Promise<any> {
+export async function fetchQuizJson(downloadUrl: string): Promise<unknown> {
   const response = await fetch(downloadUrl);
   if (!response.ok) {
     throw new Error(`Failed to download quiz file: ${response.statusText}`);

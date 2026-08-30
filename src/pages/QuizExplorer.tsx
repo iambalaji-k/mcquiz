@@ -160,7 +160,7 @@ export const QuizExplorer: React.FC = () => {
   const [expandedNodes, setExpandedNodes] = useState<Record<string, boolean>>({});
   
   // Loading & Error States
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [explorerError, setExplorerError] = useState<string | null>(null);
 
   // Search State
@@ -188,8 +188,10 @@ export const QuizExplorer: React.FC = () => {
     return ids;
   }, []);
 
-  // 1. Initial Load of Full Tree
-  const loadTree = async (forceRefresh = false) => {
+  const abortControllerRef = React.useRef<AbortController | null>(null);
+
+  // 1. Initial / Refresh Load of Tree
+  const loadTree = useCallback(async (forceRefresh = false) => {
     setExplorerError(null);
     setLoading(true);
     if (forceRefresh) {
@@ -204,24 +206,54 @@ export const QuizExplorer: React.FC = () => {
       setRootNodes(tree);
 
       // Auto-expand top level folders by default on fresh load
-      if (!forceRefresh && Object.keys(expandedNodes).length === 0) {
-        const initialExpanded: Record<string, boolean> = {};
-        tree.forEach(node => {
-          if (node.type === 'dir') {
-            initialExpanded[node.id] = true;
-          }
+      if (!forceRefresh) {
+        setExpandedNodes(prev => {
+          if (Object.keys(prev).length > 0) return prev;
+          const initialExpanded: Record<string, boolean> = {};
+          tree.forEach(node => {
+            if (node.type === 'dir') {
+              initialExpanded[node.id] = true;
+            }
+          });
+          return initialExpanded;
         });
-        setExpandedNodes(initialExpanded);
       }
-    } catch (err: any) {
-      setExplorerError(err.message || 'Failed to connect to the GitHub repository.');
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Failed to connect to the GitHub repository.';
+      setExplorerError(message);
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
-    loadTree();
+    let isMounted = true;
+    fetchQuizTree(false)
+      .then((tree) => {
+        if (!isMounted) return;
+        setRootNodes(tree);
+        setExpandedNodes((prev) => {
+          if (Object.keys(prev).length > 0) return prev;
+          const initialExpanded: Record<string, boolean> = {};
+          tree.forEach((node) => {
+            if (node.type === 'dir') {
+              initialExpanded[node.id] = true;
+            }
+          });
+          return initialExpanded;
+        });
+        setLoading(false);
+      })
+      .catch((err: unknown) => {
+        if (!isMounted) return;
+        const message = err instanceof Error ? err.message : 'Failed to connect to the GitHub repository.';
+        setExplorerError(message);
+        setLoading(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   // 2. Toggle Folder Node
@@ -246,10 +278,16 @@ export const QuizExplorer: React.FC = () => {
     setExpandedNodes(newExpanded);
   };
 
-  // 4. Select file and fetch JSON content for preview
+  // 4. Select file and fetch JSON content for preview with AbortController
   const handleSelectFile = async (file: QuizTreeNode) => {
     if (selectedFile?.id === file.id) return;
     
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+    const controller = new AbortController();
+    abortControllerRef.current = controller;
+
     setSelectedFile(file);
     setLoadingQuizContent(true);
     setQuizPreviewData(null);
@@ -261,6 +299,9 @@ export const QuizExplorer: React.FC = () => {
       }
       const rawQuiz = await fetchQuizJson(file.downloadUrl);
       
+      // Check if another request was started
+      if (abortControllerRef.current !== controller) return;
+
       // Validate schema
       const validation = validateQuiz(rawQuiz);
       if (validation.isValid) {
@@ -268,10 +309,14 @@ export const QuizExplorer: React.FC = () => {
       } else {
         setPreviewErrors(validation.errors);
       }
-    } catch (err: any) {
-      setPreviewErrors([err.message || 'Failed to download or parse quiz file JSON contents.']);
+    } catch (err: unknown) {
+      if (abortControllerRef.current !== controller) return;
+      const message = err instanceof Error ? err.message : 'Failed to download or parse quiz file JSON contents.';
+      setPreviewErrors([message]);
     } finally {
-      setLoadingQuizContent(false);
+      if (abortControllerRef.current === controller) {
+        setLoadingQuizContent(false);
+      }
     }
   };
 
@@ -289,26 +334,27 @@ export const QuizExplorer: React.FC = () => {
     navigate('/quiz');
   };
 
-  // 6. Search filtering & auto-expanding matching branches
-  const { filteredTreeNodes, matchedCount } = useMemo(() => {
+  // 7. Search filtering & auto-expanding matching branches
+  const { filteredTreeNodes, matchedCount, matchingPaths } = useMemo(() => {
     const result = filterTree(rootNodes, searchTerm);
-    
-    // Auto-expand any folders that contain matching items when user searches
-    if (searchTerm.trim() && result.matchingPaths.size > 0) {
-      setExpandedNodes(prev => {
-        const next = { ...prev };
-        result.matchingPaths.forEach(path => {
-          next[path] = true;
-        });
-        return next;
-      });
-    }
-
     return {
       filteredTreeNodes: result.filtered,
       matchedCount: result.matchedCount,
+      matchingPaths: result.matchingPaths,
     };
   }, [rootNodes, searchTerm]);
+
+  // Derive expanded nodes without render-phase side effects
+  const effectiveExpandedNodes = useMemo(() => {
+    if (!searchTerm.trim() || matchingPaths.size === 0) {
+      return expandedNodes;
+    }
+    const merged = { ...expandedNodes };
+    matchingPaths.forEach(path => {
+      merged[path] = true;
+    });
+    return merged;
+  }, [expandedNodes, searchTerm, matchingPaths]);
 
   // Breadcrumbs calculation for selected file
   const breadcrumbSegments = useMemo(() => {
@@ -485,7 +531,7 @@ export const QuizExplorer: React.FC = () => {
                     key={node.id}
                     node={node}
                     depth={0}
-                    expandedNodes={expandedNodes}
+                    expandedNodes={effectiveExpandedNodes}
                     onToggle={handleToggleNode}
                     selectedFile={selectedFile}
                     onSelectFile={handleSelectFile}
@@ -519,23 +565,22 @@ export const QuizExplorer: React.FC = () => {
 
           {/* Preview view for loaded quiz info */}
           {selectedFile && (
-            <section className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 md:p-6 shadow-sm space-y-5 min-h-[340px] flex flex-col justify-between animate-fade-in">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
               <div className="space-y-4">
                 
-                {/* Breadcrumb path */}
-                <div className="space-y-2 pb-3 border-b border-slate-100 dark:border-slate-800/60">
-                  <div className="flex items-center gap-1.5 flex-wrap text-[11px] font-semibold text-slate-400 dark:text-slate-500">
+                {/* Header info in right preview panel */}
+                <div className="space-y-2 pb-2 border-b border-slate-100 dark:border-slate-800">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-400 dark:text-slate-500 flex-wrap">
+                    <FolderTree className="h-3.5 w-3.5 shrink-0 text-indigo-500" />
                     {breadcrumbSegments.map((segment, idx) => (
                       <React.Fragment key={idx}>
-                        {idx > 0 && <span className="text-slate-300 dark:text-slate-700">/</span>}
-                        <span className={idx === breadcrumbSegments.length - 1 ? 'text-indigo-600 dark:text-indigo-400 font-bold' : ''}>
-                          {segment}
-                        </span>
+                        <span className="truncate max-w-[120px] font-medium">{segment}</span>
+                        {idx < breadcrumbSegments.length - 1 && <span>/</span>}
                       </React.Fragment>
                     ))}
                   </div>
 
-                  <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200 font-mono truncate" title={selectedFile.name}>
+                  <h3 className="text-lg md:text-xl font-black text-slate-900 dark:text-white font-outfit break-words">
                     {selectedFile.name}
                   </h3>
 
@@ -606,9 +651,17 @@ export const QuizExplorer: React.FC = () => {
                         <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">
                           Categories
                         </span>
-                        <span className="text-xs font-black text-slate-800 dark:text-white font-outfit truncate block" title={quizPreviewData.questions[0]?.category}>
-                          {quizPreviewData.questions[0]?.category || 'General'}
-                        </span>
+                        {(() => {
+                          const distinctCategories = Array.from(new Set(quizPreviewData.questions.map((q) => q.category)));
+                          return (
+                            <span 
+                              className="text-xs font-black text-slate-800 dark:text-white font-outfit truncate block" 
+                              title={distinctCategories.join(', ')}
+                            >
+                              {distinctCategories.length} {distinctCategories.length === 1 ? 'Topic' : 'Topics'}
+                            </span>
+                          );
+                        })()}
                       </div>
                     </div>
 
@@ -633,7 +686,7 @@ export const QuizExplorer: React.FC = () => {
                   <span>Start Practice Attempt</span>
                 </button>
               )}
-            </section>
+            </div>
           )}
         </aside>
       </div>

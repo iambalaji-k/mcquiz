@@ -86,6 +86,41 @@ export const ResultSummary: React.FC = () => {
     return () => clearInterval(interval);
   }, [quiz]);
 
+  // Get unique categories for filtration
+  const categories = useMemo(() => {
+    if (!quiz) return ['All'];
+    const list = new Set<string>();
+    quiz.questions.forEach((q) => list.add(q.category));
+    return ['All', ...Array.from(list)];
+  }, [quiz]);
+
+  // Filter and Search Questions list
+  const filteredQuestions = useMemo(() => {
+    if (!quiz) return [];
+    return quiz.questions.filter((q) => {
+      // 1. Search filter
+      const matchesSearch = q.question.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                            q.explanation.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      // 2. Category filter
+      const matchesCategory = selectedCategory === 'All' || q.category === selectedCategory;
+      
+      // 3. Status filter (correct, incorrect, unanswered)
+      const userAns = answers[q.id];
+      const isCorrect = userAns !== undefined && userAns === q.answer;
+      const isIncorrect = userAns !== undefined && userAns !== q.answer;
+
+      let matchesStatus = true;
+      if (statusFilter === 'correct') {
+        matchesStatus = isCorrect;
+      } else if (statusFilter === 'incorrect') {
+        matchesStatus = isIncorrect;
+      }
+
+      return matchesSearch && matchesCategory && matchesStatus;
+    });
+  }, [quiz, answers, searchTerm, selectedCategory, statusFilter]);
+
   if (!quiz) return null;
 
   const totalQuestions = quiz.questions.length;
@@ -113,39 +148,6 @@ export const ResultSummary: React.FC = () => {
     parts.push(`${s}s`);
     return parts.join(' ');
   };
-
-  // Get unique categories for filtration
-  const categories = useMemo(() => {
-    const list = new Set<string>();
-    quiz.questions.forEach((q) => list.add(q.category));
-    return ['All', ...Array.from(list)];
-  }, [quiz]);
-
-  // Filter and Search Questions list
-  const filteredQuestions = useMemo(() => {
-    return quiz.questions.filter((q) => {
-      // 1. Search filter
-      const matchesSearch = q.question.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                            q.explanation.toLowerCase().includes(searchTerm.toLowerCase());
-      
-      // 2. Category filter
-      const matchesCategory = selectedCategory === 'All' || q.category === selectedCategory;
-      
-      // 3. Status filter (correct, incorrect, unanswered)
-      const userAns = answers[q.id];
-      const isCorrect = userAns !== undefined && userAns === q.answer;
-      const isIncorrect = userAns !== undefined && userAns !== q.answer;
-
-      let matchesStatus = true;
-      if (statusFilter === 'correct') {
-        matchesStatus = isCorrect;
-      } else if (statusFilter === 'incorrect') {
-        matchesStatus = isIncorrect;
-      }
-
-      return matchesSearch && matchesCategory && matchesStatus;
-    });
-  }, [quiz, answers, searchTerm, selectedCategory, statusFilter]);
 
   const handleRestart = () => {
     if (window.confirm('Start another quiz? This will discard your current review results.')) {
@@ -214,8 +216,8 @@ export const ResultSummary: React.FC = () => {
   };
 
   // Score badge configurations
-  let badgeColor = 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300';
-  let badgeText = 'Completed';
+  let badgeColor: string;
+  let badgeText: string;
 
   if (scorePercentage >= 80) {
     badgeColor = 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300';
@@ -259,7 +261,7 @@ export const ResultSummary: React.FC = () => {
       </header>
       
       {/* Print-Only Header */}
-      <div className="hidden print:flex justify-between items-center border-b-2 border-slate-350 pb-4 mb-8">
+      <div className="hidden print:flex justify-between items-center border-b-2 border-slate-300 pb-4 mb-8">
         <div>
           <h1 className="text-xl font-bold text-slate-900 font-outfit">QuizPlayer Practice Exam Report</h1>
           <p className="text-xs text-slate-500 font-semibold">{quiz.title}</p>
@@ -299,7 +301,7 @@ export const ResultSummary: React.FC = () => {
           <div className="md:col-span-5 flex flex-col items-center justify-center p-4">
             <div className="relative flex items-center justify-center">
               {/* Circular progress background */}
-              <svg className="w-36 h-36 md:w-44 md:w-44 transform -rotate-90">
+              <svg className="w-36 h-36 md:w-44 md:h-44 transform -rotate-90" viewBox="0 0 144 144">
                 <circle
                   cx="72"
                   cy="72"
@@ -512,9 +514,9 @@ export const ResultSummary: React.FC = () => {
               const isCorrect = isAnswered && userAns === q.answer;
               const isExpanded = expandedQuestions[q.id] ?? false;
 
-              let questionNum = quiz.questions.findIndex((item) => item.id === q.id) + 1;
+              const questionNum = quiz.questions.findIndex((item) => item.id === q.id) + 1;
               let indicatorColor = 'border-slate-200 dark:border-slate-800 text-slate-500 bg-slate-50 dark:bg-slate-900';
-              let badge = null;
+              let badge: React.ReactNode;
 
               if (isAnswered) {
                 if (isCorrect) {
@@ -617,7 +619,7 @@ export const ResultSummary: React.FC = () => {
                       </div>
 
                       {/* Explanation box */}
-                      <div className="bg-slate-50 dark:bg-slate-950 border border-slate-150 dark:border-slate-800/50 rounded-2xl p-4 md:p-5 space-y-2">
+                      <div className="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800/50 rounded-2xl p-4 md:p-5 space-y-2">
                         <div className="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400 font-bold text-xs">
                           <Info className="h-4 w-4" />
                           <span>EXPLANATION</span>

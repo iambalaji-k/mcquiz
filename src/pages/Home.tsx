@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 
 export const Home: React.FC = () => {
-  const { quiz, loadNewQuiz, discardQuiz, theme, toggleTheme } = useQuiz();
+  const { quiz, isCompleted, loadNewQuiz, discardQuiz, theme, toggleTheme } = useQuiz();
   const navigate = useNavigate();
   const [errors, setErrors] = useState<string[]>([]);
   const [isDragging, setIsDragging] = useState(false);
@@ -66,7 +66,8 @@ export const Home: React.FC = () => {
     setIsDragging(true);
   };
 
-  const handleDragLeave = () => {
+  const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
     setIsDragging(false);
   };
 
@@ -75,7 +76,7 @@ export const Home: React.FC = () => {
     setIsDragging(false);
     const file = e.dataTransfer.files?.[0];
     if (file) {
-      if (file.type === 'application/json' || file.name.endsWith('.json')) {
+      if (file.name.endsWith('.json')) {
         processFile(file);
       } else {
         setErrors(['Invalid file type. Please upload a .json file.']);
@@ -145,22 +146,24 @@ export const Home: React.FC = () => {
           <section className="bg-gradient-to-r from-indigo-500/10 to-violet-600/10 border border-indigo-200/50 dark:border-indigo-500/20 rounded-2xl p-5 md:p-6 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 animate-fade-in">
             <div className="space-y-1">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300">
-                Active Session Detected
+                {isCompleted ? 'Completed Session Available' : 'Active Session Detected'}
               </span>
               <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white">
                 {quiz.title}
               </h3>
               <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400">
-                You have an incomplete attempt saved. Would you like to resume it?
+                {isCompleted
+                  ? 'You recently completed this quiz. Would you like to review the full results?'
+                  : 'You have an incomplete attempt saved. Would you like to resume it?'}
               </p>
             </div>
             <div className="flex gap-2">
               <button
-                onClick={() => navigate('/quiz')}
+                onClick={() => navigate(isCompleted ? '/result' : '/quiz')}
                 className="flex-1 md:flex-initial flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all cursor-pointer hover:shadow-lg hover:shadow-indigo-500/20 active:scale-95 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
                 <Play className="h-4 w-4 fill-white" />
-                Resume Quiz
+                {isCompleted ? 'View Results' : 'Resume Quiz'}
               </button>
               <button
                 onClick={discardQuiz}
@@ -189,7 +192,7 @@ export const Home: React.FC = () => {
             aria-label="Upload quiz JSON file"
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && triggerFilePicker()}
+            onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && triggerFilePicker()}
           >
             <input
               type="file"

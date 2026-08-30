@@ -227,7 +227,7 @@ export const CsvConverter: React.FC = () => {
                 <select
                   id="answer-format"
                   value={answerIndexing}
-                  onChange={(e) => setAnswerIndexing(e.target.value as any)}
+                  onChange={(e) => setAnswerIndexing(e.target.value as '1-indexed' | '0-indexed' | 'letter')}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-xs md:text-sm text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 appearance-none cursor-pointer"
                 >
                   <option value="1-indexed">1-indexed (e.g. 1, 2, 3, 4)</option>

@@ -3,7 +3,7 @@ import type { Quiz, ValidationResult } from '../types/quiz';
 /**
  * Validates a quiz object or parsed JSON data against the required schema.
  */
-export function validateQuiz(data: any): ValidationResult {
+export function validateQuiz(data: unknown): ValidationResult {
   const errors: string[] = [];
 
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
@@ -13,33 +13,35 @@ export function validateQuiz(data: any): ValidationResult {
     };
   }
 
+  const quizObj = data as Record<string, unknown>;
+
   // 1. Title Validation
-  if (!data.title) {
+  if (!quizObj.title) {
     errors.push('Missing "title" property in the quiz file.');
-  } else if (typeof data.title !== 'string' || data.title.trim() === '') {
+  } else if (typeof quizObj.title !== 'string' || quizObj.title.trim() === '') {
     errors.push('The "title" property must be a non-empty string.');
   }
 
   // 2. Questions Array Validation
-  if (!data.questions) {
+  if (!quizObj.questions) {
     errors.push('Missing "questions" property. The file must contain a questions array.');
     return { isValid: false, errors };
   }
 
-  if (!Array.isArray(data.questions)) {
+  if (!Array.isArray(quizObj.questions)) {
     errors.push('The "questions" property must be an array.');
     return { isValid: false, errors };
   }
 
-  if (data.questions.length === 0) {
+  if (quizObj.questions.length === 0) {
     errors.push('The "questions" array cannot be empty. Please include at least one question.');
     return { isValid: false, errors };
   }
 
   // 3. Question Item Validation
-  const seenIds = new Set<string | number>();
+  const seenIds = new Set<string>();
 
-  data.questions.forEach((q: any, index: number) => {
+  quizObj.questions.forEach((q: unknown, index: number) => {
     const qNum = index + 1;
     const prefix = `Question ${qNum} (at index ${index})`;
 
@@ -48,45 +50,48 @@ export function validateQuiz(data: any): ValidationResult {
       return; // Skip further checks for this item if it's not an object
     }
 
+    const item = q as Record<string, unknown>;
+
     // ID Validation
-    if (q.id === undefined || q.id === null) {
+    if (item.id === undefined || item.id === null) {
       errors.push(`${prefix}: Missing unique "id".`);
     } else {
-      if (typeof q.id !== 'number' && typeof q.id !== 'string') {
+      if (typeof item.id !== 'number' && typeof item.id !== 'string') {
         errors.push(`${prefix}: "id" must be a number or a string.`);
       } else {
-        if (seenIds.has(q.id)) {
-          errors.push(`${prefix}: Duplicate ID "${q.id}" detected. All question IDs must be unique.`);
+        const strId = String(item.id);
+        if (seenIds.has(strId)) {
+          errors.push(`${prefix}: Duplicate ID "${item.id}" detected. All question IDs must be unique.`);
         } else {
-          seenIds.add(q.id);
+          seenIds.add(strId);
         }
       }
     }
 
     // Question Text Validation
-    if (!q.question) {
+    if (!item.question) {
       errors.push(`${prefix}: Missing "question" text.`);
-    } else if (typeof q.question !== 'string' || q.question.trim() === '') {
+    } else if (typeof item.question !== 'string' || item.question.trim() === '') {
       errors.push(`${prefix}: "question" must be a non-empty string.`);
     }
 
     // Category Validation
-    if (!q.category) {
+    if (!item.category) {
       errors.push(`${prefix}: Missing "category".`);
-    } else if (typeof q.category !== 'string' || q.category.trim() === '') {
+    } else if (typeof item.category !== 'string' || item.category.trim() === '') {
       errors.push(`${prefix}: "category" must be a non-empty string.`);
     }
 
     // Options Validation
-    if (!q.options) {
+    if (!item.options) {
       errors.push(`${prefix}: Missing "options" list.`);
-    } else if (!Array.isArray(q.options)) {
+    } else if (!Array.isArray(item.options)) {
       errors.push(`${prefix}: "options" must be an array.`);
     } else {
-      if (q.options.length < 2 || q.options.length > 6) {
-        errors.push(`${prefix}: Must have between 2 and 6 options. Current options count: ${q.options.length}.`);
+      if (item.options.length < 2 || item.options.length > 6) {
+        errors.push(`${prefix}: Must have between 2 and 6 options. Current options count: ${item.options.length}.`);
       }
-      q.options.forEach((opt: any, optIdx: number) => {
+      item.options.forEach((opt: unknown, optIdx: number) => {
         if (opt === undefined || opt === null) {
           errors.push(`${prefix}, Option ${optIdx + 1}: Option cannot be empty.`);
         } else if (typeof opt !== 'string' && typeof opt !== 'number') {
@@ -96,20 +101,20 @@ export function validateQuiz(data: any): ValidationResult {
     }
 
     // Answer Validation
-    if (q.answer === undefined || q.answer === null) {
+    if (item.answer === undefined || item.answer === null) {
       errors.push(`${prefix}: Missing "answer" index.`);
-    } else if (typeof q.answer !== 'number') {
+    } else if (typeof item.answer !== 'number') {
       errors.push(`${prefix}: "answer" must be a number representing the correct option index.`);
-    } else if (Array.isArray(q.options)) {
-      if (q.answer < 0 || q.answer >= q.options.length) {
-        errors.push(`${prefix}: Contains an invalid answer index ${q.answer}. It must be between 0 and ${q.options.length - 1}.`);
+    } else if (Array.isArray(item.options)) {
+      if (item.answer < 0 || item.answer >= item.options.length) {
+        errors.push(`${prefix}: Contains an invalid answer index ${item.answer}. It must be between 0 and ${item.options.length - 1}.`);
       }
     }
 
     // Explanation Validation
-    if (!q.explanation) {
+    if (!item.explanation) {
       errors.push(`${prefix}: Missing "explanation".`);
-    } else if (typeof q.explanation !== 'string' || q.explanation.trim() === '') {
+    } else if (typeof item.explanation !== 'string' || item.explanation.trim() === '') {
       errors.push(`${prefix}: "explanation" must be a non-empty string.`);
     }
   });
@@ -131,10 +136,11 @@ export function parseAndValidateQuiz(jsonString: string): ValidationResult & { q
       ...validation,
       quiz: validation.isValid ? (data as Quiz) : null,
     };
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Syntax error';
     return {
       isValid: false,
-      errors: [`Invalid JSON formatting: ${error.message || 'Syntax error'}`],
+      errors: [`Invalid JSON formatting: ${message}`],
       quiz: null,
     };
   }

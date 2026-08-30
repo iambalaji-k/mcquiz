@@ -1,6 +1,12 @@
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Trash2 } from 'lucide-react';
+import { 
+  ACTIVE_SESSION_KEY, 
+  ACTIVE_QUIZ_KEY, 
+  ACTIVE_PROGRESS_KEY, 
+  THEME_KEY 
+} from '../context/QuizContext';
 
 interface Props {
   children: ReactNode;
@@ -35,8 +41,10 @@ export class ErrorBoundary extends Component<Props, State> {
         'This will clear all active sessions and themes, resetting the application to its default state. Proceed?'
       )
     ) {
-      localStorage.removeItem('quiz-app-active-session');
-      localStorage.removeItem('quiz-app-theme');
+      localStorage.removeItem(ACTIVE_SESSION_KEY);
+      localStorage.removeItem(ACTIVE_QUIZ_KEY);
+      localStorage.removeItem(ACTIVE_PROGRESS_KEY);
+      localStorage.removeItem(THEME_KEY);
       window.location.href = window.location.origin + window.location.pathname; // Redirects to clean home URL
     }
   };

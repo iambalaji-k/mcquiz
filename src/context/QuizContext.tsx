@@ -1,33 +1,30 @@
-import React, { createContext, useState, useEffect, useContext, useRef } from 'react';
-import type { Quiz, QuizState } from '../types/quiz';
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import type { Quiz } from '../types/quiz';
+import {
+  QuizContext,
+  type QuizContextType,
+  ACTIVE_SESSION_KEY,
+  ACTIVE_QUIZ_KEY,
+  ACTIVE_PROGRESS_KEY,
+  THEME_KEY,
+} from './QuizContextTypes';
 
-interface QuizContextType {
-  // Quiz State
-  quiz: Quiz | null;
+export {
+  QuizContext,
+  ACTIVE_SESSION_KEY,
+  ACTIVE_QUIZ_KEY,
+  ACTIVE_PROGRESS_KEY,
+  THEME_KEY,
+};
+export type { QuizContextType };
+
+interface ProgressState {
   currentQuestionIndex: number;
   answers: Record<string | number, number>;
   score: number;
   timeSpent: number;
   isCompleted: boolean;
-  
-  // Actions
-  loadNewQuiz: (quiz: Quiz) => void;
-  answerQuestion: (questionId: string | number, optionIndex: number) => void;
-  nextQuestion: () => void;
-  prevQuestion: () => void;
-  jumpToQuestion: (index: number) => void;
-  completeQuiz: () => void;
-  discardQuiz: () => void;
-  
-  // Theme State & Actions
-  theme: 'light' | 'dark';
-  toggleTheme: () => void;
 }
-
-const QuizContext = createContext<QuizContextType | undefined>(undefined);
-
-const ACTIVE_SESSION_KEY = 'quiz-app-active-session';
-const THEME_KEY = 'quiz-app-theme';
 
 export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // 1. Theme State Initialization
@@ -37,7 +34,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return savedTheme;
     }
     // Fallback to system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark';
     }
     return 'light';
@@ -54,20 +51,50 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     localStorage.setItem(THEME_KEY, theme);
   }, [theme]);
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
+  }, []);
 
-  // 2. Quiz Session State Initialization from LocalStorage
-  const [session, setSession] = useState<QuizState>(() => {
+  // 2. Initialize Quiz & Progress State with Migration Support
+  const [quiz, setQuiz] = useState<Quiz | null>(() => {
     try {
-      const savedSession = localStorage.getItem(ACTIVE_SESSION_KEY);
-      if (savedSession) {
-        const parsed = JSON.parse(savedSession);
-        // Make sure it matches our QuizState structure
-        if (parsed && typeof parsed === 'object' && parsed.quiz) {
+      // Check new separated key first
+      const savedQuiz = localStorage.getItem(ACTIVE_QUIZ_KEY);
+      if (savedQuiz) {
+        return JSON.parse(savedQuiz);
+      }
+      // Check legacy session key
+      const legacySession = localStorage.getItem(ACTIVE_SESSION_KEY);
+      if (legacySession) {
+        const parsed = JSON.parse(legacySession);
+        if (parsed?.quiz) return parsed.quiz;
+      }
+    } catch (e) {
+      console.error('Failed to load active quiz from LocalStorage', e);
+    }
+    return null;
+  });
+
+  const [progress, setProgress] = useState<ProgressState>(() => {
+    try {
+      // Check new separated progress key first
+      const savedProgress = localStorage.getItem(ACTIVE_PROGRESS_KEY);
+      if (savedProgress) {
+        const parsed = JSON.parse(savedProgress);
+        return {
+          currentQuestionIndex: parsed.currentQuestionIndex ?? 0,
+          answers: parsed.answers ?? {},
+          score: parsed.score ?? 0,
+          timeSpent: parsed.timeSpent ?? 0,
+          isCompleted: parsed.isCompleted ?? false,
+        };
+      }
+      // Check legacy session key
+      const legacySession = localStorage.getItem(ACTIVE_SESSION_KEY);
+      if (legacySession) {
+        const parsed = JSON.parse(legacySession);
+        if (parsed) {
           return {
-            quiz: parsed.quiz,
             currentQuestionIndex: parsed.currentQuestionIndex ?? 0,
             answers: parsed.answers ?? {},
             score: parsed.score ?? 0,
@@ -77,10 +104,9 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
         }
       }
     } catch (e) {
-      console.error('Failed to load active session from LocalStorage', e);
+      console.error('Failed to load active progress from LocalStorage', e);
     }
     return {
-      quiz: null,
       currentQuestionIndex: 0,
       answers: {},
       score: 0,
@@ -89,174 +115,197 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
   });
 
-  // 3. Timer Effect
-  const timerRef = useRef<any>(null);
+  // Keep latest progress in ref for throttled/unload saving
+  const progressRef = useRef(progress);
+  useEffect(() => {
+    progressRef.current = progress;
+  }, [progress]);
+
+  const saveProgress = useCallback((state: ProgressState) => {
+    try {
+      localStorage.setItem(ACTIVE_PROGRESS_KEY, JSON.stringify(state));
+    } catch (e) {
+      console.error('Failed to save progress to localStorage', e);
+    }
+  }, []);
+
+  // 3. Timer Effect (Increments timeSpent without serializing the whole quiz)
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    // Only count up if a quiz is loaded and not yet completed
-    if (session.quiz && !session.isCompleted) {
+    if (quiz && !progress.isCompleted) {
       timerRef.current = setInterval(() => {
-        setSession((prev) => {
-          const updated = { ...prev, timeSpent: prev.timeSpent + 1 };
-          // Autosave on timer tick
-          localStorage.setItem(ACTIVE_SESSION_KEY, JSON.stringify(updated));
-          return updated;
-        });
+        setProgress((prev) => ({
+          ...prev,
+          timeSpent: prev.timeSpent + 1,
+        }));
       }, 1000);
     } else {
       if (timerRef.current) {
         clearInterval(timerRef.current);
+        timerRef.current = null;
       }
     }
 
     return () => {
       if (timerRef.current) {
         clearInterval(timerRef.current);
+        timerRef.current = null;
       }
     };
-  }, [session.quiz, session.isCompleted]);
+  }, [quiz, progress.isCompleted]);
 
-  // 4. Autosave state changes helper (whenever session elements update, excluding rapid timer ticks)
-  const saveSession = (updatedState: QuizState) => {
-    localStorage.setItem(ACTIVE_SESSION_KEY, JSON.stringify(updatedState));
-  };
+  // Periodic autosave of progress every 10s and on beforeunload
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (quiz && !progressRef.current.isCompleted) {
+        saveProgress(progressRef.current);
+      }
+    }, 10000);
 
-  // 5. Actions
-  const loadNewQuiz = (newQuiz: Quiz) => {
-    const newState: QuizState = {
-      quiz: newQuiz,
+    const handleBeforeUnload = () => {
+      if (quiz) {
+        saveProgress(progressRef.current);
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [quiz, saveProgress]);
+
+  // 4. Actions
+  const loadNewQuiz = useCallback((newQuiz: Quiz) => {
+    const initialProgress: ProgressState = {
       currentQuestionIndex: 0,
       answers: {},
       score: 0,
       timeSpent: 0,
       isCompleted: false,
     };
-    setSession(newState);
-    saveSession(newState);
-  };
+    setQuiz(newQuiz);
+    setProgress(initialProgress);
+    try {
+      localStorage.setItem(ACTIVE_QUIZ_KEY, JSON.stringify(newQuiz));
+      localStorage.setItem(ACTIVE_PROGRESS_KEY, JSON.stringify(initialProgress));
+      localStorage.removeItem(ACTIVE_SESSION_KEY); // Clean up legacy key
+    } catch (e) {
+      console.error('Failed to persist new quiz', e);
+    }
+  }, []);
 
-  const answerQuestion = (questionId: string | number, optionIndex: number) => {
-    setSession((prev) => {
-      if (!prev.quiz) return prev;
-      
-      // If already answered, do not allow changes
+  const answerQuestion = useCallback((questionId: string | number, optionIndex: number) => {
+    if (!quiz) return;
+    setProgress((prev) => {
       if (prev.answers[questionId] !== undefined) return prev;
-
-      // Find the question object to evaluate correctness
-      const currentQuestion = prev.quiz.questions.find((q) => q.id === questionId);
+      const currentQuestion = quiz.questions.find((q) => q.id === questionId || String(q.id) === String(questionId));
       if (!currentQuestion) return prev;
 
       const isCorrect = currentQuestion.answer === optionIndex;
-      const updatedAnswers = {
-        ...prev.answers,
-        [questionId]: optionIndex,
-      };
-
-      const newScore = isCorrect ? prev.score + 1 : prev.score;
-
-      const updatedState = {
+      const updated: ProgressState = {
         ...prev,
-        answers: updatedAnswers,
-        score: newScore,
+        answers: {
+          ...prev.answers,
+          [questionId]: optionIndex,
+        },
+        score: isCorrect ? prev.score + 1 : prev.score,
       };
-
-      saveSession(updatedState);
-      return updatedState;
+      saveProgress(updated);
+      return updated;
     });
-  };
+  }, [quiz, saveProgress]);
 
-  const nextQuestion = () => {
-    setSession((prev) => {
-      if (!prev.quiz) return prev;
-      const nextIndex = Math.min(prev.currentQuestionIndex + 1, prev.quiz.questions.length - 1);
-      const updatedState = {
-        ...prev,
-        currentQuestionIndex: nextIndex,
-      };
-      saveSession(updatedState);
-      return updatedState;
+  const nextQuestion = useCallback(() => {
+    if (!quiz) return;
+    setProgress((prev) => {
+      const nextIndex = Math.min(prev.currentQuestionIndex + 1, quiz.questions.length - 1);
+      const updated: ProgressState = { ...prev, currentQuestionIndex: nextIndex };
+      saveProgress(updated);
+      return updated;
     });
-  };
+  }, [quiz, saveProgress]);
 
-  const prevQuestion = () => {
-    setSession((prev) => {
-      if (!prev.quiz) return prev;
+  const prevQuestion = useCallback(() => {
+    if (!quiz) return;
+    setProgress((prev) => {
       const prevIndex = Math.max(prev.currentQuestionIndex - 1, 0);
-      const updatedState = {
-        ...prev,
-        currentQuestionIndex: prevIndex,
-      };
-      saveSession(updatedState);
-      return updatedState;
+      const updated: ProgressState = { ...prev, currentQuestionIndex: prevIndex };
+      saveProgress(updated);
+      return updated;
     });
-  };
+  }, [quiz, saveProgress]);
 
-  const jumpToQuestion = (index: number) => {
-    setSession((prev) => {
-      if (!prev.quiz) return prev;
-      const targetIndex = Math.max(0, Math.min(index, prev.quiz.questions.length - 1));
-      const updatedState = {
-        ...prev,
-        currentQuestionIndex: targetIndex,
-      };
-      saveSession(updatedState);
-      return updatedState;
+  const jumpToQuestion = useCallback((index: number) => {
+    if (!quiz) return;
+    setProgress((prev) => {
+      const targetIndex = Math.max(0, Math.min(index, quiz.questions.length - 1));
+      const updated: ProgressState = { ...prev, currentQuestionIndex: targetIndex };
+      saveProgress(updated);
+      return updated;
     });
-  };
+  }, [quiz, saveProgress]);
 
-  const completeQuiz = () => {
-    setSession((prev) => {
-      if (!prev.quiz) return prev;
-      const updatedState = {
-        ...prev,
-        isCompleted: true,
-      };
-      saveSession(updatedState);
-      return updatedState;
+  const completeQuiz = useCallback(() => {
+    setProgress((prev) => {
+      const updated: ProgressState = { ...prev, isCompleted: true };
+      saveProgress(updated);
+      return updated;
     });
-  };
+  }, [saveProgress]);
 
-  const discardQuiz = () => {
+  const discardQuiz = useCallback(() => {
+    localStorage.removeItem(ACTIVE_QUIZ_KEY);
+    localStorage.removeItem(ACTIVE_PROGRESS_KEY);
     localStorage.removeItem(ACTIVE_SESSION_KEY);
-    setSession({
-      quiz: null,
+    setQuiz(null);
+    setProgress({
       currentQuestionIndex: 0,
       answers: {},
       score: 0,
       timeSpent: 0,
       isCompleted: false,
     });
-  };
+  }, []);
+
+  const value = useMemo<QuizContextType>(() => ({
+    quiz,
+    currentQuestionIndex: progress.currentQuestionIndex,
+    answers: progress.answers,
+    score: progress.score,
+    timeSpent: progress.timeSpent,
+    isCompleted: progress.isCompleted,
+    loadNewQuiz,
+    answerQuestion,
+    nextQuestion,
+    prevQuestion,
+    jumpToQuestion,
+    completeQuiz,
+    discardQuiz,
+    theme,
+    toggleTheme,
+  }), [
+    quiz,
+    progress.currentQuestionIndex,
+    progress.answers,
+    progress.score,
+    progress.timeSpent,
+    progress.isCompleted,
+    loadNewQuiz,
+    answerQuestion,
+    nextQuestion,
+    prevQuestion,
+    jumpToQuestion,
+    completeQuiz,
+    discardQuiz,
+    theme,
+    toggleTheme,
+  ]);
 
   return (
-    <QuizContext.Provider
-      value={{
-        quiz: session.quiz,
-        currentQuestionIndex: session.currentQuestionIndex,
-        answers: session.answers,
-        score: session.score,
-        timeSpent: session.timeSpent,
-        isCompleted: session.isCompleted,
-        loadNewQuiz,
-        answerQuestion,
-        nextQuestion,
-        prevQuestion,
-        jumpToQuestion,
-        completeQuiz,
-        discardQuiz,
-        theme,
-        toggleTheme,
-      }}
-    >
+    <QuizContext.Provider value={value}>
       {children}
     </QuizContext.Provider>
   );
-};
-
-export const useQuiz = () => {
-  const context = useContext(QuizContext);
-  if (context === undefined) {
-    throw new Error('useQuiz must be used within a QuizProvider');
-  }
-  return context;
 };

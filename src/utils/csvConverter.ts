@@ -84,10 +84,11 @@ export function convertCsvToQuiz(
   const explanationIdx = headers.indexOf('explanation');
   const answerIdx = headers.indexOf('answer');
   
-  // Find option columns (e.g. option1, option2, option_1, etc.)
+  // Find option columns precisely (e.g. option1, option_1, opt1, opt_1, etc.)
+  const optionRegex = /^opt(?:ion)?_?\d+$/i;
   const optionIndexes: number[] = [];
   headers.forEach((h, idx) => {
-    if (h.startsWith('option') || h.startsWith('opt')) {
+    if (optionRegex.test(h)) {
       optionIndexes.push(idx);
     }
   });
@@ -159,32 +160,31 @@ export function convertCsvToQuiz(
       errors.push(`${prefix}: Answer is required.`);
     } else {
       if (options.answerIndexing === '1-indexed') {
-        const val = parseInt(rawAnswer);
-        if (isNaN(val)) {
-          errors.push(`${prefix}: Invalid 1-indexed answer "${rawAnswer}". Expected an integer.`);
+        const val = parseInt(rawAnswer, 10);
+        if (isNaN(val) || val < 1) {
+          errors.push(`${prefix}: Invalid 1-indexed answer "${rawAnswer}". Expected a positive integer >= 1.`);
         } else {
           parsedAnswer = val - 1;
         }
       } else if (options.answerIndexing === '0-indexed') {
-        const val = parseInt(rawAnswer);
-        if (isNaN(val)) {
-          errors.push(`${prefix}: Invalid 0-indexed answer "${rawAnswer}". Expected an integer.`);
+        const val = parseInt(rawAnswer, 10);
+        if (isNaN(val) || val < 0) {
+          errors.push(`${prefix}: Invalid 0-indexed answer "${rawAnswer}". Expected a non-negative integer.`);
         } else {
           parsedAnswer = val;
         }
       } else if (options.answerIndexing === 'letter') {
         // Map A -> 0, B -> 1, etc.
         const letter = rawAnswer.toUpperCase();
-        const code = letter.charCodeAt(0) - 65; // 'A' code is 65
-        if (code >= 0 && code < 6) {
-          parsedAnswer = code;
+        if (/^[A-F]$/.test(letter)) {
+          parsedAnswer = letter.charCodeAt(0) - 65;
         } else {
           errors.push(`${prefix}: Invalid letter answer "${rawAnswer}". Expected A, B, C, D, E, or F.`);
         }
       }
 
       // Range check
-      if (parsedAnswer !== -1 && (parsedAnswer < 0 || parsedAnswer >= optionsList.length)) {
+      if (parsedAnswer >= 0 && parsedAnswer >= optionsList.length) {
         errors.push(
           `${prefix}: Correct answer index ${rawAnswer} resolves to index ${parsedAnswer}, which is out of range for the ${optionsList.length} options provided.`
         );
