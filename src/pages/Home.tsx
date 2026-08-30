@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuiz } from '../hooks/useQuiz';
 import { parseAndValidateQuiz } from '../utils/validation';
+import { StartQuizModal } from '../components/StartQuizModal';
+import type { Quiz } from '../types/quiz';
 import { 
   UploadCloud, 
   FileJson, 
@@ -24,6 +26,8 @@ export const Home: React.FC = () => {
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [jsonExampleExpanded, setJsonExampleExpanded] = useState(false);
+  const [pendingQuiz, setPendingQuiz] = useState<Quiz | null>(null);
+  const [isConfigModalOpen, setIsConfigModalOpen] = useState(false);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -39,8 +43,8 @@ export const Home: React.FC = () => {
       const content = event.target?.result as string;
       const result = parseAndValidateQuiz(content);
       if (result.isValid && result.quiz) {
-        loadNewQuiz(result.quiz);
-        navigate('/quiz');
+        setPendingQuiz(result.quiz);
+        setIsConfigModalOpen(true);
       } else {
         setErrors(result.errors);
       }
@@ -49,6 +53,12 @@ export const Home: React.FC = () => {
       setErrors(['Failed to read the file. Please try again.']);
     };
     reader.readAsText(file);
+  };
+
+  const handleConfirmStart = (preparedQuiz: Quiz) => {
+    loadNewQuiz(preparedQuiz);
+    setIsConfigModalOpen(false);
+    navigate('/quiz');
   };
 
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
@@ -330,6 +340,14 @@ export const Home: React.FC = () => {
           </section>
         )}
       </main>
+
+      {/* Pre-test Configuration Confirmation Modal */}
+      <StartQuizModal
+        isOpen={isConfigModalOpen}
+        quiz={pendingQuiz}
+        onClose={() => setIsConfigModalOpen(false)}
+        onConfirm={handleConfirmStart}
+      />
     </div>
   );
 };

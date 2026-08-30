@@ -1,0 +1,2451 @@
+{
+  "title": "CA Final Direct Taxes - Profits and Gains of Business or Profession (PGBP) Complete Conceptual Mastery",
+  "description": "Comprehensive conceptual clarity MCQ set covering every substantive condition, exception, distinction, consequence, and landmark case law across all provisions of PGBP.",
+  "version": "1.0",
+  "questions": [
+    {
+      "id": "Q001",
+      "category": "Charging Section",
+      "question": "An assessee carried on an active trading business during April and May of the previous year and permanently shut down operations on 31st May. Under which head and on what basis are the profits earned during those two months assessed?",
+      "options": [
+        "Profits and Gains of Business or Profession, because the business was carried on at any time during the previous year",
+        "Income from Other Sources, because the business was not in active existence on the last day of the previous year",
+        "Capital Gains, as discontinuance of business converts operational profits into realization of capital assets",
+        "Exempt from income-tax, because business profits are taxable only if operations continue for the full financial year"
+      ],
+      "answer": 0,
+      "explanation": "Under the charging section for PGBP, profits and gains of any business or profession carried on by the assessee at any time during the previous year are chargeable to tax under PGBP. Continuous operation throughout the entire previous year is not required."
+    },
+    {
+      "id": "Q002",
+      "category": "Export Incentives",
+      "question": "A manufacturer receives Duty Entitlement Pass Book (DEPB) credit and Cash Compensatory Support upon completing overseas export shipments. What is the correct income-tax character and head of income for these receipts?",
+      "options": [
+        "Capital receipts reducing the actual cost of plant and machinery",
+        "Specific statutory business receipts taxable under Profits and Gains of Business or Profession",
+        "Casual non-recurring income taxable under Income from Other Sources",
+        "Exempt subsidies granted to promote national foreign trade"
+      ],
+      "answer": 1,
+      "explanation": "Profit on sale of import entitlement licences, cash compensatory support, duty drawback, DEPB, and DFRC are specific statutory inclusions under the charging section chargeable under the head 'Profits and Gains of Business or Profession'."
+    },
+    {
+      "id": "Q003",
+      "category": "Keyman Insurance Policy",
+      "question": "A corporate employer receives ₹50,00,000 upon maturity of a Keyman Insurance Policy taken on the life of its chief operating officer, including ₹8,00,000 allocated as bonus. How is this total maturity payout taxed?",
+      "options": [
+        "Exempt from income-tax as a maturity receipt from a life insurance policy",
+        "Taxable under Capital Gains after deducting total insurance premiums paid over the policy tenure",
+        "Taxable as business income under Profits and Gains of Business or Profession",
+        "Taxable under Income from Other Sources as an ex-gratia windfall"
+      ],
+      "answer": 2,
+      "explanation": "Any sum received under a Keyman insurance policy, including the sum allocated by way of bonus on such policy, is specifically chargeable to income-tax under the head 'Profits and Gains of Business or Profession'."
+    },
+    {
+      "id": "Q004",
+      "category": "Business Benefits & Perquisites",
+      "question": "An architect receives a luxury sedan from a real estate developer as a performance reward for designing an award-winning commercial complex. The architect claims the car is a tax-free personal gift in kind. What is the correct tax treatment?",
+      "options": [
+        "Non-taxable, because movable assets received without monetary conversion cannot constitute income",
+        "Taxable under Income from Other Sources only if the architect sells the car within the same previous year",
+        "Treated as an adjustment to personal capital with zero income-tax liability",
+        "Taxable under PGBP at fair market value, as the value of any benefit or perquisite arising from business or profession is chargeable whether convertible into money or not"
+      ],
+      "answer": 3,
+      "explanation": "The value of any benefit or perquisite arising from business or the exercise of a profession is taxable under PGBP, irrespective of whether it is convertible into money or not, and whether received in cash or in kind."
+    },
+    {
+      "id": "Q005",
+      "category": "Partner Remuneration Interaction",
+      "question": "A partnership firm pays ₹6,00,000 as salary to its working partner. In the assessment of the firm, ₹2,00,000 is disallowed being in excess of the statutory book profit limit. What amount is taxable in the hands of the partner under PGBP?",
+      "options": [
+        "₹4,00,000, because partner remuneration is taxable under PGBP only to the extent it was allowed as a deduction to the firm",
+        "₹6,00,000, because the partner actually received the full salary from the partnership firm",
+        "Nil, because mutual transactions between partners and their firm are completely exempt from tax",
+        "₹2,00,000, being the amount disallowed in the assessment of the partnership firm"
+      ],
+      "answer": 0,
+      "explanation": "Under the interaction principle between partner and firm taxation, salary, interest, bonus, or commission received by a partner is taxable under PGBP only to the extent it has been allowed as a deduction in the computation of income of the firm. The disallowed portion (₹2,00,000) is not taxable in the partner's hands."
+    },
+    {
+      "id": "Q006",
+      "category": "Partner Remuneration Interaction",
+      "question": "A firm credits interest on capital of ₹1,80,000 (calculated at 18% simple interest per annum) to a partner's capital account. If the firm is allowed deduction only at 12% per annum (₹1,20,000), how is the partner assessed?",
+      "options": [
+        "₹1,80,000 is taxable under Income from Other Sources",
+        "₹1,20,000 is taxable under PGBP, and the excess ₹60,000 disallowed to the firm is not taxable in the partner's hands",
+        "₹1,80,000 is taxable under PGBP with a tax credit for the firm's disallowance",
+        "The entire ₹1,80,000 is exempt from tax in the hands of the partner"
+      ],
+      "answer": 1,
+      "explanation": "Interest received by a partner from a firm is taxable under PGBP only to the extent allowed as a deduction to the firm (i.e. at 12% p.a., equaling ₹1,20,000). The excess interest disallowed to the firm is not taxable in the partner's hands."
+    },
+    {
+      "id": "Q007",
+      "category": "Non-Compete Fees",
+      "question": "A pharmaceutical scientist enters into a restrictive covenant agreeing not to share proprietary chemical synthesis know-how with any competitor for a period of 5 years and receives ₹40,00,000. How is this receipt treated?",
+      "options": [
+        "Exempt capital receipt representing the sterilisation of personal intellectual capacity",
+        "Taxable under Capital Gains as consideration for the transfer of a capital asset",
+        "Taxable under Profits and Gains of Business or Profession as a statutory business receipt",
+        "Taxable under Income from Other Sources as casual income"
+      ],
+      "answer": 2,
+      "explanation": "Non-compete fees and any sum received under an agreement for not carrying out any activity in relation to any business or profession, or for not sharing any know-how, patent, copyright, trademark, or commercial right, are specifically taxable under PGBP."
+    },
+    {
+      "id": "Q008",
+      "category": "Trade Association Services",
+      "question": "A trade association provides specialized technical product testing services exclusively to its member units for a specific testing fee. What is the taxability of this fee in the hands of the association?",
+      "options": [
+        "Exempt from tax under the general principle of mutuality",
+        "Taxable under Income from House Property",
+        "Exempt provided the association is registered as a non-profit company",
+        "Taxable under Profits and Gains of Business or Profession as income from specific services performed for members"
+      ],
+      "answer": 3,
+      "explanation": "Income derived by a trade, professional, or similar association from specific services performed for its members is specifically enumerated as income chargeable under the head 'Profits and Gains of Business or Profession'."
+    },
+    {
+      "id": "Q009",
+      "category": "Conversion of Inventory",
+      "question": "A land dealer converts a commercial plot held as stock-in-trade (cost: ₹30,00,000) into a permanent capital asset when its Fair Market Value is ₹55,00,000. What is the tax consequence in the year of conversion?",
+      "options": [
+        "The Fair Market Value of ₹55,00,000 is recognized, resulting in business profit of ₹25,00,000 taxable under PGBP in the year of conversion",
+        "No income arises until the converted capital asset is subsequently sold to a third party",
+        "₹25,00,000 is taxable as Long Term Capital Gain in the year of conversion",
+        "The entire ₹55,00,000 is taxable as casual income under Income from Other Sources"
+      ],
+      "answer": 0,
+      "explanation": "Under the deeming provisions of PGBP, the Fair Market Value of inventory on the date on which it is converted into a capital asset is chargeable as business income under PGBP. The business profit is FMV minus cost (₹55,00,000 - ₹30,00,000 = ₹25,00,000)."
+    },
+    {
+      "id": "Q010",
+      "category": "Contract Termination Compensation",
+      "question": "A sole distributor receives ₹20,00,000 as compensation for the premature cancellation of its nationwide distribution agency. The distributor claims the compensation is a capital receipt for loss of business apparatus. Is this claim valid?",
+      "options": [
+        "Valid, because compensation for total sterilisation of a profit-making apparatus is a non-taxable capital receipt",
+        "Invalid, because compensation in connection with the termination or modification of terms of any business contract is statutory PGBP income, whether revenue or capital in nature",
+        "Valid, provided the distributor closes its business within 30 days of receiving compensation",
+        "Invalid, because such compensation is mandatorily taxable under Capital Gains"
+      ],
+      "answer": 1,
+      "explanation": "Any compensation or other payment received in connection with the termination or modification of the terms and conditions of any contract relating to business is statutorily chargeable to tax under PGBP, irrespective of whether the receipt is of a revenue or capital nature."
+    },
+    {
+      "id": "Q011",
+      "category": "Residential Property Letting Exclusion",
+      "question": "A corporate entity owns 20 residential apartments and lets them out on lease, maintaining dedicated property managers. Following the statutory amendment by Finance Act 2024, under which head should this residential rental income be assessed?",
+      "options": [
+        "Profits and Gains of Business or Profession, because leasing is conducted as a structured commercial business activity",
+        "Income from Other Sources, as residential rental receipts cannot fall under any specific head",
+        "Income from House Property, because letting out of a residential house or part thereof by the owner is excluded from PGBP and taxable under IFHP",
+        "Exempt income, provided the company creates a dedicated housing infrastructure reserve"
+      ],
+      "answer": 2,
+      "explanation": "As per the statutory Explanation added to Section 28 by Finance Act 2024, any income from letting out of a residential house or a part of the house by the owner shall not be taxable under 'PGBP' and shall be taxable under 'Income from house property', irrespective of corporate objects or business scale."
+    },
+    {
+      "id": "Q012",
+      "category": "Speculation Business",
+      "question": "Under what statutory condition is a commercial transaction in commodities or shares classified as a speculative transaction for tax purposes?",
+      "options": [
+        "When the transaction is executed on an unrecognised regional commodity exchange",
+        "When the transaction results in an overall trading loss exceeding standard commercial gross margin",
+        "When the transaction involves dematerialized securities held for less than 30 days",
+        "When the transaction is periodically or ultimately settled otherwise than by actual physical delivery or transfer of the commodity or scrips"
+      ],
+      "answer": 3,
+      "explanation": "A speculative transaction is defined as a transaction in which a contract for the purchase or sale of any commodity, including stocks and shares, is periodically or ultimately settled otherwise than by actual delivery or transfer. Speculative business is treated as a separate and distinct business."
+    },
+    {
+      "id": "Q013",
+      "category": "Speculation Business",
+      "question": "A textile manufacturer enters into forward contracts to purchase raw cotton bales to protect its spinning mills against anticipated future price rises. How is this transaction treated for income-tax purposes?",
+      "options": [
+        "It is deemed a non-speculative hedging transaction entered into to guard against price fluctuations in raw materials used in the manufacturing business",
+        "It is deemed a speculative transaction because physical settlement occurs at a future date",
+        "It is an inadmissible contingent expenditure disallowed under business deductions",
+        "It is chargeable under Capital Gains rather than PGBP"
+      ],
+      "answer": 0,
+      "explanation": "A hedging contract entered into in respect of raw materials or merchandise by a person in the course of manufacturing or merchanting business to guard against loss through future price fluctuations is statutorily deemed NOT to be a speculative transaction."
+    },
+    {
+      "id": "Q014",
+      "category": "Speculation Business",
+      "question": "A share dealer enters into forward contracts in equity shares to guard against loss through price fluctuations in stock-in-trade holdings. What is the tax classification of this forward contract?",
+      "options": [
+        "Speculative transaction, because share price movements cannot be physically insured",
+        "Deemed non-speculative transaction entered into by an investor/dealer to protect stock-in-trade holdings against price volatility",
+        "Void transaction under security contract regulations and disallowed",
+        "Short Term Capital Gain transaction outside business income"
+      ],
+      "answer": 1,
+      "explanation": "A contract entered into by a dealer or investor in stocks and shares to guard against loss in their holding of stocks and shares through price fluctuations is expressly deemed not to be a speculative transaction."
+    },
+    {
+      "id": "Q015",
+      "category": "Speculation Business",
+      "question": "An investor trades in Nifty and Bank Nifty derivative futures on the National Stock Exchange through a registered broker with digital contract notes. What is the tax classification of this trading activity?",
+      "options": [
+        "Speculative business, because derivative contracts are settled on cash differences without physical equity delivery",
+        "Gambling and wagering transaction chargeable at a flat 30% rate without loss set-off",
+        "Non-speculative business transaction, because eligible derivative trading on a recognised stock exchange is statutory excluded from speculative transactions",
+        "Exclusively assessable under Capital Gains"
+      ],
+      "answer": 2,
+      "explanation": "Trading in derivatives carried out in a recognized stock exchange is statutorily deemed NOT to be a speculative transaction."
+    },
+    {
+      "id": "Q016",
+      "category": "Speculation Business",
+      "question": "A trader carries out derivative transactions in agricultural commodities on a recognized commodity stock exchange where Commodity Transaction Tax (CTT) was not charged. Is this transaction treated as speculative?",
+      "options": [
+        "Speculative, because payment of CTT is a mandatory condition for all commodity derivative exceptions",
+        "Illegal commodity wagering transaction with 100% penalty",
+        "Speculative only if the contract results in a net gain",
+        "Non-speculative, because the statutory requirement of CTT chargeability does not apply to trading in agricultural commodity derivatives"
+      ],
+      "answer": 3,
+      "explanation": "Trading in commodity derivatives through a recognized stock exchange on which CTT is paid is deemed non-speculative. However, the requirement of CTT chargeability is explicitly NOT applicable in respect of trading in agricultural commodity derivatives."
+    },
+    {
+      "id": "Q017",
+      "category": "Case Law - Principle",
+      "question": "In K & Co., what principle was laid down by the Delhi High Court regarding interest earned on fixed deposits pledged as margin money for business bank guarantees?",
+      "options": [
+        "Interest earned on bank deposits inextricably linked to the business operations of the assessee is taxable under PGBP and not under Income from Other Sources",
+        "Interest on bank fixed deposits is always assessable under Income from Other Sources regardless of business necessity",
+        "Interest on bank guarantee margin money is totally exempt from income-tax as a statutory cost reimbursement",
+        "Interest must be reduced from the contract execution cost without income recognition"
+      ],
+      "answer": 0,
+      "explanation": "In K & Co., the Delhi High Court held that where the assessee was required to deposit margin money with a bank for obtaining a bank guarantee essential for the assessee's business, the interest earned on such deposits is inextricably linked to the business and must be taxed under PGBP, not IFOS."
+    },
+    {
+      "id": "Q018",
+      "category": "Case Law - Application",
+      "question": "A construction company has surplus idle cash of ₹50,00,000 and places it in 1-year bank fixed deposits. Simultaneously, it places ₹10,00,000 in fixed deposits as compulsory margin money for obtaining a performance bank guarantee for a highway contract. How should the interest from these two deposits be classified?",
+      "options": [
+        "Entire interest from both deposits is taxable under PGBP",
+        "Interest on the ₹10,00,000 mandatory margin deposit is taxable under PGBP (inextricably linked), while interest on the ₹50,00,000 surplus deposit is taxable under IFOS",
+        "Entire interest from both deposits is taxable under Income from Other Sources",
+        "Both interest amounts are exempt from income-tax"
+      ],
+      "answer": 1,
+      "explanation": "Applying the ratio of K & Co. (Delhi HC), interest on margin money compulsorily deposited for essential business bank guarantees is inextricably linked to business and taxable under PGBP. Conversely, interest earned on surplus/idle funds placed in deposits is assessable under Income from Other Sources."
+    },
+    {
+      "id": "Q019",
+      "category": "Case Law - Principle",
+      "question": "In Chennai Properties & Investment Ltd, what critical test was established by the Supreme Court to hold that rental income was assessable under PGBP rather than Income from House Property?",
+      "options": [
+        "Whether the company employed full-time property maintenance staff",
+        "Whether the leases were registered under municipal commercial establishment acts",
+        "Whether acquiring, holding, and letting properties constituted the main objective of the company as per its Memorandum of Association and represented its primary business activity",
+        "Whether rent was received through electronic banking channels"
+      ],
+      "answer": 2,
+      "explanation": "In Chennai Properties & Investment Ltd, the Supreme Court held that where holding and letting properties is the main corporate objective in the Memorandum of Association and the company's entire activity consists of letting such properties, the letting activity is a business activity taxable under PGBP."
+    },
+    {
+      "id": "Q020",
+      "category": "Case Law - Application",
+      "question": "Commercial Malls Ltd is formed with the primary objective in its MOA to hold and lease commercial office complexes and derives rental income from leasing shop lots. How does Chennai Properties apply post Finance Act 2024?",
+      "options": [
+        "The ruling is entirely overridden, making all rental income taxable under IFHP",
+        "Commercial rental income must be apportioned 50:50 between PGBP and IFOS",
+        "Commercial letting is assessable under Capital Gains",
+        "The ruling continues to govern commercial properties where letting is the core MOA objective (PGBP), while residential property letting by owners is statutorily excluded and taxed under IFHP"
+      ],
+      "answer": 3,
+      "explanation": "Following the Finance Act 2024 amendment (which specifically mandates that letting out of residential houses by the owner is taxable under IFHP), the Chennai Properties ratio applies to commercial properties where letting is the primary MOA objective, taxing commercial rents under PGBP."
+    },
+    {
+      "id": "Q021",
+      "category": "Rent, Rates & Taxes",
+      "question": "Which statement correctly distinguishes the deductibility of rent, rates, and taxes of a building between an owner and a tenant under Section 30?",
+      "options": [
+        "Rent is deductible for a tenant but not for an owner; Rates & Taxes and Insurance are deductible for both owner and tenant",
+        "Rent and Rates & Taxes are deductible for both owner and tenant without restriction",
+        "Owner can claim rent paid to himself as a notional business deduction",
+        "Tenant can claim rent and rates but cannot claim building insurance"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 30, a tenant can claim deduction for rent, rates & taxes, insurance, and revenue repairs. An owner occupying the building for business cannot claim rent (no notional rent to self), but can claim rates & taxes, insurance, and revenue repairs."
+    },
+    {
+      "id": "Q022",
+      "category": "Repairs & Tenant Deemed Building",
+      "question": "A tenant incurs ₹20,00,000 on structural capital renovations and civil additions to a leased factory building. How is this capital expenditure treated under PGBP?",
+      "options": [
+        "Allowed as an immediate 100% revenue deduction under rent, rates, and repairs",
+        "Disallowed as a revenue deduction, but treated as a 'Deemed Building' on which the tenant is entitled to claim depreciation under Section 32",
+        "Added to the landlord's block of assets with zero tax benefit to the tenant",
+        "Treated as an inadmissible personal loss of capital"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 30 and Explanation 1 to Section 32(1), capital expenditure incurred on renovation or improvement of a leased building by a tenant is disallowed as a revenue deduction, but is treated as a Deemed Building owned by the tenant, eligible for depreciation under Section 32."
+    },
+    {
+      "id": "Q023",
+      "category": "Repairs of Plant & Machinery",
+      "question": "A manufacturing company incurs ₹5,00,000 on current revenue overhaul of its machines and ₹12,00,000 on capital replacement of key engine blocks that substantially increase production capacity. What is the tax treatment?",
+      "options": [
+        "Both ₹5,00,000 and ₹12,00,000 are deductible as current revenue repairs under Section 31",
+        "Both expenditures are 100% disallowed because machinery repairs must be amortized over 5 years",
+        "₹5,00,000 is allowed as a revenue deduction u/s 31; ₹12,00,000 is disallowed as a revenue deduction and must be capitalized to the Block of Assets for claiming depreciation",
+        "₹12,00,000 is allowed as revenue deduction while ₹5,00,000 is capitalized"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 31, only current revenue repairs and insurance for plant and machinery are allowable deductions. Capital repairs are disallowed as revenue deductions and must be capitalized to the Block of Assets for depreciation."
+    },
+    {
+      "id": "Q024",
+      "category": "Rent Paid to Partner",
+      "question": "A partnership firm operates its administrative office in a commercial building owned personally by one of its partners and pays monthly rent to the partner. Is this rent deductible for the firm?",
+      "options": [
+        "Completely disallowed because transactions between partners and firms are internal transfers",
+        "Allowed only if the partner pays tax at the maximum marginal rate of 30%",
+        "Deductible only up to a fixed statutory limit of ₹10,000 per month",
+        "Allowed as a deduction to the firm to the extent it is reasonable and not excessive having regard to market rates"
+      ],
+      "answer": 3,
+      "explanation": "Rent paid by a partnership firm to a partner for using premises owned by the partner is an admissible business deduction under Section 30, subject to Section 40A(2) reasonableness limits (i.e. allowed to the extent not excessive)."
+    },
+    {
+      "id": "Q025",
+      "category": "Rent of Machinery",
+      "question": "Under which provision of the Income-tax Act is rent paid for hiring plant and machinery deductible as a business expense?",
+      "options": [
+        "Under Section 37 as a general business expenditure, because Section 31 covers only repairs and insurance of plant and machinery",
+        "Specifically under Section 31",
+        "Under Section 30 along with building rent",
+        "Under Section 32 as an element of notional depreciation"
+      ],
+      "answer": 0,
+      "explanation": "Section 31 covers only insurance and current repairs of plant, machinery, and furniture. Rent for hiring plant and machinery is deductible as a general business expenditure under Section 37(1)."
+    },
+    {
+      "id": "Q026",
+      "category": "Depreciation Conditions",
+      "question": "Which of the following conditions must be satisfied for an assessee to claim depreciation under Section 32?",
+      "options": [
+        "The assessee must possess registered legal title AND the asset must be actively operated for at least 300 days",
+        "The assessee must be the legal or beneficial owner (wholly or partly) AND the asset must be used for the purpose of business or profession (active or passive)",
+        "The asset must be completely paid for in cash without any outstanding bank loans",
+        "The asset must be manufactured in India and installed in an approved industrial zone"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 32, depreciation is allowable if: (1) The assessee is the owner (wholly or partly, legal or beneficial); and (2) The asset is used for the purposes of the assessee's business or profession (which includes active or passive use)."
+    },
+    {
+      "id": "Q027",
+      "category": "Beneficial Ownership",
+      "question": "A buyer purchases an industrial building, takes full possession, pays the entire purchase price, and operates its factory in the building, but the formal registration deed is pending. Can the buyer claim depreciation?",
+      "options": [
+        "No, because legal registration of the conveyance deed is an absolute pre-condition for tax depreciation",
+        "Depreciation is available only to the seller until registration is completed",
+        "Yes, because beneficial ownership with possession and operational control is sufficient to claim depreciation under Section 32",
+        "Depreciation is restricted to 50% until legal title is formally registered"
+      ],
+      "answer": 2,
+      "explanation": "For Section 32, beneficial ownership suffices. An assessee who has acquired possession and paid consideration in part performance of a contract is the beneficial owner entitled to claim depreciation, even without a registered title deed."
+    },
+    {
+      "id": "Q028",
+      "category": "Hire Purchase Depreciation",
+      "question": "An assessee acquires machinery on hire purchase. The agreement specifies that legal ownership will pass only upon payment of the 48th and final monthly instalment. From which year can the assessee claim depreciation?",
+      "options": [
+        "Only after paying the 48th instalment and obtaining legal ownership",
+        "Depreciation cannot be claimed by either party throughout the hire term",
+        "Depreciation must be split 50:50 with the hire vendor",
+        "From the first previous year in which the asset is put to use, treating the hire purchaser as beneficial owner from inception"
+      ],
+      "answer": 3,
+      "explanation": "In hire purchase transactions, the buyer is treated as the beneficial owner from inception and can claim depreciation from the first year the asset is put to use, even though legal ownership passes only upon payment of the last instalment."
+    },
+    {
+      "id": "Q029",
+      "category": "Standby Machinery Use",
+      "question": "A power plant keeps standby turbines and emergency spares in complete operational readiness. During the previous year, the standby turbines were not actively run because the main turbines functioned without interruption. Is depreciation allowable?",
+      "options": [
+        "Allowed, because passive use and operational readiness of standby machinery and emergency spares satisfy the 'used for business' condition",
+        "Disallowed, because Section 32 requires active operational wear and tear",
+        "Restricted to 10% of the prescribed depreciation rate",
+        "Allowed only if the main turbines suffer an operational breakdown"
+      ],
+      "answer": 0,
+      "explanation": "For Section 32 depreciation, 'use' includes passive use. In the case of standby machinery and emergency spares kept ready for use, depreciation is allowable even if they are not actively operated during the year."
+    },
+    {
+      "id": "Q030",
+      "category": "Case Law - Principle",
+      "question": "In the landmark ruling of ICDS Ltd, what ratio did the Supreme Court lay down regarding depreciation on leased vehicles registered in the name of the lessee?",
+      "options": [
+        "Depreciation is available only to the person holding vehicular registration under the Motor Vehicles Act",
+        "Depreciation is allowable to the lessor who holds exclusive ownership rights and repossession powers under the lease agreement, even if the vehicle is registered in the name of the lessee",
+        "Depreciation must be split equally between lessor and lessee",
+        "Leased vehicles are non-depreciable inventory"
+      ],
+      "answer": 1,
+      "explanation": "In ICDS Ltd, the Supreme Court held that depreciation is allowable to the lessor where the lease agreement establishes that the lessor is the exclusive owner with inspection and repossession rights, notwithstanding that the vehicle is registered in the lessee's name."
+    },
+    {
+      "id": "Q031",
+      "category": "Case Law - Application",
+      "question": "A commercial fleet leasing company leases trucks under finance lease contracts. The trucks are registered with the RTO in the lessees' names to comply with transport permits. The Assessing Officer denies depreciation to the lessor citing lessee registration. Is the AO's action justified?",
+      "options": [
+        "Justified, because vehicular registration under the Motor Vehicles Act is conclusive proof of ownership for Section 32",
+        "Justified, unless the lessor operates the transport routes directly",
+        "Unjustified, because under ICDS Ltd, substantive ownership lies in the terms of the lease agreement, entitling the lessor to depreciation regardless of administrative RTO registration",
+        "Unjustified only if the vehicles are used within special economic zones"
+      ],
+      "answer": 2,
+      "explanation": "Applying ICDS Ltd (SC), the lessor who retains exclusive contractual ownership, inspection rights, and repossession rights upon default is entitled to claim depreciation under Section 32, notwithstanding that the vehicle is registered in the lessee's name for regulatory convenience."
+    },
+    {
+      "id": "Q032",
+      "category": "Depreciation Rates",
+      "question": "Which of the following correctly matches the prescribed rates of depreciation for assets under the Income-tax Rules?",
+      "options": [
+        "Residential Building: 10%; Commercial Building: 15%; Computers: 60%",
+        "Plant & Machinery General: 20%; Motor cars in hiring business: 15%",
+        "Intangible assets: 40%; Computer accessories: 15%",
+        "Residential Building: 5%; Commercial Building: 10%; Temporary Wooden Structures: 40%; Furniture: 10%"
+      ],
+      "answer": 3,
+      "explanation": "Under the depreciation rate schedule: Buildings — Residential (5%), Commercial/Other (10%), Temporary wooden structures (40%); Furniture & fittings (10%); General P&M (15%); Computers & computer software (40%); Intangibles (25%)."
+    },
+    {
+      "id": "Q033",
+      "category": "Depreciation Rates",
+      "question": "An IT company acquires mobile smartphones and an EPABX telephone exchange for its call center operations. At what rate is depreciation allowable on these devices?",
+      "options": [
+        "15%, because EPABX systems and mobile phones are communication apparatus and not computers",
+        "40%, because smartphones and digital exchanges are computing devices",
+        "25%, as intangible communication assets",
+        "10%, as office furniture and fittings"
+      ],
+      "answer": 0,
+      "explanation": "EPABX systems and mobile phones are communication devices, NOT computers; hence they are eligible for the general Plant & Machinery depreciation rate of 15%, not the 40% computer rate."
+    },
+    {
+      "id": "Q034",
+      "category": "Definition of Plant",
+      "question": "As per the statutory definition under Section 43(3), which of the following items is EXCLUDED from the scope of 'Plant'?",
+      "options": [
+        "Ships and technical books used in professional libraries",
+        "Tea bushes, livestock, buildings, and furniture",
+        "Scientific apparatus and surgical equipment",
+        "Pollution control equipment and renewable energy devices"
+      ],
+      "answer": 1,
+      "explanation": "Section 43(3) defines 'plant' to include ships, vehicles, books, scientific apparatus, and surgical equipment used for business or profession, but specifically EXCLUDES tea bushes, livestock, buildings, and furniture."
+    },
+    {
+      "id": "Q035",
+      "category": "Depreciation on Intangibles",
+      "question": "Which of the following intangible assets is specifically EXCLUDED from claiming 25% depreciation under Section 32?",
+      "options": [
+        "Know-how and patents",
+        "Copyrights and trademarks",
+        "Goodwill of a business or profession",
+        "Commercial licences and business franchises"
+      ],
+      "answer": 2,
+      "explanation": "Intangible assets eligible for 25% depreciation include know-how, patents, copyrights, trademarks, licences, franchises, or other commercial rights of similar nature, but explicitly EXCLUDE goodwill of a business or profession."
+    },
+    {
+      "id": "Q036",
+      "category": "Mandatory Depreciation",
+      "question": "An assessee deliberately omits claiming depreciation in its Return of Income to report higher business profits and avoid book profit minimum taxes. What is the statutory consequence?",
+      "options": [
+        "The Assessing Officer is bound to accept the return without any depreciation allowance",
+        "The assessee is penalized with a 200% penalty for under-reporting income",
+        "The entire Block of Assets is deemed dissolved",
+        "Depreciation is mandatory; the AO shall compute and allow depreciation, and the Closing WDV of the Block is reduced by notional depreciation actually allowable"
+      ],
+      "answer": 3,
+      "explanation": "Claiming depreciation is mandatory for all assessees. Explanation 5 to Section 32(1) provides that the provisions of Section 32 apply whether or not the assessee has claimed the deduction in computing total income."
+    },
+    {
+      "id": "Q037",
+      "category": "Depreciation Methods",
+      "question": "Which category of assessees has the statutory option to calculate depreciation under the Straight Line Method (SLM) on individual assets instead of the WDV Block of Assets method?",
+      "options": [
+        "Assessees engaged in the business of generation or generation and distribution of power",
+        "All micro, small, and medium manufacturing enterprises",
+        "Companies listed on recognized stock exchanges",
+        "Export oriented units located in Special Economic Zones"
+      ],
+      "answer": 0,
+      "explanation": "Only undertakings engaged in the generation or generation and distribution of power have the statutory option to follow the Straight Line Method (SLM) on individual assets. All other assessees must follow the WDV method on Block of Assets."
+    },
+    {
+      "id": "Q038",
+      "category": "Block of Assets Definition",
+      "question": "What is the statutory definition of a 'Block of Assets' under Section 2(11)?",
+      "options": [
+        "A group of assets acquired in the same financial year from a single vendor",
+        "A group of assets falling within a class of assets in respect of which the same rate of depreciation is prescribed",
+        "All tangible assets located within a single manufacturing factory compound",
+        "Assets whose individual historical cost exceeds ₹1,00,000"
+      ],
+      "answer": 1,
+      "explanation": "A Block of Assets means a group of assets falling within a class of assets (e.g. buildings, machinery, furniture, or intangibles) in respect of which the same percentage rate of depreciation is prescribed."
+    },
+    {
+      "id": "Q039",
+      "category": "Block of Assets Computation",
+      "question": "An assessee acquires a new machine for ₹5,00,000 during the previous year on 10th August but does not put it to use during that previous year. How is this machine treated in computing WDV and depreciation for that year?",
+      "options": [
+        "It is excluded from the Block of Assets entirely until the year it is put to use",
+        "Full 15% depreciation is allowable because it was acquired before 3rd October",
+        "It is added to the Block of Assets for computing WDV, but no depreciation is allowed on that machine for the current previous year",
+        "50% depreciation is allowed as an idle asset"
+      ],
+      "answer": 2,
+      "explanation": "An asset acquired during the previous year is added to the Block of Assets, but if it is not put to use during that previous year, no depreciation is allowable on that specific asset for the current previous year."
+    },
+    {
+      "id": "Q040",
+      "category": "Sale of Building from Block",
+      "question": "A company sells an office building forming part of its 10% building block for an actual sale price of ₹60,00,000, while the Stamp Duty Value (SDV) adopted by state authorities is ₹80,00,000. What amount is deducted from the Block of Assets?",
+      "options": [
+        "₹80,00,000, because Stamp Duty Value is mandatory for all real estate adjustments",
+        "₹70,00,000, being the average of actual price and SDV",
+        "Nil, because buildings cannot be removed from a Block until all units are sold",
+        "₹60,00,000, because only the actual sale price (money payable) is reduced from the Block of Assets"
+      ],
+      "answer": 3,
+      "explanation": "For adjusting the Block of Assets under Section 32, only the actual sale price (money payable) is reduced from the Block. Stamp Duty Value is considered only when computing capital gains under Section 50 / Section 50C."
+    },
+    {
+      "id": "Q041",
+      "category": "180 Days Depreciation Proviso",
+      "question": "A manufacturer acquires a machine on 1st November of Year 1 and puts it to use for 151 days in Year 1. In Year 2, the machine is operated for only 90 days due to maintenance. What rate of depreciation applies in Year 1 and Year 2?",
+      "options": [
+        "Year 1: 50% of normal rate; Year 2: 100% full normal rate, because the 50% restriction applies only in the year of acquisition",
+        "Year 1: 50% of normal rate; Year 2: 50% of normal rate (used <180 days in both years)",
+        "Year 1: Nil depreciation; Year 2: Full depreciation",
+        "Year 1: Full depreciation; Year 2: Pro-rata 90/365 depreciation"
+      ],
+      "answer": 0,
+      "explanation": "Under the proviso to Section 32(1), depreciation is restricted to 50% of the prescribed rate only in the previous year in which the asset is acquired and put to use for less than 180 days. In subsequent years, full depreciation is allowable even if used for less than 180 days."
+    },
+    {
+      "id": "Q042",
+      "category": "180 Days Depreciation Proviso",
+      "question": "A firm acquires an asset in Year 1 (not put to use in Year 1). The asset is first put to use on 1st December of Year 2 (used for 121 days in Year 2). What depreciation is allowable in Year 1 and Year 2?",
+      "options": [
+        "Year 1: Nil; Year 2: Restricted to 50% of normal rate",
+        "Year 1: Nil (not put to use); Year 2: Full 100% depreciation rate, because Year 2 is not the year of acquisition",
+        "Year 1: 50% rate; Year 2: 50% rate",
+        "Year 1: Full rate; Year 2: Full rate"
+      ],
+      "answer": 1,
+      "explanation": "In Year 1, no depreciation is allowable as the asset was not put to use. In Year 2, since the year of acquisition was Year 1, the 50% restriction under the proviso to Section 32(1) does not apply because the restriction applies strictly when the asset is acquired and put to use for <180 days in the same year. Hence, full depreciation is allowed in Year 2."
+    },
+    {
+      "id": "Q043",
+      "category": "Depreciation in Amalgamation",
+      "question": "Company A amalgamates with Company B on 1st October during the previous year. How is normal depreciation computed and distributed between the two companies for that year?",
+      "options": [
+        "Both Company A and Company B claim 100% full depreciation independently",
+        "Company A claims 50% and Company B claims 50% regardless of actual operational days",
+        "Total normal depreciation is computed as if no amalgamation took place, and then apportioned between Company A and Company B in the ratio of the number of days the assets were used by each",
+        "Depreciation is allowable exclusively to the amalgamated company (Company B)"
+      ],
+      "answer": 2,
+      "explanation": "Under the fifth proviso to Section 32(1), in cases of amalgamation, demerger, or succession, total depreciation is calculated as if no restructuring occurred, and is then apportioned between predecessor and successor in the ratio of the number of days assets were used by them."
+    },
+    {
+      "id": "Q044",
+      "category": "Capital Gains on Depreciable Assets",
+      "question": "An assessee has an opening WDV of ₹8,00,000 (3 machines). During the year, it sells all 3 machines for ₹5,00,000 and acquires no new machines. What is the tax result?",
+      "options": [
+        "₹3,00,000 Long Term Capital Loss, provided the machines were held for over 36 months",
+        "₹3,00,000 is carried forward as closing WDV on which 15% depreciation continues",
+        "No tax consequence until the assessee purchases a replacement machine",
+        "₹3,00,000 Short Term Capital Loss, because the Block ceases to exist and has a positive balance"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 50, where all assets in a Block are transferred (Block ceases to exist) and the Money Payable (₹5,00,000) is less than (Opening WDV + Additions = ₹8,00,000), the resulting shortfall of ₹3,00,000 is assessed as Short Term Capital Loss (STCL). No depreciation is allowed."
+    },
+    {
+      "id": "Q045",
+      "category": "Capital Gains on Depreciable Assets",
+      "question": "An assessee has an opening WDV of ₹6,00,000 (5 machines). During the year, it sells 2 machines for ₹9,00,000, leaving 3 machines in the factory. What is the tax result?",
+      "options": [
+        "₹3,00,000 Short Term Capital Gain, and the closing WDV of the Block becomes Nil",
+        "₹3,00,000 Long Term Capital Gain, and depreciation continues on the remaining 3 machines",
+        "Closing WDV becomes negative ₹3,00,000 on which negative depreciation is charged",
+        "No capital gain arises because assets are still physically present in the Block"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 50, where Money Payable (₹9,00,000) exceeds (Opening WDV + Additions = ₹6,00,000), the excess of ₹3,00,000 is assessed as Short Term Capital Gain (STCG). The closing WDV becomes Nil and no depreciation is allowable, even though 3 machines remain physically present."
+    },
+    {
+      "id": "Q046",
+      "category": "Additional Depreciation",
+      "question": "Which of the following business entities is eligible to claim additional depreciation under Section 32(1)(ia)?",
+      "options": [
+        "A trading partnership firm engaged in wholesale distribution of consumer goods",
+        "An assessee engaged in the business of manufacture or production of any article or thing, or generation/transmission/distribution of power",
+        "A telecommunication service provider operating cellular towers",
+        "A commercial bank providing leasing and credit facilities"
+      ],
+      "answer": 1,
+      "explanation": "Additional depreciation @20% on new Plant & Machinery is available to assessees engaged in the manufacture or production of any article or thing, or in the generation, transmission, or distribution of power."
+    },
+    {
+      "id": "Q047",
+      "category": "Additional Depreciation Exclusions",
+      "question": "On which of the following categories of plant and machinery is additional depreciation under Section 32(1)(ia) PROHIBITED?",
+      "options": [
+        "New manufacturing machinery installed inside a factory shed",
+        "Pollution control equipment installed in manufacturing units",
+        "Second-hand machinery, office appliances, ships, aircraft, road transport vehicles, and P&M with 100% PGBP deduction",
+        "Material handling conveyor belts used on the assembly line"
+      ],
+      "answer": 2,
+      "explanation": "Additional depreciation is not allowable on: (1) Second-hand P&M; (2) P&M installed in office premises or guest houses; (3) Office appliances and computers in office; (4) Ships, aircraft, and road transport vehicles; and (5) P&M on which 100% deduction is allowed under PGBP."
+    },
+    {
+      "id": "Q048",
+      "category": "Additional Depreciation 180 Days Split",
+      "question": "A manufacturing company acquires and puts to use new factory machinery on 15th November (used for 137 days in Year 1). How is the 20% additional depreciation claimed?",
+      "options": [
+        "10% in Year 1, and the remaining 10% lapses permanently",
+        "Zero additional depreciation in Year 1, and full 20% in Year 2",
+        "Full 20% additional depreciation in Year 1 itself",
+        "10% in Year 1, and the remaining 10% is allowed in the immediately succeeding previous year (Year 2)"
+      ],
+      "answer": 3,
+      "explanation": "Under the third proviso to Section 32(1)(ia), if new P&M is put to use for less than 180 days in the year of acquisition, 50% of the additional depreciation (10%) is allowed in that year, and the remaining 50% (10%) is allowed in the immediately succeeding previous year."
+    },
+    {
+      "id": "Q049",
+      "category": "Additional Depreciation Printing",
+      "question": "A publishing house is engaged in printing newspapers and textbooks. Is it eligible for additional depreciation under Section 32(1)(ia)?",
+      "options": [
+        "Eligible, because printing or printing and publishing is treated as a manufacturing business eligible for additional depreciation (CBDT)",
+        "Ineligible, because printing is a service activity rather than manufacturing",
+        "Eligible only if it exports 100% of its publications overseas",
+        "Ineligible unless it manufactures its own newsprint paper from pulp"
+      ],
+      "answer": 0,
+      "explanation": "As per CBDT clarification, the business of printing or printing and publishing is treated as the manufacture or production of an article or thing, making new P&M eligible for additional depreciation under Section 32(1)(ia)."
+    },
+    {
+      "id": "Q050",
+      "category": "Additional Depreciation Trap",
+      "question": "A factory acquires new motorized forklift trucks to transport heavy raw material pallets between manufacturing bays within the factory compound. The AO disallows additional depreciation citing the transport vehicle exclusion. Is the AO correct?",
+      "options": [
+        "Correct, because all motorized wheeled vehicles are excluded transport vehicles",
+        "Incorrect, because forklift trucks used inside factory premises for internal handling are plant and machinery and not road transport vehicles, making them eligible for additional depreciation",
+        "Correct, unless the forklift trucks are driven by solar energy",
+        "Incorrect only if the forklifts are operated by female technicians"
+      ],
+      "answer": 1,
+      "explanation": "Forklift trucks used inside factory premises for internal material handling are plant & machinery integral to manufacturing, and are NOT road transport vehicles. Hence, they are eligible for additional depreciation @20%."
+    },
+    {
+      "id": "Q051",
+      "category": "Additional Depreciation SLM Interaction",
+      "question": "A power generation undertaking opts for the Straight Line Method (SLM) on individual assets under Section 32(1)(i). Can it claim additional depreciation under Section 32(1)(ia)?",
+      "options": [
+        "Yes, all power generating units are entitled to additional depreciation @20%",
+        "Yes, but the rate of additional depreciation under SLM is restricted to 10%",
+        "No, additional depreciation is available only to assessees opting for the WDV method; power units opting for SLM are not eligible",
+        "Yes, provided the power plant utilizes renewable wind energy"
+      ],
+      "answer": 2,
+      "explanation": "Additional depreciation under Section 32(1)(ia) is allowable only if the assessee follows the WDV method. Power units opting for the Straight Line Method (SLM) under Section 32(1)(i) are not eligible for additional depreciation."
+    },
+    {
+      "id": "Q052",
+      "category": "Actual Cost Inclusions",
+      "question": "Which of the following items forms part of the 'Actual Cost' of a newly acquired manufacturing machine under Section 43(1)?",
+      "options": [
+        "Taxes and duties in respect of which Input Tax Credit (ITC) is admissible",
+        "Interest on loan incurred after the date the machine was put to commercial use",
+        "Government grants received specifically for purchasing the machine",
+        "Purchase price, transportation charges, installation expenses, and interest on capital borrowed up to the date the machine is first put to use"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 43(1), actual cost includes purchase cost, freight, installation charges, net trial run costs, and loan interest up to the date of first put to use. Duties where ITC is claimed and government grants are excluded/deducted."
+    },
+    {
+      "id": "Q053",
+      "category": "Actual Cost Cash Restriction",
+      "question": "An assessee acquires a commercial generator for ₹3,50,000. It pays ₹3,35,000 by RTGS and pays ₹15,000 in cash on the same day to the vendor. What is the Actual Cost of the generator for depreciation u/s 43(1)?",
+      "options": [
+        "₹3,35,000, because payments made to a person in a day exceeding ₹10,000 otherwise than by specified banking channels are excluded from actual cost",
+        "₹3,50,000, because incidental cash payments under ₹20,000 are admissible",
+        "Nil, because any cash payment invalidates the entire capital asset cost",
+        "₹3,40,000, allowing a standard statutory cash deduction of ₹5,000"
+      ],
+      "answer": 0,
+      "explanation": "Under the second proviso to Section 43(1), any expenditure for acquisition of an asset paid to a person in a day exceeding ₹10,000 otherwise than by account payee cheque, DD, or ECS is excluded from actual cost. Hence, Actual Cost = ₹3,50,000 - ₹15,000 = ₹3,35,000."
+    },
+    {
+      "id": "Q054",
+      "category": "Actual Cost Scientific Asset",
+      "question": "A scientific research asset (cost: ₹10,00,000) on which 100% deduction was claimed u/s 35 is subsequently brought into regular manufacturing business. What is its Actual Cost for regular depreciation?",
+      "options": [
+        "₹10,00,000, being the historical acquisition cost",
+        "NIL, because 100% deduction was already allowed in full under Section 35",
+        "Fair Market Value on the date it is brought into regular business",
+        "₹10,00,000 minus notional depreciation for intermediate years"
+      ],
+      "answer": 1,
+      "explanation": "Under Explanation 1 to Section 43(1), where an asset previously used for scientific research is brought into regular business, its Actual Cost to the assessee is NIL, because the entire capital expenditure was already deducted u/s 35."
+    },
+    {
+      "id": "Q055",
+      "category": "Actual Cost Converted Inventory",
+      "question": "Where trading stock is converted into a capital asset and introduced into business operations, what is its Actual Cost under Explanation 1A to Section 43(1)?",
+      "options": [
+        "Historical purchase cost of the inventory",
+        "Zero, until the asset is put to active use for 180 days",
+        "Fair Market Value of the inventory on the date of conversion (which was charged to tax under Section 28)",
+        "Lower of cost or net realizable value"
+      ],
+      "answer": 2,
+      "explanation": "Under Explanation 1A to Section 43(1), where inventory is converted into a capital asset and used for business, its Actual Cost is the Fair Market Value on the date of conversion which was recognized as income u/s 28."
+    },
+    {
+      "id": "Q056",
+      "category": "Actual Cost Gift/Inheritance",
+      "question": "An assessee acquires an industrial machine by way of inheritance. The previous owner had purchased it for ₹8,00,000 and claimed ₹3,00,000 depreciation before death. What is the Actual Cost to the heir?",
+      "options": [
+        "₹8,00,000, being original purchase cost",
+        "NIL, because inherited assets have zero monetary cost to the recipient",
+        "Fair Market Value on the date of inheritance",
+        "₹5,00,000, being actual cost to the previous owner minus depreciation actually allowed to the previous owner"
+      ],
+      "answer": 3,
+      "explanation": "Under Explanation 2 to Section 43(1), where an asset is acquired by gift or inheritance, the Actual Cost to the assessee is the actual cost to the previous owner less depreciation actually allowed to the previous owner (i.e. ₹8,00,000 - ₹3,00,000 = ₹5,00,000)."
+    },
+    {
+      "id": "Q057",
+      "category": "Actual Cost Anti-Avoidance",
+      "question": "Under Explanation 3 to Section 43(1), what power does the Assessing Officer possess if an asset is acquired with the main purpose of claiming higher depreciation?",
+      "options": [
+        "The AO can determine the Actual Cost of the asset (normally FMV), with the prior approval of the Joint Commissioner",
+        "The AO can seize the asset without notice",
+        "The AO can disallow 100% of the depreciation permanently",
+        "The AO can reclassify the asset as personal property"
+      ],
+      "answer": 0,
+      "explanation": "Under Explanation 3 to Section 43(1), where an asset is acquired with the intention of claiming higher depreciation by inflating cost, the AO may, with the prior approval of the Joint Commissioner, determine the actual cost having regard to all circumstances (normally FMV)."
+    },
+    {
+      "id": "Q058",
+      "category": "Actual Cost Re-acquisition & Leaseback",
+      "question": "An assessee sells a machine (WDV at sale: ₹4,00,000) for ₹6,00,000 and re-acquires the same machine after 6 months for ₹7,50,000. What is the Actual Cost on re-acquisition?",
+      "options": [
+        "₹7,50,000, being the re-acquisition purchase price",
+        "₹4,00,000, being the lower of WDV at the time of sale (₹4,00,000) or re-acquisition price (₹7,50,000)",
+        "₹6,00,000, being the intermediate sale consideration",
+        "NIL"
+      ],
+      "answer": 1,
+      "explanation": "Under Explanation 4 to Section 43(1), upon re-acquisition of an asset previously sold, Actual Cost is the lower of (1) WDV at the time of original sale, or (2) Re-acquisition cost. Hence, Actual Cost = ₹4,00,000."
+    },
+    {
+      "id": "Q059",
+      "category": "Actual Cost Personal Building",
+      "question": "An individual purchases a residential house for ₹20,00,000 and uses it exclusively for personal residence for 3 years. Thereafter, the building is brought into business as an office. How is Actual Cost computed?",
+      "options": [
+        "₹20,00,000, without any deduction for past personal use",
+        "Fair Market Value of the building on the date of introduction into business",
+        "Original cost of ₹20,00,000 minus notional depreciation computed at current rates for the 3 intervening years",
+        "Zero, because personal assets brought into business cannot be depreciated"
+      ],
+      "answer": 2,
+      "explanation": "Under Explanation 5 to Section 43(1), where a building previously used for personal/other purpose is brought into business, Actual Cost is original purchase cost minus notional depreciation computed at the rates in force for all intervening years."
+    },
+    {
+      "id": "Q060",
+      "category": "Actual Cost Group Restructuring",
+      "question": "A holding company transfers a depreciable asset (WDV: ₹12,00,000) to its 100% Indian subsidiary company for ₹18,00,000. What is the Actual Cost to the subsidiary under Explanation 6 to Section 43(1)?",
+      "options": [
+        "₹18,00,000, being the consideration paid by the subsidiary",
+        "Fair Market Value on the date of transfer",
+        "Nil, as intra-group transfers are ignored",
+        "₹12,00,000, being the WDV to the transferor holding company"
+      ],
+      "answer": 3,
+      "explanation": "Under Explanation 6 to Section 43(1), where a capital asset is transferred by a holding company to its 100% Indian subsidiary (or vice versa), the Actual Cost to the transferee is the WDV to the transferor company."
+    },
+    {
+      "id": "Q061",
+      "category": "Actual Cost Non-Resident Asset",
+      "question": "A foreign non-resident brings an offshore drilling rig into India to execute a domestic contract. How is the Actual Cost of the rig determined under Explanation 11 to Section 43(1)?",
+      "options": [
+        "Actual cost abroad minus depreciation calculated at Indian statutory rates as if the rig had been used in India since its acquisition",
+        "Original purchase cost of the rig abroad",
+        "Customs valuation adopted at the Indian seaport",
+        "NIL"
+      ],
+      "answer": 0,
+      "explanation": "Under Explanation 11 to Section 43(1), where an asset acquired abroad by a non-resident is brought into India for business, Actual Cost is original cost minus depreciation calculated at the rates in force in India as if used in India since acquisition."
+    },
+    {
+      "id": "Q062",
+      "category": "Actual Cost 35AD Asset",
+      "question": "An assessee uses a cold chain facility asset (cost: ₹50,00,000, 100% deduction claimed u/s 35AD) for 9 years in specified business and then transfers it to a non-specified business. What is the Actual Cost for the non-specified business?",
+      "options": [
+        "₹50,00,000",
+        "NIL, because 100% deduction was allowed under Section 35AD and the transfer occurs after the mandatory 8-year period",
+        "Fair Market Value on the date of transfer",
+        "₹50,00,000 minus notional depreciation for 9 years"
+      ],
+      "answer": 1,
+      "explanation": "Under Explanation 13 to Section 43(1), where an asset on which Section 35AD deduction was claimed is transferred to a non-specified business after the expiry of 8 years, the Actual Cost to the transferee/business is NIL."
+    },
+    {
+      "id": "Q063",
+      "category": "Composite Agricultural Income Depreciation",
+      "question": "A tea manufacturing company derives composite income where only 40% is taxable under PGBP and 60% is exempt agricultural income. In computing WDV of its factory machinery under Explanation 7 to Section 43(6), what depreciation is deducted?",
+      "options": [
+        "Only 40% of the total depreciation, representing the portion actually taxed",
+        "Zero depreciation is deducted to protect agricultural parity",
+        "100% of the computed depreciation, deemed as if the entire composite income was chargeable under PGBP",
+        "60% of the computed depreciation"
+      ],
+      "answer": 2,
+      "explanation": "Under Explanation 7 to Section 43(6), in composite agricultural and business operations (Tea/Coffee/Rubber), for computing WDV, 100% of the depreciation is deducted as if the entire income were taxable under PGBP, deemed as actually allowed."
+    },
+    {
+      "id": "Q064",
+      "category": "Power Undertakings SLM Sale",
+      "question": "A power generating company on SLM sells an individual generator (Cost: ₹100, WDV: ₹80) in year 3. What are the tax implications if it is sold for: (a) ₹72; (b) ₹89; (c) ₹117?",
+      "options": [
+        "(a) ₹8 Capital Loss; (b) ₹9 STCG; (c) ₹37 STCG",
+        "(a) ₹8 Terminal Depreciation; (b) ₹9 Capital Gain; (c) ₹37 Balancing Charge",
+        "All sales under SLM are adjusted into Block WDV",
+        "(a) ₹8 Terminal Depreciation u/s 32(1)(iii); (b) ₹9 Balancing Charge u/s 41(2) (PGBP); (c) ₹20 Balancing Charge u/s 41(2) (PGBP) + ₹17 STCG u/s 50A"
+      ],
+      "answer": 3,
+      "explanation": "Under SLM for power units: (a) Sale < WDV (₹72 < ₹80) -> ₹8 Terminal Depreciation allowed u/s 32(1)(iii); (b) WDV < Sale <= Cost (₹80 < ₹89 <= ₹100) -> ₹9 Balancing Charge taxable u/s 41(2); (c) Sale > Cost (₹117 > ₹100) -> ₹20 Balancing Charge up to cost taxable u/s 41(2) and excess ₹17 taxable as STCG u/s 50A."
+    },
+    {
+      "id": "Q065",
+      "category": "Partial Business Use",
+      "question": "A business car (Opening WDV: ₹4,00,000, 15% rate) is used 60% for business and 40% for personal driving. How is depreciation and Closing WDV determined under Section 38(2)?",
+      "options": [
+        "Depreciation allowed: ₹36,000 (60%); Disallowed: ₹24,000 (40%); Closing WDV reduced only by allowed depreciation of ₹36,000 to ₹3,64,000",
+        "Total depreciation ₹60,000 allowed in full; Closing WDV ₹3,40,000",
+        "Depreciation allowed: ₹36,000; Closing WDV reduced by full ₹60,000 to ₹3,40,000",
+        "Zero depreciation allowed on mixed-use vehicles"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 38(2), deductions for mixed-use assets are restricted proportionately (60% allowed = ₹36,000). While computing Closing WDV, only the depreciation actually allowed (₹36,000) is deducted from the Block, resulting in Closing WDV of ₹3,64,000."
+    },
+    {
+      "id": "Q066",
+      "category": "Unabsorbed Depreciation Set-off",
+      "question": "Which of the following statements correctly states the legal rules governing the carry-forward and set-off of unabsorbed depreciation under Section 32(2)?",
+      "options": [
+        "Can be carried forward for a maximum of 8 assessment years and set off only against PGBP",
+        "Can be carried forward indefinitely, can be set off against any head of income except Salaries, and does not require the original business to be in existence",
+        "Can be set off only against Capital Gains of the same business",
+        "Lapses automatically if the business closes down"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 32(2), unabsorbed depreciation can be carried forward indefinitely, can be set off against income under any head (except 'Salaries'), and can be set off even if the business to which it relates no longer exists."
+    },
+    {
+      "id": "Q067",
+      "category": "Set-off Priority Order",
+      "question": "In what order of priority must an assessee adjust depreciation and business losses in any assessment year?",
+      "options": [
+        "Brought forward business loss -> Current year depreciation -> Unabsorbed depreciation",
+        "Unabsorbed depreciation -> Current year depreciation -> Brought forward business loss",
+        "Current year depreciation -> Brought forward business loss -> Unabsorbed depreciation",
+        "Current year depreciation -> Unabsorbed depreciation -> Brought forward business loss"
+      ],
+      "answer": 2,
+      "explanation": "The mandatory statutory hierarchy of set-off in any assessment year is: (1) Current year depreciation; (2) Brought forward business loss; (3) Unabsorbed depreciation."
+    },
+    {
+      "id": "Q068",
+      "category": "Government Grants & Subsidies",
+      "question": "How are government subsidies and grants treated under Section 2(24)(xviii) and Section 43(1)?",
+      "options": [
+        "All subsidies are tax-free capital receipts",
+        "All subsidies must be credited to General Reserve without tax impact",
+        "Subsidies are taxable under Income from Other Sources only",
+        "General subsidies are taxable as PGBP income; subsidies specifically granted for acquiring a capital asset are reduced from the Actual Cost of that asset; trust corpus and individual welfare subsidies are exempt"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 2(24)(xviii), government grants, subsidies, and waivers are taxable as PGBP income. Under Explanation 10 to Section 43(1), if a subsidy is directly relatable to acquiring an asset, it is reduced from actual cost. Trust corpus and individual welfare subsidies are excluded."
+    },
+    {
+      "id": "Q069",
+      "category": "Interest on Capital Borrowings",
+      "question": "A company borrows capital to acquire new factory machinery. How is interest on this borrowed capital treated before and after the machine is put to use?",
+      "options": [
+        "Interest up to the date of first put to use is added to Actual Cost; interest after first put to use is allowed as a deductible revenue expense u/s 36(1)(iii)",
+        "Entire interest across all years must be capitalized to Actual Cost",
+        "Entire interest is deductible as a revenue expense immediately upon payment",
+        "Interest is disallowed under Section 40(a)"
+      ],
+      "answer": 0,
+      "explanation": "Interest on loan borrowed for acquiring a capital asset incurred up to the date the asset is first put to use must be capitalized to the Actual Cost of the asset. Interest incurred after the date of put to use is deductible as revenue expenditure u/s 36(1)(iii)."
+    },
+    {
+      "id": "Q070",
+      "category": "Tea, Coffee, Rubber Deposit Scheme",
+      "question": "What is the quantum of deduction available under Section 33AB for an assessee engaged in growing and manufacturing tea in India?",
+      "options": [
+        "100% of the amount deposited in any scheduled commercial bank",
+        "Actual amount deposited in NABARD account within 6 months of PY end or return filing due date, or 40% of PGBP (before this deduction), whichever is lower",
+        "20% of net agricultural turnover",
+        "Actual amount deposited in SBI Site Restoration account or 20% of PGBP, whichever is lower"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 33AB, the deduction is lower of: (1) Actual amount deposited in NABARD within 6 months from the end of the previous year or due date of filing return, whichever is earlier; or (2) 40% of PGBP profits (before this deduction). Form 3AC audit report is mandatory."
+    },
+    {
+      "id": "Q071",
+      "category": "Site Restoration Fund",
+      "question": "An assessee in petroleum extraction deposits funds in the SBI Site Restoration Account. What is the maximum deduction allowed under Section 33ABA?",
+      "options": [
+        "Lower of actual amount deposited or 40% of PGBP",
+        "100% of global oil turnover",
+        "Lower of actual amount deposited by the end of the previous year or 20% of PGBP before this deduction",
+        "₹10 Crore per oil field"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 33ABA, deduction is lower of: (1) Actual amount deposited in SBI Site Restoration Account up to the end of the previous year; or (2) 20% of PGBP profits (before this deduction). Form 3AD audit report is mandatory."
+    },
+    {
+      "id": "Q072",
+      "category": "Withdrawal from 33AB/33ABA",
+      "question": "What is the consequence if funds withdrawn from the NABARD account or Site Restoration Account are not utilized in the year of withdrawal or are utilized to buy office appliances?",
+      "options": [
+        "Treated as an interest-free loan from the Board",
+        "Allowed as a deduction under Section 37",
+        "The entire business licence is canceled by the tax department",
+        "The unutilized/misutilized amount is deemed PGBP income and taxed in the year of withdrawal"
+      ],
+      "answer": 3,
+      "explanation": "Any amount withdrawn from the special account must be utilized within the year of withdrawal for approved scheme purposes. If misutilized or utilized for office appliances/residential P&M, the deduction allowed earlier is withdrawn and deemed PGBP income."
+    },
+    {
+      "id": "Q073",
+      "category": "Closure under 33AB vs 33ABA",
+      "question": "How does the tax treatment of outstanding deposit balances upon business closure or firm dissolution differ between Section 33AB and Section 33ABA?",
+      "options": [
+        "Under Section 33AB, closure/dissolution is taxable (death/partition is not taxable); under Section 33ABA, all withdrawals net of government dues are fully taxable without exception",
+        "Both sections treat all closure withdrawals as completely tax-free",
+        "Section 33AB is exempt while Section 33ABA is taxable under Capital Gains",
+        "Both sections transfer deposits to the Central Government without income tax"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 33AB, withdrawals on business closure, dissolution of firm, or liquidation are taxable (withdrawals on death or HUF partition are not taxable). Under Section 33ABA, any amount withdrawn (minus amounts payable to Central Government) is fully taxable in the year of withdrawal without exception."
+    },
+    {
+      "id": "Q074",
+      "category": "In-House Scientific Research",
+      "question": "A pharmaceutical manufacturing company incurs ₹25,00,000 on revenue scientific research and ₹60,00,000 on capital research (including ₹15,00,000 for purchasing land). What deduction is allowable under Section 35(1)(i) and Section 35(2)?",
+      "options": [
+        "₹85,00,000, covering all revenue and capital expenditures",
+        "₹70,00,000 (100% of revenue research ₹25L + 100% of capital research excluding land ₹45L)",
+        "₹45,00,000, as capital research is amortized over 5 years",
+        "Nil, unless the research produces a commercially patented drug"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 35, 100% deduction is allowed for revenue expenditure u/s 35(1)(i) and capital expenditure u/s 35(2) related to the assessee's business. However, cost of land is strictly EXCLUDED from Section 35 deduction. Thus, deduction = ₹25L + (₹60L - ₹15L) = ₹70,00,000."
+    },
+    {
+      "id": "Q075",
+      "category": "External Research Donations",
+      "question": "An assessee donates ₹5,00,000 to an approved national research laboratory. Subsequently, the Central Government withdraws approval from the laboratory. What happens to the donor's deduction under Section 35?",
+      "options": [
+        "The deduction is withdrawn and reassessed with retrospective effect",
+        "The donor must claim deduction under Section 80G at 50%",
+        "The deduction shall not be denied to the donor if approval was withdrawn after payment of the sum",
+        "The donation is converted into a taxable capital asset"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 35 notes, deduction allowed for contributions to approved scientific research institutions/universities shall NOT be denied merely on the grounds that subsequent to the payment, the approval granted to such institution has been withdrawn."
+    },
+    {
+      "id": "Q076",
+      "category": "Research Donation Compliance",
+      "question": "Under Section 35(1A), what statutory reporting requirement must be fulfilled for a donor to claim deduction for external scientific research contributions?",
+      "options": [
+        "The donor must obtain physical signature from the jurisdictional Commissioner",
+        "The donation must be published in the Official Gazette",
+        "The donor must file a special research return in Form 3CD",
+        "The donee institution must prepare and submit Statement Form 10BD and furnish Certificate Form 10BE to the donor by 31st May of the succeeding FY"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 35(1A), the donor is entitled to deduction for research contributions only if the donee institution submits statement Form 10BD to tax authorities and furnishes certificate Form 10BE to the donor by 31st May of the next financial year."
+    },
+    {
+      "id": "Q077",
+      "category": "Sale of Scientific Research Asset",
+      "question": "A scientific research machine (cost: ₹10,00,000, 100% deduction claimed u/s 35) is sold without being used for regular business for: (a) ₹8,00,000; (b) ₹14,00,000. What is the tax result?",
+      "options": [
+        "(a) ₹8,00,000 PGBP u/s 41(3); (b) ₹10,00,000 PGBP u/s 41(3) and ₹4,00,000 Capital Gain",
+        "(a) ₹8,00,000 STCG; (b) ₹14,00,000 STCG",
+        "(a) ₹2,00,000 Terminal Depreciation; (b) ₹4,00,000 Balancing Charge",
+        "Sale proceeds are completely exempt"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 41(3), when a scientific research asset is sold without regular business use: (a) Sale proceeds up to cost (₹8,00,000) are taxable as PGBP; (b) When sold for ₹14,00,000, amount up to cost (₹10,00,000) is taxable as PGBP u/s 41(3), and the excess over cost (₹4,00,000) is taxable under Capital Gains."
+    },
+    {
+      "id": "Q078",
+      "category": "Telecom Licence & Spectrum Amortization",
+      "question": "A telecom company acquires a 10-year telecom licence/spectrum on 1st July of Year 1 for ₹1,10,00,000 (remaining licence life: 11 previous years including acquisition year). How is deduction claimed under Section 35ABB / 35ABA?",
+      "options": [
+        "Depreciation @25% under Section 32 as an intangible asset",
+        "Amortized in equal annual instalments (₹10,00,000 per year) over the 11 previous years; no Section 32 depreciation allowed",
+        "100% upfront deduction in Year 1",
+        "Amortized over a mandatory 5-year block"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 35ABB (Licence) and Section 35ABA (Spectrum), fees paid are amortized in equal annual instalments over the remaining life of the licence/spectrum. Depreciation under Section 32 is strictly prohibited."
+    },
+    {
+      "id": "Q079",
+      "category": "Agricultural & Skill Projects",
+      "question": "Which assessee is eligible to claim 100% deduction for notified Skill Development Projects under Section 35CCD?",
+      "options": [
+        "All resident individuals and HUFs",
+        "Partnership firms and LLPs",
+        "Only corporate assessees (Companies), excluding cost of Land & Building",
+        "All assessees including non-residents"
+      ],
+      "answer": 2,
+      "explanation": "Deduction @100% under Section 35CCD for notified Skill Development Projects is available ONLY to Companies (excluding expenditure on Land & Building). Conversely, Section 35CCC for Agricultural Extension Projects is available to all assessees."
+    },
+    {
+      "id": "Q080",
+      "category": "Case Law - Principle",
+      "question": "In Ceebros Hotel Pvt. Ltd., what principle was established by the Madras High Court regarding Section 35AD deduction where star categorization approval was delayed by government authorities?",
+      "options": [
+        "Deduction is permanently forfeited if the inspection certificate is dated in a subsequent year",
+        "Deduction is restricted to 50% for delayed approvals",
+        "The hotel must pay a compounding fine to regularize the deduction",
+        "Section 35AD is an incentive provision that must be interpreted liberally; an assessee cannot be penalized with denial of deduction in the commencement year merely due to departmental delay in issuing formal approval"
+      ],
+      "answer": 3,
+      "explanation": "In Ceebros Hotel Pvt. Ltd., the Madras High Court held that Section 35AD is a beneficial infrastructure provision that must be liberally interpreted. Where the hotel was operational and applied for 3-star categorization in the PY, deduction cannot be denied merely because administrative approval was granted in the next year."
+    },
+    {
+      "id": "Q081",
+      "category": "Case Law - Application",
+      "question": "Royal Resorts sets up a 3-star hotel and commences commercial operations in January. It applied for star categorization in February, but the tourism board conducted inspection and issued the star certificate in May of the next financial year. Can Royal Resorts claim Section 35AD deduction for the year of commencement?",
+      "options": [
+        "Yes, applying Ceebros Hotel Pvt. Ltd., the approval relates back to the operational commencement year since the application was filed in time",
+        "No, deduction is available only starting from the year in which the certificate is physically dated",
+        "No, unless Royal Resorts obtains a special condonation order from the CBDT",
+        "Yes, but deduction is restricted to 20% of capital expenditure"
+      ],
+      "answer": 0,
+      "explanation": "Applying Ceebros Hotel Pvt. Ltd. (Madras HC), since the hotel commenced operations and applied for 3-star approval within the relevant previous year, Section 35AD deduction cannot be denied in the year of commencement due to administrative delay by the granting authority."
+    },
+    {
+      "id": "Q082",
+      "category": "Preliminary Expenses",
+      "question": "What is the maximum limit of preliminary expenses eligible for 5-year amortization under Section 35D for an Indian Company?",
+      "options": [
+        "Lower of actual preliminary expenses or 5% of Cost of Project only",
+        "Lower of actual preliminary expenses or 5% of (Cost of Project or Capital Employed, whichever is higher)",
+        "100% of actual expenses without any monetary cap",
+        "10% of annual turnover"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 35D, for an Indian Company, eligible preliminary expenses are lower of actual expenses or 5% of Cost of Project (COP) or Capital Employed (CE), whichever is higher. For non-corporate residents, the limit is strictly 5% of Cost of Project."
+    },
+    {
+      "id": "Q083",
+      "category": "Capital Employed Definition",
+      "question": "For computing the preliminary expense ceiling under Section 35D for an Indian company, what items are included in 'Capital Employed'?",
+      "options": [
+        "Total assets minus current liabilities including revaluation reserves",
+        "Net worth plus short-term bank overdrafts",
+        "Issued share capital, debentures, and long-term borrowings as on the last day of the PY (excluding reserves, surplus, and securities premium)",
+        "Paid-up equity share capital only"
+      ],
+      "answer": 2,
+      "explanation": "Capital Employed under Section 35D means the aggregate of issued share capital, debentures, and long-term borrowings as on the last day of the previous year. Reserves & Surplus (including securities premium) are explicitly EXCLUDED from Capital Employed."
+    },
+    {
+      "id": "Q084",
+      "category": "Amalgamation & Demerger Expenses",
+      "question": "Under Section 35DD, how are expenses incurred by an Indian Company wholly and exclusively for amalgamation or demerger allowed as a deduction?",
+      "options": [
+        "100% upfront deduction in the year of restructuring",
+        "Disallowed as a capital restructuring loss",
+        "Amortized over 10 years",
+        "In 5 equal annual instalments beginning from the previous year in which amalgamation or demerger takes place"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 35DD, expenditure incurred by an Indian Company for amalgamation or demerger is allowed as a deduction in 5 equal annual instalments starting from the year in which the amalgamation/demerger takes place."
+    },
+    {
+      "id": "Q085",
+      "category": "VRS Amortization",
+      "question": "An employer incurs ₹50,00,000 on voluntary retirement compensation paid to retiring employees. How is this expenditure deducted under Section 35DDA?",
+      "options": [
+        "Deductible in 5 equal annual instalments of ₹10,00,000 each across all assessees",
+        "100% deductible in the year of payment under Section 37",
+        "Deductible in 10 equal instalments",
+        "Disallowed if the firm incurs a business loss"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 35DDA, any expenditure incurred by an assessee by way of payment of any sum to employees on voluntary retirement (VRS) is allowable as a deduction in 5 equal annual instalments."
+    },
+    {
+      "id": "Q086",
+      "category": "Mining Expenditure",
+      "question": "How is expenditure on prospecting and development of minerals deductible under Section 35E?",
+      "options": [
+        "100% upfront in the year prospecting begins",
+        "In 10 equal annual instalments starting from the year of commercial production, restricted to mining PGBP income",
+        "In 5 equal instalments without profit restrictions",
+        "Amortized over the physical life of the mine"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 35E, prospecting and mineral development expenses incurred in the commercial production year and 4 preceding years are deductible in 10 equal annual instalments, restricted to the PGBP income derived from the mining operations."
+    },
+    {
+      "id": "Q087",
+      "category": "Specified Business Scope",
+      "question": "Which of the following capital expenditures is EXCLUDED from claiming 100% deduction under Section 35AD?",
+      "options": [
+        "Plant and machinery installed in an inland container depot",
+        "Civil construction of a cold storage warehouse",
+        "Cost of acquisition of Land, Goodwill, and Financial Instruments",
+        "Central air-conditioning systems for a 100-bed hospital"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 35AD, 100% deduction is allowed for all capital expenditures incurred for specified businesses, EXCEPT expenditure incurred on the acquisition of Land, Goodwill, and Financial Instruments."
+    },
+    {
+      "id": "Q088",
+      "category": "Specified Business Conditions",
+      "question": "What are the statutory conditions regarding plant and machinery used in a Section 35AD specified business?",
+      "options": [
+        "All machinery must be imported directly from OECD nations",
+        "100% of P&M must be brand new with zero second-hand components",
+        "Second-hand machinery can constitute up to 50% of total value",
+        "P&M must be new, with two exceptions: (1) Imported second-hand P&M not previously depreciated in India; and (2) Up to 20% of total P&M value can be domestic second-hand"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 35AD, the specified business must use new plant & machinery. Exceptions: (1) Previously imported second-hand P&M on which no depreciation was claimed in India; and (2) Up to 20% of the total value of plant & machinery can be second-hand."
+    },
+    {
+      "id": "Q089",
+      "category": "Specified Business Loss Set-off",
+      "question": "An assessee incurs a loss of ₹30,00,000 in a Section 35AD eligible 100-bed hospital business. Against what income can this loss be set off?",
+      "options": [
+        "ONLY against profits of another specified business under Section 35AD (whether or not that other specified business is eligible for 35AD deduction)",
+        "Against profits of any business under PGBP or Long Term Capital Gains",
+        "Against income from house property and salaries",
+        "Cannot be set off in current year, but carried forward for maximum 8 years"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 73A, losses of a specified business u/s 35AD can be carried forward indefinitely and can ONLY be set off against profits of any other specified business (irrespective of whether the other specified business is eligible for 35AD deduction)."
+    },
+    {
+      "id": "Q090",
+      "category": "Specified Business 8-Year Rule Breach",
+      "question": "A machine on which 100% deduction of ₹20,00,000 was claimed u/s 35AD is transferred to a regular non-specified business after 5 years. What is the tax consequence in the year of transfer?",
+      "options": [
+        "The entire ₹20,00,000 is taxed as STCG",
+        "(Total 35AD deduction claimed minus Notional depreciation that would have been allowable for the 5 years) is taxable under PGBP; the resulting hypothetical WDV becomes the Actual Cost for the non-specified business",
+        "Zero tax impact because the asset was used for more than 3 years",
+        "The assessee must pay a 50% penalty on original cost"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 35AD(7B), if an asset is transferred to a non-specified business within 8 years, (35AD deduction claimed minus normal depreciation that would have been allowed) is taxable as PGBP income. Under Explanation 14 to Section 43(1), the resulting hypothetical WDV becomes its Actual Cost."
+    },
+    {
+      "id": "Q091",
+      "category": "Zero Coupon Bonds Discount",
+      "question": "A company issues Zero Coupon Bonds on 16th December redeemable after 10 months at a total discount of ₹22,00,000. How is the monthly discount amortized under Section 36(1)(iiia)?",
+      "options": [
+        "Discount is deducted 100% in the year of redemption",
+        "Discount is divided by exactly 300 calendar days",
+        "Discount is amortized over 11 calendar months (period >=15 days in December rounded up to 1 full month), allowing 4 months' discount in that financial year",
+        "Discount is disallowed as a capital borrowing discount"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 36(1)(iiia), discount on ZCBs is amortized pro-rata over the life of the bond in calendar months. If any calendar month fraction is 15 days or more, it is rounded up to 1 calendar month (<15 days ignored). Hence, 11 months life applies."
+    },
+    {
+      "id": "Q092",
+      "category": "Employee Benefit Funds",
+      "question": "An employer contributes ₹4,00,000 to a Recognized Provident Fund (RPF) and ₹2,00,000 to an Unrecognized Provident Fund (URPF). What is the deduction allowable under Section 36(1)(iv)?",
+      "options": [
+        "₹6,00,000, covering both funds",
+        "₹2,00,000 for URPF only",
+        "Nil, because employer contributions must be capitalized",
+        "₹4,00,000 for RPF (subject to Section 43B); the ₹2,00,000 contribution to URPF is strictly disallowed"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 36(1)(iv)/(v), employer contributions to Statutory PF, Recognized PF, Approved Superannuation Fund, and Approved Gratuity Fund are deductible (subject to Section 43B). Contributions to Unrecognized/Unapproved funds are strictly disallowed."
+    },
+    {
+      "id": "Q093",
+      "category": "NPS Contribution Limit",
+      "question": "An employer contributes ₹3,00,000 to the NPS account of its employee u/s 80CCD. The employee's Basic Salary is ₹15,00,000 and DA (forming part of retirement benefits) is ₹5,00,000. What is the maximum deduction allowable to the employer under Section 36(1)(iva) following Finance Act 2024?",
+      "options": [
+        "₹2,80,000 (14% of salary: 14% of ₹20,00,000)",
+        "₹2,00,000 (10% of salary)",
+        "₹3,00,000 (actual contribution in full)",
+        "₹1,50,000"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 36(1)(iva) as amended by Finance Act 2024, employer contribution to NPS is deductible up to a maximum of 14% of Salary (Basic + DA retirement terms). 14% of ₹20,00,000 = ₹2,80,000 (lower of actual ₹3,00,000 or ₹2,80,000)."
+    },
+    {
+      "id": "Q094",
+      "category": "Bad Debts Conditions",
+      "question": "What conditions must be satisfied to claim a deduction for Bad Debts under Section 36(1)(vii)?",
+      "options": [
+        "The assessee must file a recovery suit in a civil court and obtain a court decree",
+        "The debt must be written off as irrecoverable in the accounts during the PY AND must have been taken into account in computing income of the current or earlier PY (no need to prove to AO that debt is irrecoverable)",
+        "The debtor must be declared officially insolvent by the NCLT",
+        "The debt must be older than 36 months"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 36(1)(vii), bad debts are deductible if: (1) Written off as irrecoverable in the books of account of the assessee during the PY; and (2) The debt was included in computing total income of the current or earlier PY. The assessee is not required to establish that the debt has become irrecoverable."
+    },
+    {
+      "id": "Q095",
+      "category": "Bad Debts with Provision Account",
+      "question": "A commercial bank maintains a Provision for Bad & Doubtful Debts account with a credit balance of ₹15,00,000. During the year, it incurs actual bad debts of ₹22,00,000. What deduction is allowed under Section 36(1)(vii)?",
+      "options": [
+        "₹22,00,000 in full",
+        "₹15,00,000",
+        "₹7,00,000, being the excess of actual bad debts (₹22L) over the provision account balance (₹15L)",
+        "Nil"
+      ],
+      "answer": 2,
+      "explanation": "Under the proviso to Section 36(1)(vii), for assessees maintaining a Provision for Bad & Doubtful Debts account u/s 36(1)(viia), actual bad debts must be debited to the provision account, and deduction u/s 36(1)(vii) is limited to the excess of actual bad debts over the provision balance."
+    },
+    {
+      "id": "Q096",
+      "category": "Bad Debt Recovery",
+      "question": "An assessee had claimed a bad debt deduction of ₹5,00,000 in Year 1. In Year 4, after closing down the business, the assessee unexpectedly recovers ₹3,50,000 from the debtor. What is the tax treatment under Section 41(4)?",
+      "options": [
+        "Exempt from tax because the business was closed before recovery",
+        "Taxable under Capital Gains as recovery of a dead asset",
+        "Taxable under Income from Other Sources",
+        "₹3,50,000 is taxable as PGBP income in Year 4, even though the business is no longer in existence"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 41(4), where a deduction has been allowed in respect of a bad debt, any recovery made subsequently is deemed to be PGBP income in the year of recovery, even if the business or profession is no longer in existence in that year."
+    },
+    {
+      "id": "Q097",
+      "category": "Family Planning Expenditure",
+      "question": "A private limited company incurs ₹1,00,000 on medical camps (revenue) and ₹5,00,000 on constructing a staff healthcare clinic (capital) for promoting employee family planning. How is this deducted u/s 36(1)(ix)?",
+      "options": [
+        "Revenue ₹1,00,000 is 100% deductible; Capital ₹5,00,000 is deductible in 5 equal annual instalments of ₹1,00,000 each (available only to Companies)",
+        "Entire ₹6,00,000 is 100% deductible upfront",
+        "Entire ₹6,00,000 is disallowed as personal staff expenditure",
+        "Deduction is available equally to partnership firms and individuals"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 36(1)(ix), expenditure on promoting family planning amongst employees is allowable ONLY to corporate entities (Companies): Revenue expenditure is 100% deductible; Capital expenditure is deductible in 5 equal annual instalments. Non-corporates get nil deduction."
+    },
+    {
+      "id": "Q098",
+      "category": "STT & CTT Deductibility",
+      "question": "Under what condition is Securities Transaction Tax (STT) or Commodities Transaction Tax (CTT) deductible under Section 36(1)(xv)/(xvi)?",
+      "options": [
+        "Allowed for all capital asset investors holding shares for >12 months",
+        "Allowed only if the shares, units, or commodities are held as stock-in-trade",
+        "Allowed as a direct tax rebate against final tax payable",
+        "Disallowed under all circumstances"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 36(1)(xv) and (xvi), STT and CTT paid in the course of business are deductible as business expenses ONLY if the underlying shares, units, or commodities are held as stock-in-trade (not as capital investments)."
+    },
+    {
+      "id": "Q099",
+      "category": "Marked to Market Losses",
+      "question": "How are Marked-to-Market (MTM) losses or expected future losses treated under Section 36(1)(xviii) and Section 40A(13)?",
+      "options": [
+        "All expected and MTM losses are deductible based on accounting conservatism",
+        "MTM losses are deductible only by listed non-banking financial companies",
+        "MTM and expected losses are deductible ONLY if computed in accordance with notified ICDS; all other MTM/expected losses are expressly disallowed u/s 40A(13)",
+        "All MTM losses are taxable as deemed income"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 36(1)(xviii) and Section 40A(13), any marked-to-market loss or other expected loss is allowable ONLY if computed in accordance with notified Income Computation and Disclosure Standards (ICDS). All other MTM losses are disallowed."
+    },
+    {
+      "id": "Q100",
+      "category": "General Deductions Criteria",
+      "question": "Which of the following conditions must be concurrently satisfied for an expenditure to be deductible under Section 37(1)?",
+      "options": [
+        "Expenditure authorized by a resolution passed at an Extraordinary General Meeting",
+        "Expenditure paid in foreign currency with RBI approval",
+        "Expenditure resulting in an enduring tangible physical asset",
+        "Expenditure not covered u/s 30 to 36, incurred wholly and exclusively for business/profession, revenue in nature, not personal, and incurred for a legal purpose"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 37(1), any expenditure not covered under Sections 30 to 36 is deductible if: (1) Incurred wholly and exclusively for the purposes of business or profession; (2) Revenue in nature; (3) Not personal expenditure; and (4) Not incurred for any illegal purpose."
+    },
+    {
+      "id": "Q101",
+      "category": "Illegal Expenses & Freebies",
+      "question": "A pharmaceutical manufacturer provides luxury international vacation packages and expensive gifts to hospital doctors to incentivize prescribing its patented drugs. What is the tax treatment of these expenses?",
+      "options": [
+        "Disallowed under Explanation to Section 37(1) as illegal expenses providing benefits in violation of professional conduct regulations",
+        "Allowed as legitimate sales promotion expenditure under Section 37(1)",
+        "Allowed up to 10% of total pharmaceutical turnover",
+        "Deductible under Section 35 as clinical research"
+      ],
+      "answer": 0,
+      "explanation": "Under Explanation to Section 37(1), providing freebies, gifts, perquisites, or travel facilities to medical practitioners in violation of regulations governing their conduct is an illegal expenditure and is strictly disallowed."
+    },
+    {
+      "id": "Q102",
+      "category": "Compounding Fees & Fines",
+      "question": "A corporation pays ₹10,00,000 as compounding fees to settle regulatory proceedings for statutory pollution violations. Is this expenditure deductible under Section 37(1)?",
+      "options": [
+        "Deductible as an ordinary commercial settlement expense",
+        "Disallowed under Explanation to Section 37(1) as expenditure incurred to compound an offence or settle contravention proceedings (FA 2024)",
+        "Allowed provided the company upgrades its effluent treatment plant",
+        "Deductible as compensatory damages"
+      ],
+      "answer": 1,
+      "explanation": "Under Explanation to Section 37(1) as amended by Finance Act 2024, any expenditure incurred to compound an offence or to settle proceedings initiated in relation to contravention of any law is strictly disallowed."
+    },
+    {
+      "id": "Q103",
+      "category": "CSR Expenses",
+      "question": "A corporate entity incurs ₹50,00,000 on Corporate Social Responsibility (CSR) projects under Section 135 of the Companies Act. How is this expenditure treated under PGBP?",
+      "options": [
+        "100% deductible as an essential statutory business compliance expense",
+        "Deductible up to 2% of average net profits",
+        "Strictly disallowed under Section 37(1) because CSR is not incurred for the purpose of carrying on business",
+        "Treated as an addition to the Block of Assets"
+      ],
+      "answer": 2,
+      "explanation": "Explanation 2 to Section 37(1) clarifies that any expenditure incurred by an assessee on activities relating to Corporate Social Responsibility (CSR) shall not be deemed to be expenditure incurred for the purpose of business or profession and is disallowed."
+    },
+    {
+      "id": "Q104",
+      "category": "Political Advertisements",
+      "question": "An Indian company pays ₹5,00,000 for publishing an advertisement in a souvenir published by a political party. How is this treated under PGBP and Chapter VI-A?",
+      "options": [
+        "Allowed as a normal advertising business deduction under Section 37(1)",
+        "Disallowed under both PGBP and Section 80GGB",
+        "Allowed as business deduction up to ₹1,00,000",
+        "Disallowed under PGBP u/s 37(2B), but eligible for 100% deduction under Section 80GGB under Chapter VI-A"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 37(2B), expenditure incurred on advertisements in souvenirs/brochures published by a political party is disallowed under PGBP. However, an Indian Company can claim 100% deduction for such amount as a political contribution u/s 80GGB."
+    },
+    {
+      "id": "Q105",
+      "category": "Capital Structure Expenses",
+      "question": "Which of the following corporate financing expenditures is ALLOWABLE as a revenue deduction under Section 37(1)?",
+      "options": [
+        "Expenditure incurred on issuing bonus shares, debentures, and raising term loans",
+        "Underwriting commission and legal fees for an Initial Public Offering (IPO) of equity shares",
+        "Filing fees paid to the Registrar of Companies for increasing authorized share capital",
+        "Expenses on rights issues of equity shares"
+      ],
+      "answer": 0,
+      "explanation": "Expenses incurred on IPO, FPO, Rights issues (capital expansion) and authorized capital increases are capital expenditures (disallowed). Expenses incurred on issuing bonus shares (no capital inflow), debentures, and loan borrowings are allowable revenue expenses."
+    },
+    {
+      "id": "Q106",
+      "category": "Taxes, Interest & Penalties",
+      "question": "Which of the following tax payments is ALLOWABLE as a deduction under PGBP?",
+      "options": [
+        "Income-tax, Surcharge, and Health & Education Cess",
+        "Goods and Services Tax (GST) paid and compensatory interest for late payment of GST (subject to Section 43B)",
+        "Interest paid for late payment of advance income-tax u/s 234B/234C",
+        "Penalty paid for breach of statutory customs regulations"
+      ],
+      "answer": 1,
+      "explanation": "Direct taxes (Income-tax, Surcharge, Cess), tax interest, and statutory breach penalties are strictly disallowed. Indirect taxes (GST) and compensatory commercial interest (such as GST delay interest or contract damages) are allowable deductions."
+    },
+    {
+      "id": "Q107",
+      "category": "Embezzlement & Theft",
+      "question": "A cashier embezzles ₹4,00,000 of cash collections during an earlier operational year. The embezzlement is discovered during an internal audit conducted in a subsequent year. When is the business loss admissible as a deduction?",
+      "options": [
+        "In the earlier period when the cash was physically misappropriated",
+        "Disallowed completely as internal management negligence",
+        "In the subsequent period in which the embezzlement is discovered",
+        "Amortized over 5 equal annual instalments"
+      ],
+      "answer": 2,
+      "explanation": "Loss through employee cash embezzlement or theft is incidental to the operation of a business and is deductible under Section 37(1) in the previous year in which the embezzlement is DISCOVERED."
+    },
+    {
+      "id": "Q108",
+      "category": "Retrenchment Compensation",
+      "question": "A manufacturing conglomerate permanently closes down one of its five branch factories and pays retrenchment compensation of ₹18,00,000 to the retrenched workers of that unit. How is this treated?",
+      "options": [
+        "Disallowed as a capital closure loss",
+        "Deductible in 10 equal instalments",
+        "Treated as an adjustment to the company's equity capital",
+        "Allowable as revenue expenditure, because retrenchment compensation on closure of individual units of an ongoing business is revenue in nature"
+      ],
+      "answer": 3,
+      "explanation": "Retrenchment compensation paid on the closure of individual units/branches while the overall business continues is an allowable revenue expenditure. (Compensation paid on closure of the entire business is capital expenditure)."
+    },
+    {
+      "id": "Q109",
+      "category": "Abandoned Projects & Films",
+      "question": "A film production house spends ₹25,00,000 on producing a feature film. Due to creative disputes, the project is abandoned prior to release. How is the cost of the abandoned film treated?",
+      "options": [
+        "Treated as an admissible revenue expenditure and allowed as a full deduction",
+        "Capitalized permanently without any tax write-off",
+        "Treated as a speculative loss",
+        "Allowed only if the script is sold at scrap value"
+      ],
+      "answer": 0,
+      "explanation": "In the case of an abandoned film or an abandoned project relating to an existing line of business, the costs incurred are treated as revenue expenditure and allowed as a deduction in the year of abandonment."
+    },
+    {
+      "id": "Q110",
+      "category": "Case Law - Principle",
+      "question": "In Orient Ceramics and Industries Ltd, what principle was laid down by the Delhi High Court regarding dealer glow sign boards?",
+      "options": [
+        "Glow sign boards represent permanent brand assets that must be capitalized to the 15% Block",
+        "Expenditure on glow sign boards displayed at dealer outlets is revenue expenditure because the boards have a short operational life, require regular replacement, and do not bring into existence any asset of enduring benefit",
+        "Signage costs are deductible only by corporate franchises",
+        "Glow sign expenses are disallowed as non-statutory advertising"
+      ],
+      "answer": 1,
+      "explanation": "In Orient Ceramics and Industries Ltd, the Delhi High Court held that expenditure on glow sign boards installed at dealer premises is revenue in nature, as the assets have a short life, need frequent replacement, and do not generate an enduring capital benefit."
+    },
+    {
+      "id": "Q111",
+      "category": "Case Law - Application",
+      "question": "A consumer electronics brand installs branded point-of-sale display counters and acrylic LED signboards across 500 retail dealerships. The AO capitalizes the ₹30,00,000 spend as a brand asset. Applying Orient Ceramics, is the AO justified?",
+      "options": [
+        "Justified, because point-of-sale branding creates multi-year brand recall",
+        "Justified, unless the retail dealers pay rent for the display space",
+        "Unjustified, because point-of-sale signage and dealer display boards do not create an enduring capital asset and are deductible revenue advertising expenses",
+        "Unjustified only if the signboards are manufactured from recycled materials"
+      ],
+      "answer": 2,
+      "explanation": "Applying Orient Ceramics (Delhi HC), point-of-sale display fixtures and dealer signage are sales promotion expenses that do not bring an enduring asset into existence, making the expenditure deductible as revenue expenses u/s 37(1)."
+    },
+    {
+      "id": "Q112",
+      "category": "Case Law - Principle",
+      "question": "In Priya Village Roadshows Ltd., what principle did the Delhi High Court establish regarding technical feasibility and architect fees for an abandoned takeover project?",
+      "options": [
+        "All feasibility expenses must be capitalized under Section 35D",
+        "Abandoned project expenses are completely non-deductible capital losses",
+        "Feasibility studies are deductible only if approved by the Ministry of Corporate Affairs",
+        "Feasibility studies for expanding an existing business line that are abandoned without creating a new asset are allowable as revenue expenditure"
+      ],
+      "answer": 3,
+      "explanation": "In Priya Village Roadshows Ltd., the Delhi High Court held that feasibility studies and architect fees incurred for examining proposals to expand an existing business, where the venture is abandoned without creating any new asset, are allowable as revenue expenditure."
+    },
+    {
+      "id": "Q113",
+      "category": "Case Law - Application",
+      "question": "An existing hospital operator incurs ₹8,00,000 on architect viability studies to expand its clinical wing, but drops the plan due to municipal zoning restrictions. Applying Priya Village Roadshows, what is the tax treatment?",
+      "options": [
+        "Deductible as revenue expenditure u/s 37(1), because the study was conducted for the existing business line and abandoned without creating a new asset",
+        "Disallowed as an abortive capital outlay",
+        "Amortized over 5 years under Section 35D",
+        "Treated as an unabsorbed capital loss"
+      ],
+      "answer": 0,
+      "explanation": "Applying Priya Village Roadshows (Delhi HC), feasibility and architectural expenses incurred for an existing business line where the venture is abandoned without creating a capital asset are deductible as revenue expenditure."
+    },
+    {
+      "id": "Q114",
+      "category": "Case Law - Principle",
+      "question": "In National Co-operative Development Corporation, what ratio was laid down by the Supreme Court regarding the relevance of the source of funding under Section 37(1)?",
+      "options": [
+        "Expenditure funded from tax-exempt capital grants cannot be claimed as revenue deductions",
+        "The source of funds is irrelevant for Section 37; every application of funds towards the business objective of the assessee constitutes business expenditure, even if funded from capital receipts",
+        "Business expenses must be funded exclusively from operating cash flows",
+        "Government grants must be returned if claimed as expenses"
+      ],
+      "answer": 1,
+      "explanation": "In National Co-operative Development Corporation, the Supreme Court held that the source of funds from which expenditure is made is irrelevant for Section 37. An amount may originate as a capital receipt, yet its application for business objectives remains deductible revenue expenditure."
+    },
+    {
+      "id": "Q115",
+      "category": "Case Law - Principle",
+      "question": "In Mahle Anand Filter Systems Pvt. Ltd., what principle did the Supreme Court establish regarding forgoing a capital security deposit to settle a commercial lease dispute?",
+      "options": [
+        "Forgoing a capital security deposit converts it into deductible revenue expenditure if done to avoid commercial litigation",
+        "Security deposits are 100% deductible as bad debts",
+        "The underlying character of a capital security deposit does not change merely because it is forfeited to settle a dispute; it remains a non-deductible capital loss",
+        "Forfeited deposits are deductible under Section 30 as rent"
+      ],
+      "answer": 2,
+      "explanation": "In Mahle Anand Filter Systems Pvt. Ltd., the Supreme Court held that forgoing a capital security deposit to end a dispute with a landlord does not convert the capital outlay into revenue expenditure. It remains capital in nature and is disallowed u/s 37(1)."
+    },
+    {
+      "id": "Q116",
+      "category": "Case Law - Principle",
+      "question": "In Shanti Bhushan, what principle was established by the Delhi High Court regarding the heart surgery expenditure incurred by a professional lawyer?",
+      "options": [
+        "Heart surgery is deductible as repairs to plant under Section 31",
+        "Heart surgery is deductible up to 50% under Section 37(1)",
+        "Professional medical expenses are deductible if authorized by the Bar Council",
+        "The human body/heart is not 'plant' under Section 31/43(3) and medical expenses are personal expenses without direct nexus to professional activity under Section 37(1)"
+      ],
+      "answer": 3,
+      "explanation": "In Shanti Bhushan, the Delhi High Court held that the human heart is not 'plant' under Section 31/43(3). Furthermore, expenditure on heart surgery is personal in nature without direct nexus to professional efficiency, and cannot be claimed under Section 31 or Section 37(1)."
+    },
+    {
+      "id": "Q117",
+      "category": "Case Law - Principle",
+      "question": "In Bank of Rajasthan Ltd. vs CIT, what principle did the Supreme Court lay down regarding 'broken-period interest' paid by banks on purchasing securities?",
+      "options": [
+        "Broken-period interest paid on purchasing securities held as stock-in-trade (AFS and HFT categories) is deductible revenue expenditure; on investment securities (HTM), it is capital in nature",
+        "Broken-period interest is non-deductible across all categories",
+        "Broken-period interest is taxable as deemed banking turnover",
+        "Broken-period interest is deductible only for central government bonds"
+      ],
+      "answer": 0,
+      "explanation": "In Bank of Rajasthan Ltd., the Supreme Court held that where securities are held as stock-in-trade (Available for Sale - AFS and Held for Trading - HFT), broken-period interest paid upon purchase is deductible revenue expenditure. On Held to Maturity (HTM) securities held as investments, it is capital."
+    },
+    {
+      "id": "Q118",
+      "category": "Case Law - Principle",
+      "question": "In Adadyn Technologies (P.) Ltd., what principle did the Supreme Court affirm regarding software development costs abandoned due to rapid technological obsolescence?",
+      "options": [
+        "Abandoned software development costs must be capitalized to the 40% computer block",
+        "Where software development is abandoned prior to completion due to technological obsolescence without creating an enduring benefit, the expenditure incurred is deductible as revenue expenditure in the year of abandonment",
+        "Software development costs can only be claimed if transferred to an overseas entity",
+        "Disallowed as a speculative R&D loss"
+      ],
+      "answer": 1,
+      "explanation": "In Adadyn Technologies (P.) Ltd., the Supreme Court affirmed that where software development expenditure is incurred but the product is abandoned due to technological obsolescence without generating any enduring benefit, the loss of outlay is deductible as revenue expenditure."
+    },
+    {
+      "id": "Q119",
+      "category": "Non-Resident TDS Disallowance",
+      "question": "An Indian firm pays ₹10,00,000 to a foreign consultant outside India during the previous year without deducting TDS. What is the quantum of disallowance under Section 40(a)(i)?",
+      "options": [
+        "30% of the payment (₹3,00,000)",
+        "Disallowed permanently with zero subsequent year relief",
+        "100% of the payment (₹10,00,000) is disallowed in the current previous year, and is allowable as a deduction in the previous year in which TDS is paid to the Government",
+        "Disallowed only if the consultant is an enterprise in a notified non-cooperative jurisdiction"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 40(a)(i), 100% of any sum payable/paid to a non-resident on which TDS has not been deducted or paid on or before the due date u/s 139(1) is disallowed in the current year. It is allowable in the year in which such TDS is paid."
+    },
+    {
+      "id": "Q120",
+      "category": "Resident TDS Disallowance",
+      "question": "An assessee credits ₹5,00,000 to a resident contractor on 31st March. TDS was deducted on 31st March but was deposited with the Government after the due date of filing return of income u/s 139(1). What is the disallowance u/s 40(a)(ia)?",
+      "options": [
+        "100% of the expenditure (₹5,00,000)",
+        "No disallowance because TDS was deducted within the previous year",
+        "Disallowance of only the interest portion u/s 201(1A)",
+        "30% of the expenditure (₹1,50,000) is disallowed in the current year, and is allowable in the previous year in which the TDS is deposited"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 40(a)(ia), 30% of any sum paid or credited to a resident on which TDS is not deducted or not paid on or before the return filing due date u/s 139(1) is disallowed in the current PY. The 30% is allowed in the year TDS is paid."
+    },
+    {
+      "id": "Q121",
+      "category": "Form 26A Relief",
+      "question": "An assessee fails to deduct TDS on a ₹6,00,000 payment to a resident vendor. However, the vendor files its return of income, includes the receipt in total income, pays taxes, and the payer furnishes Form 26A from a CA. What is the tax result?",
+      "options": [
+        "The payer is deemed to have deducted and paid TDS on the date the payee furnished its return; 30% is disallowed in the current year and allowed in the year the payee filed its return (payer liable for 1% p.m. interest u/s 201(1A))",
+        "The payer is permanently disallowed 30% of the expenditure",
+        "Full deduction is allowed in the current year without any interest penalty",
+        "The payee is penalized with a 100% penalty"
+      ],
+      "answer": 0,
+      "explanation": "Under the second proviso to Section 40(a)(ia), where the payee includes the amount in its return and pays tax, and the payer furnishes Form 26A, TDS is deemed paid on the payee's return filing date. Deduction is allowed in that year, and the payer must pay 1% p.m. interest u/s 201(1A)."
+    },
+    {
+      "id": "Q122",
+      "category": "Case Law - Principle",
+      "question": "In Palam Gas Service, what principle did the Supreme Court establish regarding the scope of the word 'payable' in Section 40(a)(ia)?",
+      "options": [
+        "Section 40(a)(ia) applies only to amounts remaining unpaid and outstanding at the end of the previous year",
+        "The term 'payable' includes amounts actually paid during the previous year; Section 40(a)(ia) disallowance applies to sums paid during the year as well as sums payable at year-end under both cash and mercantile systems",
+        "Section 40(a)(ia) applies only to corporate assessees",
+        "Disallowance applies only if the freight contract is registered with the RTO"
+      ],
+      "answer": 1,
+      "explanation": "In Palam Gas Service, the Supreme Court held that the word 'payable' in Section 40(a)(ia) includes sums actually paid during the previous year. Disallowance triggers on both amounts paid during the year and amounts remaining payable at year-end, under both cash and mercantile accounting."
+    },
+    {
+      "id": "Q123",
+      "category": "Case Law - Principle",
+      "question": "In Maruti Suzuki India Limited, what principle was established by the Delhi High Court regarding commission paid to an overseas selling agent?",
+      "options": [
+        "TDS must be deducted on all foreign payments regardless of Indian chargeability",
+        "Foreign agent commission is limited to 5% of export turnover",
+        "Payments made to a non-resident agent who has no income assessable in India cannot be disallowed u/s 40(a)(i) for non-deduction of TDS merely because no nil-TDS application was made u/s 195(2)",
+        "Section 40(a)(i) applies only if the foreign agent visits India"
+      ],
+      "answer": 2,
+      "explanation": "In Maruti Suzuki India Limited, the Delhi High Court held that commission paid to a foreign non-resident agent operating outside India with no taxable income in India cannot be disallowed u/s 40(a)(i) for failure to apply for a Section 195(2) nil-deduction order."
+    },
+    {
+      "id": "Q124",
+      "category": "State PSU Levy Disallowance",
+      "question": "Under Section 40(a)(iib), how is a privilege fee or royalty levied exclusively on a State Public Sector Undertaking by the State Government treated?",
+      "options": [
+        "100% deductible as an operational state licence fee",
+        "Deductible upon obtaining approval from the Finance Ministry",
+        "Treated as an advance tax credit",
+        "Strictly disallowed in the hands of the State Government undertaking"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 40(a)(iib), any amount paid by way of royalty, licence fee, service charge, or privilege fee which is levied exclusively on a State Government undertaking by the State Government is strictly disallowed."
+    },
+    {
+      "id": "Q125",
+      "category": "Foreign Salary TDS",
+      "question": "An employer pays salary to an employee outside India without deducting TDS. What is the disallowance under Section 40(a)(iii)?",
+      "options": [
+        "100% of the salary is disallowed; if TDS is not paid within the statutory due date, the salary is disallowed without subsequent-year relief",
+        "30% disallowance with subsequent year relief",
+        "Disallowed only if the employee is an Indian citizen",
+        "Treated as deemed profit of the employee"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 40(a)(iii), any salary payable outside India or to a non-resident on which TDS is not deducted or not paid within the prescribed time is 100% disallowed without subsequent-year cure."
+    },
+    {
+      "id": "Q126",
+      "category": "Non-Monetary Perquisite Tax",
+      "question": "An employer provides rent-free accommodation to an employee and pays ₹80,000 tax on the non-monetary perquisite on behalf of the employee u/s 10(10CC). Can the employer claim this ₹80,000 as a business deduction?",
+      "options": [
+        "Yes, as staff welfare expenditure under Section 37(1)",
+        "No, because under Section 40(a)(v), tax paid by an employer on non-monetary perquisites (which is exempt in employee hands u/s 10(10CC)) is strictly non-deductible in the employer's hands",
+        "Deductible up to ₹50,000",
+        "Yes, provided it is authorized by the board of directors"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 40(a)(v), any tax paid by an employer on non-monetary perquisites provided to employees (which is exempt in the hands of the employee u/s 10(10CC)) is strictly disallowed as a deduction in the hands of the employer."
+    },
+    {
+      "id": "Q127",
+      "category": "Partner Remuneration Book Profit Limits",
+      "question": "A partnership firm has a Book Profit of ₹10,00,000 before partner remuneration. What is the maximum allowable remuneration to working partners under Section 40(b)?",
+      "options": [
+        "₹6,00,000",
+        "₹9,00,000 (90% of ₹10,00,000)",
+        "₹6,90,000 [On first ₹3,00,000 @ 90% = ₹2,70,000; On balance ₹7,00,000 @ 60% = ₹4,20,000; Total = ₹6,90,000]",
+        "₹10,00,000"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 40(b), the maximum allowable partner remuneration is: On the first ₹3,00,000 Book Profit (or in case of loss) -> ₹1,50,000 or 90% of book profit (whichever is higher = ₹2,70,000); On the balance Book Profit (₹7,00,000) -> 60% (₹4,20,000). Maximum deduction = ₹2,70,000 + ₹4,20,000 = ₹6,90,000."
+    },
+    {
+      "id": "Q128",
+      "category": "Partner Remuneration Conditions",
+      "question": "Which of the following conditions is MANDATORY for a partnership firm to claim deduction for remuneration paid to a partner u/s 40(b)?",
+      "options": [
+        "The partner must be a Chartered Accountant or Advocate",
+        "The firm must be registered under the Indian Partnership Act, 1932",
+        "The partner must not draw any capital interest",
+        "The remuneration must be paid only to a working partner, authorized by the partnership deed, relate to the period after deed execution, and fall within Section 40(b) limits"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 40(b), partner remuneration is deductible only if: (1) Paid to a working partner; (2) Authorized by and in accordance with the terms of the partnership deed; (3) Relates to the period after the date of the deed; and (4) Within statutory book profit limits."
+    },
+    {
+      "id": "Q129",
+      "category": "Related Party Payments",
+      "question": "A sole proprietor purchases raw materials for ₹12,00,000 from his brother. The Fair Market Value of the raw materials is ₹9,00,000. How does the Assessing Officer deal with this transaction under Section 40A(2)?",
+      "options": [
+        "Disallow the excessive and unreasonable amount of ₹3,00,000 (₹12,00,000 - ₹9,00,000) having regard to Fair Market Value",
+        "Disallow the entire payment of ₹12,00,000",
+        "No disallowance because relatives are entitled to commercial profit margins",
+        "Impose a 100% penalty on the brother"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 40A(2), where an assessee incurs expenditure with specified persons (relatives, partners, substantial interest holders), the AO can disallow the portion of expenditure that is excessive or unreasonable having regard to the Fair Market Value."
+    },
+    {
+      "id": "Q130",
+      "category": "Cash Payment Disallowance Limits",
+      "question": "What is the monetary limit under Section 40A(3) for disallowance of expenditure paid in cash to a goods transporter in a single day?",
+      "options": [
+        "₹10,000",
+        "₹35,000 (payment to a goods transport operator exceeding ₹35,000 in a single day otherwise than by account payee cheque/DD/ECS is disallowed)",
+        "₹50,000",
+        "₹1,00,000"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 40A(3), the general daily cash expenditure disallowance threshold is ₹10,000. However, in the case of payments made for plying, hiring, or leasing goods carriages (transporters), the daily threshold is ₹35,000."
+    },
+    {
+      "id": "Q131",
+      "category": "Crossed Cheque vs Account Payee",
+      "question": "An assessee makes an expenditure payment of ₹45,000 by a 'Crossed Cheque' (not an Account Payee Cheque). Is this expenditure allowable under Section 40A(3)?",
+      "options": [
+        "Allowable, because a crossed cheque is a banking channel instrument",
+        "Allowable up to ₹50,000",
+        "Disallowed, because Section 40A(3) strictly mandates payment by 'Account Payee Cheque', 'Account Payee DD', or specified electronic modes; a crossed cheque is treated on par with cash",
+        "Disallowed only if the cheque bounces"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 40A(3), payment must be made specifically by Account Payee Cheque, Account Payee Demand Draft, or ECS/prescribed electronic clearing modes. Payment by bearer cheque or crossed cheque (not account payee) is disallowed."
+    },
+    {
+      "id": "Q132",
+      "category": "Subsequent Cash Payment",
+      "question": "An assessee claimed deduction of ₹80,000 for raw material purchases on accrual basis in Year 1. In Year 2, the assessee pays this ₹80,000 liability in cash to the supplier. What is the tax result under Section 40A(3A)?",
+      "options": [
+        "The assessment of Year 1 is reopened to disallow the expenditure",
+        "₹80,000 is taxed as Short Term Capital Gain",
+        "No tax consequence because the expense was validly incurred in Year 1",
+        "The entire ₹80,000 is deemed to be profits and gains of business (PGBP income) of Year 2"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 40A(3A), where an expenditure was allowed on accrual basis in an earlier previous year, and subsequent payment exceeding ₹10,000 is made in cash/non-account payee mode, the payment is deemed to be PGBP income of the previous year in which payment is made."
+    },
+    {
+      "id": "Q133",
+      "category": "Rule 6DD Cash Exceptions",
+      "question": "Which of the following cash payments exceeding ₹10,000 is PROTECTED from disallowance under Section 40A(3) by virtue of Rule 6DD?",
+      "options": [
+        "Cash payment made directly to a cultivator/farmer for purchasing agricultural produce cultivated by him",
+        "Cash payment made to a retail supermarket for stationery",
+        "Cash payment made to a sub-contractor for construction labor",
+        "Cash payment made to an advertising agency"
+      ],
+      "answer": 0,
+      "explanation": "Under Rule 6DD, payments made directly to primary producers/cultivators for the purchase of agricultural produce, forest produce, poultry, fish, or livestock products are exempt from Section 40A(3) cash disallowance."
+    },
+    {
+      "id": "Q134",
+      "category": "Gratuity Provision Disallowance",
+      "question": "A company creates an actuarial provision of ₹10,00,000 for employee gratuity in its Profit & Loss account. No payment is made to an Approved Gratuity Fund, nor did any employee retire during the year. Is the provision deductible under Section 40A(7)?",
+      "options": [
+        "100% deductible as a scientifically computed provision",
+        "Strictly disallowed under Section 40A(7); deduction is allowed only for actual payments to an Approved Gratuity Fund or for gratuity that has become actually payable upon retirement/resignation during the PY",
+        "Deductible up to 8.33% of basic salary",
+        "Deductible in 5 equal instalments"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 40A(7), provisions for gratuity are disallowed. Deduction is allowed only when actual contribution is paid to an Approved Gratuity Fund (subject to Section 43B) or when gratuity actually becomes due and payable to employees during the previous year."
+    },
+    {
+      "id": "Q135",
+      "category": "Section 43B Payment Basis",
+      "question": "Which of the following liabilities incurred during the previous year is deductible in that previous year ONLY if paid on or before the due date of filing return of income u/s 139(1)?",
+      "options": [
+        "Raw material purchases from large corporate vendors",
+        "Office building rent paid to a non-relative landlord",
+        "Any tax, duty, cess, employer statutory fund contribution, employee bonus/commission, bank interest, leave encashment, and railway charges",
+        "General electricity and water utility bills"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 43B(a)-(g), statutory taxes, duties, cess, employee statutory fund contributions, bonus/commission, interest on loans from banks/financial institutions, leave encashment, and railway charges are deductible only if paid on or before the Section 139(1) return filing due date."
+    },
+    {
+      "id": "Q136",
+      "category": "Section 43B Interest Conversion",
+      "question": "An assessee is unable to pay outstanding bank interest of ₹6,00,000. Under a bank debt restructuring agreement, the bank converts the unpaid interest into a funded term loan. Does this conversion satisfy Section 43B actual payment?",
+      "options": [
+        "Yes, because conversion into a loan legally extinguishes the interest liability",
+        "Yes, provided the term loan is repayable over a period exceeding 5 years",
+        "Yes, if approved by the Reserve Bank of India",
+        "No, under Explanations 3C & 3D to Section 43B, conversion of unpaid interest into a loan, borrowing, debenture, or deferred liability does NOT constitute actual payment; deduction is allowed only when the converted loan is actually paid off"
+      ],
+      "answer": 3,
+      "explanation": "Under Explanations 3C and 3D to Section 43B, conversion of unpaid interest into a loan, borrowing, debenture, or other deferred instrument does not constitute actual payment. The interest is deductible only in the previous year in which actual payment is made."
+    },
+    {
+      "id": "Q137",
+      "category": "MSME Section 43B(h) Rule",
+      "question": "An assessee purchases goods from a Small Enterprise towards the end of the previous year with a written contract specifying payment within 45 days. The assessee makes payment after the expiry of the 45-day contract period in the succeeding previous year. What is the allowable timing of deduction for the purchase expenditure?",
+      "options": [
+        "Allowed in the succeeding year of actual payment, because under Section 43B(h), payments to micro or small enterprises made beyond statutory limits are deductible ONLY on actual payment basis",
+        "Allowed in the year of purchase on accrual basis, provided payment was made before the statutory return filing due date",
+        "Permanently disallowed with zero deduction in any year",
+        "Apportioned 50% across both years"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 43B(h), any sum payable to a Micro or Small Enterprise beyond the time limit specified in Section 15 of the MSMED Act (maximum 45 days under written agreement) is deductible ONLY in the previous year of actual payment. The relaxation of paying up to the Section 139(1) return due date does NOT apply to Section 43B(h)."
+    },
+    {
+      "id": "Q138",
+      "category": "MSME Time Limits without Agreement",
+      "question": "An assessee purchases goods from a Micro Enterprise on 2nd March with NO written agreement regarding payment terms. Payment is made on 30th March. What is the deduction treatment under Section 43B(h)?",
+      "options": [
+        "Allowed on payment basis in the next previous year",
+        "Allowed on payment basis in the current previous year (PY 1), because although payment was made after the 15-day statutory MSMED limit (17th March), it was actually paid before the close of the current previous year on 30th March",
+        "Disallowed permanently",
+        "Allowed on accrual basis"
+      ],
+      "answer": 1,
+      "explanation": "Where there is no written agreement, the statutory MSMED due date is 15 days from acceptance (17th March). Since payment was made on 30th March (after 17th March), accrual deduction is lost, but because actual payment occurred within the same previous year (on 30th March), deduction is allowed on payment basis in that current previous year."
+    },
+    {
+      "id": "Q139",
+      "category": "MSME Enterprise Classification",
+      "question": "What are the statutory investment and turnover thresholds for an entity to qualify as a 'Micro Enterprise' under the MSMED Act criteria referred in PGBP?",
+      "options": [
+        "Investment in Plant & Machinery <= ₹25 Crore AND Turnover <= ₹100 Crore",
+        "Investment in Plant & Machinery <= ₹50 Lakhs AND Turnover <= ₹2 Crore",
+        "Investment in Plant & Machinery <= ₹2.5 Crore AND Turnover <= ₹10 Crore",
+        "Turnover <= ₹5 Crore with zero investment criteria"
+      ],
+      "answer": 2,
+      "explanation": "Under the criteria stated in PGBP: A Micro Enterprise is an enterprise where investment in plant & machinery/equipment does not exceed ₹2.5 Crore AND turnover does not exceed ₹10 Crore. (Small Enterprise: Investment <= ₹25 Crore and Turnover <= ₹100 Crore)."
+    },
+    {
+      "id": "Q140",
+      "category": "Construction & Service Contracts",
+      "question": "How must revenue and costs from a construction contract be recognized for tax purposes under Section 43CB and ICDS-III?",
+      "options": [
+        "Completed Contract Method only upon final handover",
+        "Cash basis upon receipt of progress billing payments",
+        "Straight line amortization over 5 years",
+        "Percentage of Completion Method (POCM), where contract revenue includes retention money and contract costs are not reduced by incidental interest or dividends"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 43CB and ICDS-III, revenue and costs from construction contracts must be recognized under the Percentage of Completion Method (POCM). Contract revenue includes retention money, and contract costs cannot be reduced by incidental interest/dividend income."
+    },
+    {
+      "id": "Q141",
+      "category": "Service Contract Methods",
+      "question": "Under Section 43CB, what method of revenue recognition applies to a service contract with a duration of 60 days?",
+      "options": [
+        "Project Completion Method, because contracts with duration up to 90 days can be recognized on project completion",
+        "Percentage of Completion Method",
+        "Straight Line Method over 12 months",
+        "Cash realization basis"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 43CB and ICDS-IV, for service contracts: If duration is up to 90 days -> Project Completion Method; If indeterminate acts over time -> Straight Line Method; Otherwise -> Percentage of Completion Method."
+    },
+    {
+      "id": "Q142",
+      "category": "Stock Acquired in Restructuring",
+      "question": "Where a capital asset is acquired as stock-in-trade by an assessee under an amalgamation or gift, how is the Cost of Acquisition of such stock determined under Section 43C?",
+      "options": [
+        "Fair Market Value on the date of amalgamation",
+        "Cost of Acquisition to the previous owner + Cost of improvement incurred by transferor/transferee + Transfer expenses incurred by transferor",
+        "NIL",
+        "Stamp Duty Value at the time of gift"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 43C, where a capital asset is transferred as stock-in-trade under amalgamation, gift, will, or trust, the Cost of Acquisition to the transferee is the cost of acquisition to the previous owner plus improvement costs and transfer expenses."
+    },
+    {
+      "id": "Q143",
+      "category": "NPA Interest of Banks",
+      "question": "Under Section 43D, when is interest income on Non-Performing Assets (NPAs) of Scheduled Banks and Public Financial Institutions chargeable to income-tax?",
+      "options": [
+        "On accrual basis as per standard loan agreements",
+        "Only upon recovery of the entire principal loan amount",
+        "In the previous year in which it is credited to the Profit & Loss account by the bank OR in the previous year in which it is actually received, whichever is earlier",
+        "Exempt until the borrower is liquidated"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 43D, interest income on prescribed categories of bad and doubtful debts (NPAs) of banks, PFIs, SFCs, and NBFCs is chargeable to tax in the previous year in which it is credited to P&L or actually received, whichever is earlier."
+    },
+    {
+      "id": "Q144",
+      "category": "Foreign Loan Fluctuation",
+      "question": "An assessee acquires machinery from an overseas supplier through a foreign currency loan. Due to exchange rate fluctuation, the rupee liability increases by ₹3,00,000. When and how is this adjustment made under Section 43A?",
+      "options": [
+        "Adjusted annually on balance sheet date on marked-to-market basis",
+        "Deducted as a revenue loss under Section 37(1)",
+        "Adjusted in the Capital Reduction Reserve",
+        "Adjusted by adding ₹3,00,000 to the WDV of the Block of Assets ONLY at the time of actual payment/repayment of the foreign loan instalment"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 43A, exchange rate gains or losses arising on foreign currency loans taken for acquiring capital assets from abroad are adjusted to the Actual Cost / Block of Assets ONLY at the time of actual repayment of the foreign loan instalment."
+    },
+    {
+      "id": "Q145",
+      "category": "Remission of Trading Liability",
+      "question": "An assessee owed ₹4,00,000 for raw material purchases deducted in an earlier year. During the current year, the assessee unilaterally writes off this liability in its books without the creditor's consent. What is the tax result under Section 41(1)?",
+      "options": [
+        "The unilateral write-off represents a cessation/remission of trading liability deemed to be PGBP income of the current previous year u/s 41(1)",
+        "No tax liability until the creditor provides a formal written release",
+        "Taxable under Capital Gains",
+        "Taxable under Income from Other Sources"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 41(1), where a trading liability was allowed as a deduction in an earlier year and the assessee unilaterally writes off the liability in accounts, it represents remission/cessation of liability deemed to be PGBP income in that previous year."
+    },
+    {
+      "id": "Q146",
+      "category": "Maintenance of Books",
+      "question": "What is the gross receipt threshold for a specified professional (e.g. Doctor, CA, Architect, IT Consultant) to compulsorily maintain Rule 6F books of account under Section 44AA?",
+      "options": [
+        "Gross receipts exceeding ₹10,00,000 in any 1 preceding year",
+        "Gross receipts exceeding ₹1,50,000 in all 3 years immediately preceding the previous year (or likely to exceed in newly set-up profession)",
+        "Gross receipts exceeding ₹50,00,000 in current year",
+        "Net profit exceeding ₹2,50,000"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 44AA(1) and Rule 6F, specified professionals must compulsorily maintain prescribed books of account (cash book, journal, ledgers, carbon copies of bills >₹25) if gross receipts exceed ₹1,50,000 in all 3 preceding years."
+    },
+    {
+      "id": "Q147",
+      "category": "Tax Audit Limits",
+      "question": "Under Section 44AB, what is the turnover threshold for compulsory tax audit for a business assessee where aggregate cash receipts and aggregate cash payments do NOT exceed 5% of total receipts/payments?",
+      "options": [
+        "₹1 Crore",
+        "₹2 Crore",
+        "₹10 Crore",
+        "₹5 Crore"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 44AB(a), the turnover limit for compulsory tax audit is ₹1 Crore. However, if aggregate cash receipts and cash payments during the previous year are each up to 5% of total receipts/payments, the tax audit limit is increased to ₹10 Crore."
+    },
+    {
+      "id": "Q148",
+      "category": "Section 44AD Presumptive Business",
+      "question": "A resident individual engaged in retail trading has a total turnover of ₹1,80,00,000 (₹1,00,00,000 received via account payee bank transfers by return due date and ₹80,00,000 in cash). What is the minimum presumptive PGBP income u/s 44AD?",
+      "options": [
+        "₹14,40,000 (8% of entire ₹1.80 Crore)",
+        "₹10,80,000 (6% of entire ₹1.80 Crore)",
+        "₹9,00,000 (5% of entire turnover)",
+        "₹12,40,000 [6% on digital turnover of ₹1,00,00,000 (₹6,00,000) + 8% on cash turnover of ₹80,00,000 (₹6,40,000)]"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 44AD, presumptive business income is 8% of turnover, but is reduced to 6% in respect of turnover realized by account payee cheque, DD, ECS, or digital banking channels on or before the return filing due date. Total = ₹6,00,000 + ₹6,40,000 = ₹12,40,000."
+    },
+    {
+      "id": "Q149",
+      "category": "Section 44AD 5-Year Lock-in",
+      "question": "An eligible assessee declared profits u/s 44AD for AY 24-25 and AY 25-26. In AY 26-27, he declares profits of 4% (lower than 44AD rates). What is the consequence for subsequent years?",
+      "options": [
+        "He is barred from claiming the benefit of Section 44AD for the next 5 consecutive assessment years (AY 27-28 to 31-32) and must maintain books and undergo tax audit if income > basic exemption",
+        "No restriction; he can opt back into 44AD in AY 27-28",
+        "He is permanently prohibited from doing business in India",
+        "He must pay a 100% penalty on turnover"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 44AD(4) and (5), if an assessee declares income u/s 44AD and subsequently opts out in any of the 5 consecutive succeeding years, he is barred from 44AD for 5 consecutive AYs succeeding the opt-out year, and must maintain books and get audited u/s 44AB."
+    },
+    {
+      "id": "Q150",
+      "category": "Section 44ADA Presumptive Profession",
+      "question": "A legal consultant (specified profession) has gross receipts of ₹48,00,000 during the previous year. What is the minimum presumptive PGBP income under Section 44ADA?",
+      "options": [
+        "₹3,84,00,000 (8% of gross receipts)",
+        "₹24,00,000 (50% of gross receipts)",
+        "₹2,88,000 (6% of gross receipts)",
+        "₹12,00,000 (25% of gross receipts)"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 44ADA, for an eligible resident professional with gross receipts up to ₹50 Lakhs (₹75 Lakhs if cash receipts <=5%), the presumptive PGBP income is deemed to be 50% of total gross receipts (50% of ₹48,00,000 = ₹24,00,000)."
+    },
+    {
+      "id": "Q151",
+      "category": "Common 44AD/44ADA Deductions",
+      "question": "A partnership firm opting for presumptive taxation under Section 44AD wishes to claim deductions for partner salary u/s 40(b) and interest on capital from its deemed profit. Are these deductions allowable?",
+      "options": [
+        "Allowable, because partner remuneration is an essential business expense",
+        "Allowable up to ₹1,50,000",
+        "Not allowable; all deductions under Sections 30 to 38 (including partner remuneration and interest) are deemed to have been fully allowed, and cannot be deducted separately from deemed 44AD/44ADA profit",
+        "Allowable only with prior approval of the Commissioner"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 44AD and 44ADA, all deductions under Sections 30 to 38 are deemed to have been fully given effect to. No separate deduction for partner salary, bonus, or interest under Section 40(b) is allowable from deemed presumptive income."
+    },
+    {
+      "id": "Q152",
+      "category": "Section 44AE Transporter Scheme",
+      "question": "An assessee owns 2 Heavy Goods Vehicles (Gross Vehicle Weight: 16,000 kg / 16 MT each) and 3 Light Goods Vehicles throughout the 12 months of the previous year. What is the presumptive PGBP income under Section 44AE?",
+      "options": [
+        "₹4,50,000 (5 vehicles x ₹7,500 x 12 months)",
+        "₹9,60,000 (5 vehicles x 16 MT x ₹1,000 x 12 months)",
+        "₹3,84,000",
+        "₹6,54,000 [Heavy: 2 x 16 MT x ₹1,000 x 12 months = ₹3,84,000; Light: 3 x ₹7,500 x 12 months = ₹2,70,000; Total = ₹6,54,000]"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 44AE: For Heavy Goods Vehicles (>12 MT GVW) -> ₹1,000 per ton of GVW per month (2 x 16 x ₹1,000 x 12 = ₹3,84,000); For Other Goods Vehicles -> ₹7,500 per vehicle per month (3 x ₹7,500 x 12 = ₹2,70,000). Total presumptive income = ₹6,54,000."
+    },
+    {
+      "id": "Q153",
+      "category": "Section 44AE Partner Remuneration",
+      "question": "A partnership firm engaged in the transport business opts for presumptive taxation under Section 44AE. Can it claim deduction for partner salary and interest on capital under Section 40(b)?",
+      "options": [
+        "Yes, unlike Section 44AD and 44ADA, partner remuneration, salary, and interest within Section 40(b) limits ARE deductible from income computed under Section 44AE",
+        "No, partner remuneration is disallowed across all presumptive schemes",
+        "Deductible only up to ₹50,000 per truck",
+        "Deductible only if the firm owns more than 10 vehicles"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 44AE(3), partner remuneration, salary, and interest on capital within the statutory limits of Section 40(b) ARE deductible from the deemed presumptive income computed under Section 44AE."
+    },
+    {
+      "id": "Q154",
+      "category": "Non-Resident Shipping & Aircraft",
+      "question": "What are the presumptive profit rates for Non-Residents engaged in Shipping (Section 44B) and Aircraft operations (Section 44BBA)?",
+      "options": [
+        "Shipping: 10%; Aircraft: 10%",
+        "Shipping (44B): 7.5% of specified sum; Aircraft (44BBA): 5% of specified sum; lower profit declaration is not available",
+        "Shipping: 5%; Aircraft: 7.5%",
+        "Shipping: 20%; Aircraft: 15%"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 44B (Non-resident shipping, other than cruise ships), presumptive income is 7.5% of the specified sum. Under Section 44BBA (Non-resident aircraft operation), presumptive income is 5% of the specified sum. Option to declare lower profits is not available."
+    },
+    {
+      "id": "Q155",
+      "category": "Non-Resident Oil & Turnkey Projects",
+      "question": "What is the presumptive profit rate for Non-Residents providing services for mineral oil extraction (Section 44BB) and Foreign Companies executing turnkey power projects (Section 44BBB)?",
+      "options": [
+        "7.5% of specified sum without audit option",
+        "25% of specified sum",
+        "10% of the specified sum under both Section 44BB and Section 44BBB; lower profits can be claimed with books of account and Section 44AB tax audit",
+        "5% under 44BB and 15% under 44BBB"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 44BB (mineral oil services) and Section 44BBB (turnkey power projects), presumptive profit is 10% of the specified sum. Assessees can claim lower profits provided they maintain books u/s 44AA and undergo tax audit u/s 44AB."
+    },
+    {
+      "id": "Q156",
+      "category": "Cruise Ships Presumptive Scheme",
+      "question": "What is the presumptive profit rate under Section 44BBC for a Non-Resident operating passenger cruise ships touching Indian ports (Finance Act 2024)?",
+      "options": [
+        "7.5% of total global cruise revenue",
+        "10% of passenger tickets",
+        "5% of net vessel operating surplus",
+        "20% of the specified sum paid/payable or received/deemed received on account of carriage of passengers"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 44BBC (introduced by Finance Act 2024), presumptive income for a non-resident operating passenger cruise ships (meeting notification criteria: >200 passenger capacity, touching >=2 Indian ports) is 20% of the specified sum. Lower profit declaration is not available."
+    },
+    {
+      "id": "Q157",
+      "category": "Foreign Branch Head Office Expenses",
+      "question": "How is the deduction for Head Office expenses allowable to an Indian branch of a Foreign Company computed under Section 44C?",
+      "options": [
+        "Lower of 5% of Adjusted Total Income (ATI) or actual head office expenses attributable to the Indian business",
+        "100% of global head office expenses allocated on turnover ratio",
+        "10% of Indian branch gross turnover",
+        "Fixed ceiling of ₹50,00,000 per branch"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 44C, head office expenditure allowable to Indian branches of foreign companies is limited to the lower of: (1) 5% of Adjusted Total Income (ATI); or (2) Actual head office expenses attributable to the Indian business. If ATI is a loss, 3-year average ATI is considered."
+    },
+    {
+      "id": "Q158",
+      "category": "Non-Resident PE FTS & Royalty",
+      "question": "A non-resident entity has a Permanent Establishment (PE) in India through which it provides technical services. How is its income computed under Section 44DA?",
+      "options": [
+        "Taxed at a flat gross rate without any expense deductions under Section 115A",
+        "Computed under PGBP on net basis (Sections 28 to 44D), where expenses not wholly/exclusively incurred for the PE and amounts paid by PE to Head Office (other than actual expense reimbursements) are disallowed",
+        "Exempt under double taxation avoidance treaties",
+        "Taxed on 100% gross receipts as presumptive income"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 44DA, royalties or FTS effectively connected with an Indian PE are computed under PGBP. Expenses not incurred wholly and exclusively for the PE and any payments made by the PE to its Head Office (except reimbursement of actual expenses) are disallowed."
+    },
+    {
+      "id": "Q159",
+      "category": "Mutual Trade Associations Deficiency",
+      "question": "How is a 'Deficiency' (excess of member protection expenditure over general member subscriptions) treated in the assessment of a mutual trade association under Section 44A?",
+      "options": [
+        "Permanently lost as mutuality disallows all losses",
+        "100% deductible against member personal income",
+        "Allowed as a deduction against other taxable income (e.g. PGBP specific services or IFOS), subject to a maximum deduction of 50% of Total Income before this deduction",
+        "Treated as an unabsorbed capital loss"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 44A (exception to the principle of mutuality), where a mutual trade association incurs a 'Deficiency' (member protection expenses minus general member subscriptions), such deficiency is deductible against other taxable income, subject to a maximum cap of 50% of Total Income."
+    },
+    {
+      "id": "Q160",
+      "category": "Joint Ownership Depreciation",
+      "question": "Two independent business persons jointly purchase a commercial cargo aircraft costing ₹40,00,000, contributing in a 60:40 financial ratio. Both use the aircraft for their respective separate business operations. How is depreciation claimed under Section 32?",
+      "options": [
+        "Depreciation is allowed only to the party holding 60% majority ownership",
+        "The co-owners must form an AOP to claim depreciation",
+        "Depreciation is disallowed because Section 32 requires sole exclusive ownership",
+        "Depreciation is computed on the total asset value and allowed to each co-owner proportionate to their respective ownership share (60% and 40%)"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 32 Note 4, where an asset is jointly or partially owned by two or more assessees, depreciation is allowable to each co-owner in proportion to their respective share of ownership in the asset."
+    },
+    {
+      "id": "Q161",
+      "category": "Specified Business Cash Restriction",
+      "question": "An assessee setting up a Section 35AD specified 100-bed hospital incurs capital expenditure of ₹4,00,000 for purchasing intensive care monitors. It pays ₹3,85,000 by RTGS and ₹15,000 in cash on the same day to the medical equipment vendor. What deduction is allowable under Section 35AD?",
+      "options": [
+        "₹3,85,000, because capital expenditure payments exceeding ₹10,000 made to a person in a single day otherwise than by specified banking channels are ineligible for Section 35AD deduction",
+        "₹4,00,000, because Section 35AD allows 100% deduction on all hospital equipment",
+        "Nil, because cash payment invalidates the entire capital outlay for specified business",
+        "₹3,90,000"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 35AD Note 4, any capital expenditure in respect of which payment (or aggregate of payments) exceeding ₹10,000 is made to a person in a single day otherwise than by account payee cheque, DD, or ECS is ineligible for Section 35AD deduction. Hence, eligible deduction = ₹4,00,000 - ₹15,00,000 = ₹3,85,000."
+    },
+    {
+      "id": "Q162",
+      "category": "Special Reserve Deduction",
+      "question": "A public financial institution providing long-term infrastructure finance creates a Special Reserve. What is the maximum statutory deduction allowable under Section 36(1)(viii)?",
+      "options": [
+        "Flat 20% of gross total income without any reserve ceiling",
+        "Lowest of: (1) Actual amount transferred to Special Reserve; (2) 20% of profits derived from eligible business; or (3) [200% of (Paid-up Capital + General Reserve) minus Opening balance of Special Reserve]",
+        "5% of total loan disbursements made during the previous year",
+        "100% of profits transferred to capital redemption reserve"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 36(1)(viii), deduction for eligible financial corporations is the lowest of: (1) Actual transfer to Special Reserve; (2) 20% of core PGBP profits; or (3) [200% of (Paid-up Share Capital + General Reserve) minus Opening balance of Special Reserve]. Any withdrawal from the reserve is subsequently taxable u/s 41(4A)."
+    },
+    {
+      "id": "Q163",
+      "category": "Sugarcane Purchase Deduction",
+      "question": "A cooperative society engaged in the manufacture of sugar purchases sugarcane from cane growers during the crushing season. Up to what amount is the purchase price deductible as a business expense under Section 36(1)(xvii)?",
+      "options": [
+        "Actual price paid without any restriction whatsoever",
+        "Restricted to 50% of the market rate of sugar",
+        "Up to the price fixed or approved by the Government (or statutory authority) for sugarcane purchases",
+        "Disallowed completely because cooperative member transactions are mutual"
+      ],
+      "answer": 2,
+      "explanation": "Under Section 36(1)(xvii), expenditure incurred by a cooperative society engaged in the manufacture of sugar for purchase of sugarcane is allowable as a deduction up to the price fixed or approved by the Government or authority constituted under law."
+    },
+    {
+      "id": "Q164",
+      "category": "MSME Year-End Accrual",
+      "question": "An assessee purchases goods from a Micro Enterprise towards the close of the previous year with a written agreement specifying payment within 30 days. The assessee makes payment in the immediately following month in the succeeding financial year (within the agreed 30-day window). How is the deduction timed for tax purposes?",
+      "options": [
+        "Allowed in the succeeding previous year on payment basis",
+        "Disallowed completely for spilling into a new financial year",
+        "Apportioned equally across both years",
+        "Allowed in the current previous year on accrual basis, because payment was made within the contractually agreed time limit (up to 45 days) under Section 15 of MSMED Act"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 43B(h), if payment is made within the agreed time limit (maximum 45 days) under Section 15 of the MSMED Act, the normal mercantile accrual deduction is NOT disrupted, and the expenditure is fully allowable in Year 1 (year of purchase), even if the actual payment falls in April of Year 2."
+    },
+    {
+      "id": "Q165",
+      "category": "Partner Remuneration in Book Loss",
+      "question": "A partnership firm incurs a Book Loss of ₹2,50,000 before partner remuneration during the previous year. What is the maximum remuneration that can be paid and allowed as a deduction to working partners under Section 40(b)?",
+      "options": [
+        "₹1,50,000, being the statutory minimum threshold allowable on the first ₹3,00,000 of book profit or in case of book loss",
+        "Nil, because remuneration can only be paid out of positive book profits",
+        "₹2,25,000 (90% of the loss)",
+        "₹50,000"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 40(b)(v), on the first ₹3,00,000 of book profit OR in case of a book loss, the maximum allowable remuneration to working partners is ₹1,50,000 or 90% of book profit, whichever is more. In case of loss, the maximum allowable deduction is ₹1,50,000."
+    },
+    {
+      "id": "Q166",
+      "category": "Partner Interest Rules",
+      "question": "A partnership deed is executed on 1st October providing for interest on partner capital @12% simple interest p.a. The firm credits interest for the entire 12-month previous year. How is this interest deduction assessed for the firm?",
+      "options": [
+        "Interest for the full 12 months is allowed @12% p.a.",
+        "Interest is allowed @12% p.a. ONLY for the period from 1st October to 31st March (post-deed execution); interest relating to the pre-deed period (April to September) is disallowed",
+        "The entire interest is disallowed because the deed was executed midway through the year",
+        "Allowed @6% p.a. for the full year"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 40(b), payment of interest to a partner is allowable only if authorized by the partnership deed and relates to the period AFTER the date of execution of the deed. Any interest relating to the period prior to the execution of the deed is strictly disallowed."
+    },
+    {
+      "id": "Q167",
+      "category": "Specified Business Asset Destruction",
+      "question": "A capital asset used in a Section 35AD specified cold chain business (cost: ₹30,00,000, 100% deduction claimed) is destroyed by fire in Year 4, and the insurer settles the claim for ₹18,00,000. How is the insurance receipt taxed?",
+      "options": [
+        "Tax-free capital receipt",
+        "Taxable as Long Term Capital Gain",
+        "Taxable as PGBP business income up to the amount of deduction allowed earlier (₹18,00,000 u/s 41(1) / Section 35AD reversal)",
+        "Added to the general 15% plant block"
+      ],
+      "answer": 2,
+      "explanation": "Any insurance compensation or salvage realized on an asset for which 100% deduction was allowed u/s 35AD is treated as a business receipt taxable under PGBP in the year of receipt, representing recovery/deemed profit of the deduction allowed earlier."
+    },
+    {
+      "id": "Q168",
+      "category": "Additional Depreciation Succeeding Year",
+      "question": "A manufacturing company acquired and put to use new factory machinery on 1st November of Year 1 (claimed 10% additional depreciation in Year 1). In Year 2, the company continues manufacturing operations. How is the balance 10% additional depreciation claimed?",
+      "options": [
+        "Lapses permanently because additional depreciation is an acquisition-year allowance",
+        "Added to the cost of future plant additions",
+        "Allowed only upon selling the machinery",
+        "Allowed as a deduction in Year 2 (the immediately succeeding previous year) under the third proviso to Section 32(1)(ia)"
+      ],
+      "answer": 3,
+      "explanation": "Under the third proviso to Section 32(1)(ia), where an asset is put to use for less than 180 days in the year of acquisition and 50% of additional depreciation is allowed in that year, the remaining 50% (10%) is mandatorily allowed as a deduction in the immediately succeeding previous year."
+    },
+    {
+      "id": "Q169",
+      "category": "Concurrent Presumptive Eligibility",
+      "question": "An individual carries on a retail grocery business (turnover: ₹1.2 Crore) and also practices as an interior decorator (specified profession, gross receipts: ₹30 Lakhs). Can he claim presumptive taxation under both Section 44AD and Section 44ADA concurrently?",
+      "options": [
+        "Yes, he can compute business income u/s 44AD (6%/8%) for the trading business and professional income u/s 44ADA (50%) for the profession simultaneously",
+        "No, an assessee can opt for only one presumptive taxation section in a single assessment year",
+        "He must undergo mandatory tax audit for both activities",
+        "He must combine both turnovers and pay tax at a flat 50%"
+      ],
+      "answer": 0,
+      "explanation": "An assessee who operates both an eligible business and an eligible specified profession can independently and simultaneously claim presumptive taxation under Section 44AD for the business and Section 44ADA for the profession, provided respective individual thresholds are satisfied."
+    },
+    {
+      "id": "Q170",
+      "category": "Deposit Withdrawal on Death/Partition",
+      "question": "Under Section 33AB (Tea/Coffee/Rubber), what is the taxability of an unutilized deposit balance in NABARD upon the death of the sole proprietor or partition of a Hindu Undivided Family (HUF)?",
+      "options": [
+        "Fully taxable as PGBP income in the hands of the legal heir / coparceners",
+        "NOT taxable as deemed income, because withdrawal upon death of the assessee or partition of an HUF is an explicit statutory exception to taxability",
+        "Taxable under Capital Gains",
+        "Taxable at a flat 30% special rate"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 33AB(7), unutilized deposit withdrawals are deemed PGBP income on business closure, firm dissolution, or company liquidation. However, withdrawal upon the death of an individual assessee or partition of an HUF is expressly exempt and NOT treated as deemed income."
+    },
+    {
+      "id": "Q171",
+      "category": "Pre-commencement Scientific Research",
+      "question": "A biotechnology company spends ₹12,00,000 on research salaries (excluding perquisites) and ₹8,00,000 on laboratory chemicals in the 2 years prior to commencing commercial business. How are these pre-commencement research expenses treated under Section 35(1)(i)?",
+      "options": [
+        "Disallowed as pre-incorporation personal expenditure",
+        "Amortized over 5 years under Section 35D",
+        "100% deductible in the previous year in which commercial business commences, because revenue expenses on salary (excluding perquisites) and materials incurred within 3 years prior to commencement are deemed incurred in the commencement year",
+        "Capitalized to the Block of Assets"
+      ],
+      "answer": 2,
+      "explanation": "Under Explanation to Section 35(1)(i), revenue expenditure incurred on scientific research related to business within the 3 years immediately preceding the commencement of business (limited to salaries paid to research staff, excluding perquisites, and material expenses) is deemed to have been incurred in the previous year of business commencement and allowed as a 100% deduction in that year."
+    },
+    {
+      "id": "Q172",
+      "category": "Substantial Interest Criteria",
+      "question": "Under Section 40A(2), what constitutes 'substantial interest' in a business or profession for triggering related-party reasonableness scrutiny?",
+      "options": [
+        "Holding at least 5% equity share capital",
+        "Holding more than 51% controlling majority stake",
+        "Having a director on the board",
+        "Holding at least 20% of the voting power (in case of a company) or entitlement to at least 20% of the profits (in case of any other entity/firm) at any time during the previous year"
+      ],
+      "answer": 3,
+      "explanation": "Under Explanation to Section 40A(2), a person is deemed to have a substantial interest in a business if: (1) In case of a company, the person beneficially holds shares carrying >= 20% voting power; (2) In other cases (firms/AOPs), the person is entitled to >= 20% of the profits of such concern."
+    },
+    {
+      "id": "Q173",
+      "category": "Single Day Aggregate Cash Payments",
+      "question": "An assessee receives 3 separate invoices of ₹4,000, ₹5,000, and ₹3,500 from the same vendor on a single day and pays the aggregate sum of ₹12,500 in cash on that same day. Is this payment disallowed under Section 40A(3)?",
+      "options": [
+        "Disallowed, because Section 40A(3) applies to the aggregate of payments made to a single person in a single day (₹12,500 > ₹10,000), irrespective of the number of invoices",
+        "Allowed, because each individual invoice is below the ₹10,000 threshold",
+        "Allowed up to ₹10,000 with disallowance of only the excess ₹2,500",
+        "Allowed provided the vendor issues separate receipts"
+      ],
+      "answer": 0,
+      "explanation": "Section 40A(3) disallowance applies where the aggregate of payments made to a person in a single day exceeds ₹10,000 (transporters ₹35,000) otherwise than by specified banking channels. Since the aggregate daily payment is ₹12,500, the entire expenditure of ₹12,500 is disallowed."
+    },
+    {
+      "id": "Q174",
+      "category": "Power SLM Balancing Charge vs Terminal Depreciation",
+      "question": "A power generating undertaking on SLM owns two identical generators (Cost: ₹10,00,000 each, WDV: ₹6,00,000 each). It sells Generator 1 for ₹4,50,000 and Generator 2 for ₹12,00,000. What is the tax result?",
+      "options": [
+        "Combined in Block with zero PGBP consequence",
+        "Generator 1: ₹1,50,000 Terminal Depreciation u/s 32(1)(iii) (deductible PGBP); Generator 2: ₹4,00,000 Balancing Charge u/s 41(2) (taxable PGBP) + ₹2,00,000 STCG u/s 50A",
+        "Generator 1: ₹1,50,000 STCL; Generator 2: ₹6,00,000 STCG",
+        "Generator 1: Nil; Generator 2: ₹6,00,000 Balancing Charge"
+      ],
+      "answer": 1,
+      "explanation": "Under the individual asset SLM method for power units: Generator 1 (Sale ₹4.5L < WDV ₹6L) yields Terminal Depreciation of ₹1,50,000 deductible u/s 32(1)(iii). Generator 2 (Sale ₹12L > Cost ₹10L) yields Balancing Charge of ₹4,00,000 (cost minus WDV) taxable under PGBP u/s 41(2) and Capital Gain of ₹2,00,000 (sale minus cost) taxable as STCG u/s 50A."
+    },
+    {
+      "id": "Q175",
+      "category": "Rule 6F Prescribed Books",
+      "question": "Which of the following books of account is specifically prescribed under Rule 6F for medical practitioners whose gross receipts exceed ₹1,50,000 in all 3 preceding years?",
+      "options": [
+        "Cost audit ledger and factory output log",
+        "Electronic inventory ERP log only",
+        "Daily cash book, journal, ledger, carbon copies of machine-numbered bills exceeding ₹25, and Daily Case Register in Form No. 3C",
+        "Bank passbook and counterfoils of cheque books"
+      ],
+      "answer": 2,
+      "explanation": "Under Rule 6F, specified professionals must maintain a cash book, journal, and ledger, along with carbon copies of machine-numbered bills/receipts > ₹25 and original expense vouchers. In addition, medical professionals must maintain a Daily Case Register in Form No. 3C showing patients, fees, and medicine stock."
+    },
+    {
+      "id": "Q176",
+      "category": "Tax Audit 5% Cash Condition",
+      "question": "A business has a turnover of ₹8 Crore. During the year, cash receipts constitute 3% of total receipts, but cash payments constitute 8% of total payments. Is tax audit mandatory under Section 44AB?",
+      "options": [
+        "Not mandatory, because total turnover is below the ₹10 Crore threshold",
+        "Not mandatory, because the average cash percentage is (3%+8%)/2 = 5.5%",
+        "Mandatory only if the assessee is a partnership firm",
+        "Mandatory, because to avail the ₹10 Crore threshold, BOTH cash receipts AND cash payments must each not exceed 5% of aggregate receipts/payments; since cash payments are 8% (>5%), the general ₹1 Crore threshold applies"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 44AB, the enhanced ₹10 Crore turnover limit applies ONLY if BOTH aggregate cash receipts AND aggregate cash payments during the previous year are each <= 5% of total receipts/payments. Since cash payments exceed 5% (8%), the higher threshold is not available, and tax audit is mandatory at ₹8 Crore turnover."
+    },
+    {
+      "id": "Q177",
+      "category": "Head Office Expenses in Loss Year",
+      "question": "An Indian branch of a foreign company incurs actual Head Office expenses of ₹50,00,000. In the current year, the branch's Adjusted Total Income (ATI) is a Loss of ₹20,00,000. How is the Head Office deduction computed under Section 44C?",
+      "options": [
+        "5% of the average Adjusted Total Income of the 3 immediately preceding previous years (or actual HO expenses, whichever is lower)",
+        "Nil, because 5% of a negative figure is zero",
+        "100% of actual HO expenses of ₹50,00,000",
+        "Fixed statutory deduction of ₹10,00,000"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 44C, head office deduction is lower of actual expenses or 5% of Adjusted Total Income (ATI). Where the ATI for the current previous year is a loss, ATI is computed as the average Adjusted Total Income of the 3 immediately preceding previous years in which there was taxable income."
+    },
+    {
+      "id": "Q178",
+      "category": "Mutual Concern Deficiency Cap",
+      "question": "A trade association incurs member protection expenditure of ₹12,00,000 and receives general member subscriptions of ₹4,00,000, creating a Deficiency of ₹8,00,000. Its other taxable PGBP income is ₹10,00,000. What is the allowable deficiency deduction under Section 44A?",
+      "options": [
+        "₹8,00,000 in full",
+        "₹5,00,000, being restricted to a maximum of 50% of the Total Income (50% of ₹10,00,000) before this deduction",
+        "Nil, because mutuality prohibits cross-head loss set-off",
+        "₹2,00,000"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 44A, the deficiency (₹12,00,000 - ₹4,00,000 = ₹8,00,000) is deductible against other taxable income of the association, but the deduction is statutorily restricted to a maximum cap of 50% of the Total Income before this deduction (50% of ₹10,00,000 = ₹5,00,000)."
+    },
+    {
+      "id": "Q179",
+      "category": "Set-off Hierarchy Application",
+      "question": "An assessee has PGBP profit of ₹5,00,000 before adjustments, Current Year Depreciation of ₹2,00,000, Brought Forward Business Loss of ₹4,00,000, and Unabsorbed Depreciation of ₹3,00,000. What is the taxable PGBP and unabsorbed carried forward balances?",
+      "options": [
+        "Taxable PGBP: ₹1,00,000; B/f Loss Carried Forward: Nil; Unabsorbed Depreciation Carried Forward: ₹2,00,000",
+        "Taxable PGBP: Nil; All losses and depreciation absorbed",
+        "Taxable PGBP: Nil; B/f Loss Carried Forward: ₹1,00,000; Unabsorbed Depreciation Carried Forward: ₹3,00,000",
+        "Taxable PGBP: ₹3,00,000"
+      ],
+      "answer": 2,
+      "explanation": "Applying the mandatory priority hierarchy u/s 32(2): Profit = ₹5,00,000. (1) Current Year Depreciation of ₹2,00,000 is deducted first -> Balance = ₹3,00,000. (2) Brought Forward Business Loss is adjusted next up to available profit -> ₹3,00,000 adjusted, leaving ₹1,00,000 B/f loss to carry forward. (3) Unabsorbed Depreciation cannot be adjusted (profit is Nil), so full ₹3,00,000 carries forward indefinitely. Taxable PGBP = Nil."
+    },
+    {
+      "id": "Q180",
+      "category": "Specified Business Loss Cross Set-off",
+      "question": "An assessee has a loss of ₹15,00,000 from an eligible specified agricultural warehousing facility and profits of ₹20,00,000 from an eligible specified 2-star hotel business (on which the investment-linked deduction was NOT claimed). Can the warehousing loss be set off against the hotel profit?",
+      "options": [
+        "No, because specified business losses can only be set off against businesses that actually claimed the investment-linked deduction",
+        "Set off is restricted to 50%",
+        "Specified losses can only be set off against identical agricultural businesses",
+        "Yes, under the statutory loss set-off rules, losses of a specified business can be set off against profits of any other specified business, whether or not the investment-linked deduction is claimed in that other business"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 73A, losses from any specified business referred to in Section 35AD can be set off against the profits of ANY other specified business, irrespective of whether the other specified business is claiming deduction u/s 35AD or not."
+    },
+    {
+      "id": "Q181",
+      "category": "Form 26A Consequences",
+      "question": "An assessee fails to deduct TDS on a ₹10,00,000 payment to a resident sub-contractor during Year 1. In Year 2, the payee files its return, pays tax, and the payer obtains Form 26A. What is the tax result for the payer across Year 1 and Year 2?",
+      "options": [
+        "Year 1: 30% (₹3,00,000) is disallowed; Year 2: ₹3,00,000 is allowed as a deduction upon furnishing Form 26A (payer remains liable for 1% p.m. interest u/s 201(1A))",
+        "30% disallowed permanently in Year 1",
+        "Year 1 assessment is revised to grant full deduction retrospectively",
+        "Payee pays 30% penalty"
+      ],
+      "answer": 0,
+      "explanation": "Under Section 40(a)(ia) second proviso, 30% is disallowed in Year 1. In Year 2, upon furnishing Form 26A confirming payee return filing and tax payment, the ₹3,00,000 is allowed as a deduction in Year 2. Payer must pay 1% per month interest u/s 201(1A) up to the date of payee return filing."
+    },
+    {
+      "id": "Q182",
+      "category": "Interest Conversion into Shares",
+      "question": "A company unable to pay ₹25,00,000 accrued loan interest to a public financial institution issues equity shares of equivalent value to the lender in full settlement of the interest liability. Does this satisfy Section 43B?",
+      "options": [
+        "Yes, allotment of shares constitutes valid non-cash discharge",
+        "No, under Explanation 3C to Section 43B, conversion of interest into shares, debentures, or loan instruments does NOT constitute actual payment; deduction is allowed only upon cash redemption/payment",
+        "Yes, if approved by SEBI",
+        "Deductible as a capital loss"
+      ],
+      "answer": 1,
+      "explanation": "Under Explanation 3C to Section 43B, conversion of unpaid loan interest into shares, debentures, loans, or other liability instruments does not constitute actual payment for the purposes of Section 43B."
+    },
+    {
+      "id": "Q183",
+      "category": "Depreciation Put to Use Edge Case",
+      "question": "A machine acquired on 15th December of Year 1 is put to use for 107 days in Year 1. On 10th May of Year 2, the machine is sold. How is depreciation allowed in Year 1 and Year 2?",
+      "options": [
+        "Year 1: 50% rate; Year 2: 50% rate",
+        "Year 1: Full rate; Year 2: Pro-rata rate",
+        "Year 1: 50% of normal rate; Year 2: No depreciation allowed because the asset was sold during Year 2 and removed from the Block before year-end",
+        "Year 1: Nil; Year 2: Full rate"
+      ],
+      "answer": 2,
+      "explanation": "In Year 1, since the asset was acquired and put to use for <180 days in that year, depreciation is restricted to 50% of the prescribed rate. In Year 2, upon sale of the asset, sale consideration (money payable) is deducted from the Block, and depreciation is computed on the net Closing WDV of the remaining Block (no individual asset depreciation under the Block concept)."
+    },
+    {
+      "id": "Q184",
+      "category": "Deemed Building Depreciation Rate",
+      "question": "A tenant incurs ₹15,00,000 on constructing a permanent commercial showroom extension on leased premises. What depreciation rate applies to this 'Deemed Building' under Section 32?",
+      "options": [
+        "100% amortized over the lease term",
+        "15%, as plant and machinery",
+        "Zero depreciation because the tenant is not the legal owner of the land",
+        "10%, being the standard rate of depreciation prescribed for commercial buildings"
+      ],
+      "answer": 3,
+      "explanation": "Under Explanation 1 to Section 32(1), capital expenditure on leased premises is treated as a Deemed Building owned by the tenant. It forms a building block of assets eligible for standard building depreciation (10% for commercial buildings)."
+    },
+    {
+      "id": "Q185",
+      "category": "Sale and Leaseback Actual Cost",
+      "question": "Company X sells its machinery (WDV: ₹10,00,000) to Leasing Company Y for ₹18,00,000 and immediately leases it back. What is the Actual Cost of the machinery to Lessor Y under Explanation 4A to Section 43(1)?",
+      "options": [
+        "₹10,00,000, being the WDV of the asset in the hands of Lessee X at the time of transfer",
+        "₹18,00,000, being the purchase consideration paid by Lessor Y",
+        "Fair Market Value determined by a registered valuer",
+        "NIL"
+      ],
+      "answer": 0,
+      "explanation": "Under Explanation 4A to Section 43(1), in a sale and leaseback transaction, the Actual Cost of the asset to the lessor is deemed to be the Written Down Value (WDV) of the asset in the hands of the lessee at the time of transfer (₹10,00,000), preventing artificial step-up of depreciation base."
+    },
+    {
+      "id": "Q186",
+      "category": "ZCB Monthly Discount Computation",
+      "question": "An infrastructure company issues Zero Coupon Bonds on 20th September redeemable on 10th March of the next calendar year (tenure: 171 days). Total discount is ₹12,00,000. How many calendar months are considered for discount amortization under Section 36(1)(iiia)?",
+      "options": [
+        "6 calendar months (September has >=11 days rounded up to 1 month)",
+        "6 calendar months (September: 11 days [<15 days -> ignored]; October, Nov, Dec, Jan, Feb: 5 full months; March: 10 days [<15 days -> ignored]; Total = 5 months)",
+        "171 / 30 = 5.7 months rounded to 6 months",
+        "12 months"
+      ],
+      "answer": 1,
+      "explanation": "Under Section 36(1)(iiia), a fraction of a month of 15 days or more is rounded up to 1 full calendar month, and <15 days is ignored. September (11 days) is ignored (<15), March (10 days) is ignored (<15), and Oct, Nov, Dec, Jan, Feb (5 full months) make the total life 5 calendar months for amortizing the ₹12,00,000 discount."
+    },
+    {
+      "id": "Q187",
+      "category": "CSR Donations under Section 80G",
+      "question": "A corporate entity makes CSR donations of ₹10,00,000 to the PM CARES Fund and ₹5,00,000 to the Clean Ganga Fund under its statutory CSR obligations. How are these treated under PGBP and Section 80G?",
+      "options": [
+        "Both are deductible under Section 37(1) as CSR business expenses",
+        "Both are allowed under Section 80G without restriction",
+        "Both are disallowed under PGBP u/s 37(1); Under Section 80G, donation to PM CARES Fund is ALLOWED, but donation to Clean Ganga Fund is STRICTLY DISALLOWED if forming part of mandatory CSR",
+        "Both are completely disallowed under all sections"
+      ],
+      "answer": 2,
+      "explanation": "CSR expenses are disallowed under Section 37(1). Under Section 80G, donations to Swachh Bharat Kosh and Clean Ganga Fund are explicitly ineligible for deduction if made as part of mandatory CSR under Companies Act, whereas donations to PM CARES Fund remain eligible for Section 80G deduction."
+    },
+    {
+      "id": "Q188",
+      "category": "Section 44AD Opt-Out Tax Audit",
+      "question": "An eligible assessee opts out of Section 44AD in Year 3 after declaring presumptive income in Year 1 and Year 2. In Year 4, his turnover is ₹1.5 Crore and total income is ₹4,00,000 (exceeding basic exemption). What statutory compliances are mandatory for Year 4?",
+      "options": [
+        "He can opt back into Section 44AD by paying a 10% surcharge",
+        "He only needs to file an affidavit with the Assessing Officer",
+        "Tax audit is not required because turnover is under ₹2 Crore",
+        "He is barred from Section 44AD for 5 consecutive years, must maintain books of account u/s 44AA, and must compulsorily get his accounts audited u/s 44AB"
+      ],
+      "answer": 3,
+      "explanation": "Under Section 44AD(4) and (5), if an assessee opts out of 44AD within 5 years, he is barred from 44AD for the next 5 consecutive assessment years. Furthermore, if total income exceeds the basic exemption limit, he must maintain books u/s 44AA and compulsorily undergo tax audit u/s 44AB, even if turnover is below the normal ₹10 Crore / ₹1 Crore audit threshold."
+    }
+  ]
+}

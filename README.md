@@ -1,40 +1,99 @@
 # ⚡ QuizPlayer - Premium MCQ Practice Platform
 
-QuizPlayer is a lightweight, mobile-first, production-ready offline web application designed to run multiple-choice question (MCQ) quizzes. Built specifically for exam preparation, it allows users to load custom JSON practice files and begin practicing instantly.
+QuizPlayer is a modern, lightweight, mobile-first, offline-ready web application designed for high-yield Multiple Choice Question (MCQ) practice and exam preparation. Built with **React 19**, **TypeScript**, **Tailwind CSS v4**, and **Vite**, it runs 100% client-side with zero backend dependencies.
 
-The application is designed to be hosted statically (e.g., on **GitHub Pages**) and runs entirely in the user's browser. It features a modern premium interface (Tailwind CSS v4, custom HSL gradients, glassmorphism elements), immediate answer locking and evaluation, detailed explanations, a question navigation palette, search and filter features, PWA support for offline usage, and robust session autosaving.
+Practice directly from the built-in question repository, upload your own custom JSON/CSV files, or convert existing spreadsheets into standardized quiz formats with one click.
 
 ---
 
 ## 🚀 Key Features
 
-* **Instant JSON Loader**: Select or drag-and-drop any quiz JSON file adhering to the correct schema.
-* **Practice Engine**: Displays one question at a time. Answers lock immediately upon selection, providing green/red feedback, showing correct choices, and displaying detailed explanations.
-* **Smart Navigation Palette**: Jump freely between questions using an interactive grid displaying the visual correctness states (unanswered, correct, incorrect).
-* **Autosave Session**: Automatically saves your current quiz state, elapsed timer, and answers in `localStorage` under `quiz-app-active-session`. If you refresh, progress is restored.
-* **Review Mode**: Review all questions after completion. Filter by category, answer correctness (All, Correct, Wrong), or perform a live text search across questions and explanations.
-* **Responsive, Premium Design**: Designed mobile-first with comfortable touch targets, elegant color palettes, fluid animations, and native-feeling scrollbars.
-* **Light / Dark Mode**: Seamlessly toggle between theme colors, persisted automatically in browser memory.
-* **Installable PWA**: Includes a Web manifest and custom Service Worker caching system enabling 100% offline usage.
-* **Strict Validation**: Detailed syntax and content check on uploaded files, generating user-friendly error logs for debugging.
-* **Automatic CI/CD**: Automatic builds, quality unit tests, and deployments to GitHub Pages on pushes to the `main` branch.
+* **🌐 GitHub Quiz Explorer (`/explore`)**:
+  * Dynamically browse, search, and load questionnaires stored in the repository's [`questions/`](./questions) catalog via the GitHub REST API.
+  * Real-time search across categories and file sets.
+  * 2-hour smart `localStorage` caching to maximize speed and prevent GitHub API rate limits.
+  * Full offline fallback once a quiz is loaded.
+
+* **📊 Built-in CSV to JSON Converter (`/convert`)**:
+  * Easily convert spreadsheets (`.csv`) into schema-compliant quiz JSON files.
+  * Visual live validation with instant feedback on syntax or structure issues.
+  * Download the converted `.json` file or immediately start practicing.
+  * Includes a downloadable [`quiz-template.csv`](./quiz-template.csv) template.
+
+* **🎯 Pre-Test Setup & Balanced Question Sampling**:
+  * Before starting any test, inspect total available questions and topic breakdown.
+  * Choose the exact number of questions you wish to attempt (defaults to all questions).
+  * **Balanced Multi-Topic Sampling**: Intelligently draws questions across all distinct concepts and topics using balanced round-robin sampling rather than clustering on a single topic.
+  * Optional question and concept sequence randomization for high-yield exam simulation.
+  * Only launches the attempt upon explicit user confirmation.
+
+* **⚡ Practice & Test Engine (`/quiz`)**:
+  * One-question-at-a-time focused practice interface.
+  * Instant answer locking with color-coded feedback (correct vs. wrong) and comprehensive explanations.
+  * Question Navigation Palette to jump across questions and visually inspect status (unanswered, correct, incorrect).
+  * Live attempt timer and running score tracking.
+
+* **💾 Session Autosaving & Recovery**:
+  * Automatically records your active session, question responses, and elapsed timer in `localStorage`.
+  * Resume practicing anytime without losing progress after browser reloads.
+
+* **🔍 Comprehensive Review & Analytics (`/result`)**:
+  * Detailed breakdown with overall accuracy, score, completion time, and category performance.
+  * Interactive review palette with filters for *All*, *Correct*, and *Wrong* answers.
+  * Live search filter across questions and explanation text.
+  * Option to retry missed questions or restart the entire attempt.
+
+* **🎨 Modern UI & Dark Mode**:
+  * Premium aesthetic built with Tailwind CSS v4 and Lucide icons.
+  * Seamless light / dark mode switching with persistent user preference.
+  * Fully responsive design optimized for mobile, tablet, and desktop screens.
+
+* **📱 Installable & Offline PWA**:
+  * Client-side architecture with Service Worker support for complete offline availability.
+
+---
+
+## 📚 Question Bank
+
+The repository comes pre-loaded with curated questionnaires in [`questions/`](./questions):
+
+* **Advanced IT (ADVITT)**:
+  * Forensic Accounting and Fraud Detection
+  * Basics of Digital Forensics and Cyber Security
+  * Robotic Process Automation (RPA)
+  * Oracle Fusion ERP
+  * Microsoft Dynamics
+  * Power BI
+  * Python Programming
+  * KNIME Analytics
 
 ---
 
 ## 📁 Project Directory Structure
 
 ```text
-src/
-├── components/          # Reusable UI components (ErrorBoundary, etc.)
-├── pages/               # Application screens (Home, QuizPlayer, ResultSummary)
-├── hooks/               # Custom React hooks (useQuiz)
-├── services/            # Core services
-├── utils/               # Helper utilities (JSON validation, helpers)
-├── types/               # TypeScript interfaces (Quiz, Question, etc.)
-├── context/             # React Context providers (QuizContext)
-├── routes/              # Routing configurations
-├── styles/              # Global styles (Tailwind, index.css)
-└── assets/              # Static assets (logos, images)
+mcqquiz/
+├── public/                 # Static assets, favicon, manifest
+├── questions/              # Repository quiz question bank
+│   └── ADVITT/             # Advanced IT MCQ sets (.json)
+├── src/
+│   ├── assets/             # Images and branding assets
+│   ├── components/         # Reusable UI components (ErrorBoundary, etc.)
+│   ├── context/            # React Context (QuizContext)
+│   ├── hooks/              # Custom hooks (useQuiz)
+│   ├── pages/              # Application views
+│   │   ├── Home.tsx            # Landing page & JSON loader
+│   │   ├── QuizExplorer.tsx    # GitHub directory browser
+│   │   ├── CsvConverter.tsx    # CSV to JSON conversion studio
+│   │   ├── QuizPlayer.tsx      # Interactive practice engine
+│   │   └── ResultSummary.tsx   # Scorecard & review analytics
+│   ├── types/              # TypeScript interfaces & types
+│   ├── utils/              # Parsers, validation, and GitHub API services
+│   ├── App.tsx             # Root router & layout
+│   └── main.tsx            # Entry point
+├── quiz-schema.json        # JSON Schema specification
+├── quiz-template.csv       # Starter template for CSV question sets
+└── vite.config.ts          # Vite build configuration
 ```
 
 ---
@@ -42,62 +101,88 @@ src/
 ## 🛠️ Technology Stack
 
 * **Frontend Framework**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-* **Build Tool**: [Vite 8](https://vite.dev/)
+* **Build Tool**: [Vite 6+](https://vite.dev/)
 * **CSS / Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
 * **Icons**: [Lucide React](https://lucide.dev/)
 * **Animations & Celebration**: [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti)
-* **Routing**: [React Router 6 (HashRouter)](https://reactrouter.com/)
+* **Routing**: [React Router 7 (HashRouter)](https://reactrouter.com/)
 * **Testing Library**: [Vitest](https://vitest.dev/) + [JSDOM](https://github.com/jsdom/jsdom)
 
 ---
 
-## 📄 JSON Schema Format
+## 📄 Data Formats & Schemas
 
-Quizzes loaded into the app must follow this schema:
+### 1. JSON Format (`quiz-schema.json`)
 
 ```json
 {
-  "title": "Income Tax Practice Set 01",
-  "description": "Practice questions",
+  "title": "Sample Quiz Title",
+  "description": "Short description of the quiz topics",
   "version": "1.0",
   "questions": [
     {
       "id": 1,
-      "category": "Income Tax",
-      "question": "What is the basic exemption limit?",
+      "category": "Topic Name",
+      "question": "Which of the following statements is correct?",
       "options": [
-        "100000",
-        "200000",
-        "300000",
-        "400000"
+        "First option",
+        "Second option",
+        "Third option",
+        "Fourth option"
       ],
-      "answer": 2,
-      "explanation": "Current exemption limit is ..."
+      "answer": 1,
+      "explanation": "Detailed explanation for why option 2 is correct."
     }
   ]
 }
 ```
 
-### Strict Validation Rules
-1. **Title**: Required, must be a non-empty string.
-2. **Questions List**: Required, must contain at least one question.
-3. **ID**: Required, must be a string or number, and **completely unique** across all questions.
-4. **Category**: Required, must be a non-empty string.
-5. **Question Text**: Required, must be a non-empty string.
-6. **Options**: Must be an array of strings or numbers, containing **between 2 and 6 options**.
-7. **Answer**: Required, must be a number corresponding to the correct option index (0-indexed).
-8. **Explanation**: Required, must be a non-empty string.
+#### Validation Rules:
+* **`title`**: Non-empty string.
+* **`questions`**: Array with at least 1 question item.
+* **`id`**: Unique string or number identifier for each question.
+* **`category`**: Non-empty string.
+* **`question`**: Non-empty string containing the question prompt.
+* **`options`**: Array of 2 to 6 options (strings or numbers).
+* **`answer`**: 0-based index integer pointing to the correct option (`0` for first option, `1` for second, etc.).
+* **`explanation`**: Non-empty explanation string.
 
 ---
 
-## 💻 Running Locally
+### 2. CSV Format (`quiz-template.csv`)
 
-Follow these steps to run the application in development mode:
+You can create quizzes in Excel or Google Sheets and export them as `.csv`:
+
+| Column Header | Required | Description | Example |
+| :--- | :---: | :--- | :--- |
+| `id` | Optional | Question identifier (auto-assigned if omitted) | `1` |
+| `category` | Yes | Subject or category name | `Information Security` |
+| `question` | Yes | Question prompt text | `What does CIA stand for?` |
+| `option_1` | Yes | First choice | `Confidentiality, Integrity, Availability` |
+| `option_2` | Yes | Second choice | `Control, Identity, Authentication` |
+| `option_3` | Optional | Third choice | `Central Intelligence Agency` |
+| `option_4` | Optional | Fourth choice | `Cyber Incident Assessment` |
+| `option_5` | Optional | Fifth choice | |
+| `option_6` | Optional | Sixth choice | |
+| `answer` | Yes | 1-based option number (`1` to `6`) | `1` |
+| `explanation` | Yes | Explanation for the solution | `CIA triad is Confidentiality...` |
+
+*(Note: The CSV converter automatically translates 1-based CSV answers to 0-based internal indexes).*
+
+---
+
+## 💻 Getting Started
+
+### Prerequisites
+* [Node.js](https://nodejs.org/) (version 18 or higher recommended)
+* `npm`
+
+### Local Development
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
-   cd mcqquiz
+   git clone https://github.com/iambalaji-k/mcquiz.git
+   cd mcquiz
    ```
 
 2. **Install dependencies**:
@@ -105,13 +190,13 @@ Follow these steps to run the application in development mode:
    npm install
    ```
 
-3. **Start the local dev server**:
+3. **Start local development server**:
    ```bash
    npm run dev
    ```
-   *The application will boot up under `http://localhost:5173/` (respecting the base routing path).*
+   Open `http://localhost:5173/` in your browser.
 
-4. **Verify production building**:
+4. **Build for production**:
    ```bash
    npm run build
    ```
@@ -120,21 +205,23 @@ Follow these steps to run the application in development mode:
 
 ## 🧪 Testing
 
-The project uses **Vitest** for unit testing. The test suite checks the JSON parser and validator for edge cases like duplicate IDs, out-of-bound indices, missing properties, and corrupt structures.
+Run the automated test suite powered by **Vitest**:
 
-To run the unit tests, use:
 ```bash
 npm run test
 ```
 
+Tests cover:
+* JSON schema validation (missing fields, duplicate IDs, invalid types, out-of-range answers).
+* CSV parsing and index conversion.
+* Edge cases and malformed inputs.
+
 ---
 
-## ⚙️ GitHub Pages Deployment
+## ⚙️ Deployment
 
-The application compiles assets using `HashRouter` and a relative base path (`./`) which makes it fully portable and compatible with both subdirectories (e.g., `https://<username>.github.io/mcqquiz/`) and custom domains or subdomains (e.g., `https://mcqquiz.balajik.in/`).
+The project uses `HashRouter` and relative asset paths, making it deployable on any static hosting service (GitHub Pages, Cloudflare Pages, Vercel, Netlify) with zero server configuration.
 
-A GitHub Actions workflow is preconfigured in `.github/workflows/deploy.yml`:
-1. Triggers automatically on push to the `main` branch.
-2. Runs the test suite to verify quality.
-3. Runs the production compiler.
-4. Deploys the built files automatically to your GitHub Pages URL.
+### GitHub Pages (Automated CI/CD)
+The repository includes an automated GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically tests, builds, and deploys the app on every push to `main`.
+

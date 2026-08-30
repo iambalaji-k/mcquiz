@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useQuiz } from '../hooks/useQuiz';
 import { parseCSV, convertCsvToQuiz } from '../utils/csvConverter';
 import { validateQuiz } from '../utils/validation';
+import { StartQuizModal } from '../components/StartQuizModal';
+import type { Quiz } from '../types/quiz';
 import { 
   ArrowLeft, 
   UploadCloud, 
@@ -10,11 +12,11 @@ import {
   Download, 
   Copy, 
   AlertCircle, 
-  CheckCircle,
-  HelpCircle,
-  Code,
-  Sun,
-  Moon
+  CheckCircle, 
+  HelpCircle, 
+  Code, 
+  Sun, 
+  Moon 
 } from 'lucide-react';
 
 export const CsvConverter: React.FC = () => {
@@ -32,6 +34,8 @@ export const CsvConverter: React.FC = () => {
   const [errors, setErrors] = useState<string[]>([]);
   const [success, setSuccess] = useState(false);
   const [convertedQuizJson, setConvertedQuizJson] = useState<string>('');
+  const [convertedQuizObj, setConvertedQuizObj] = useState<Quiz | null>(null);
+  const [isConfigModalOpen, setIsConfigModalOpen] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [showExampleSchema, setShowExampleSchema] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -76,6 +80,7 @@ export const CsvConverter: React.FC = () => {
 
     // Success
     setSuccess(true);
+    setConvertedQuizObj(conversion.quiz);
     setConvertedQuizJson(JSON.stringify(conversion.quiz, null, 2));
   };
 
@@ -113,11 +118,7 @@ export const CsvConverter: React.FC = () => {
     setIsDragging(false);
     const file = e.dataTransfer.files?.[0];
     if (file) {
-      if (file.name.endsWith('.csv') || file.type === 'text/csv') {
-        processFile(file);
-      } else {
-        setErrors(['Invalid file type. Please upload a .csv file.']);
-      }
+      processFile(file);
     }
   };
 
@@ -146,9 +147,14 @@ export const CsvConverter: React.FC = () => {
   };
 
   const handlePlayQuizDirectly = () => {
-    if (!convertedQuizJson) return;
-    const parsedQuiz = JSON.parse(convertedQuizJson);
-    loadNewQuiz(parsedQuiz);
+    if (convertedQuizObj) {
+      setIsConfigModalOpen(true);
+    }
+  };
+
+  const handleConfirmStart = (preparedQuiz: Quiz) => {
+    loadNewQuiz(preparedQuiz);
+    setIsConfigModalOpen(false);
     navigate('/quiz');
   };
 
@@ -430,6 +436,14 @@ export const CsvConverter: React.FC = () => {
 
         </aside>
       </div>
+
+      {/* Pre-test Configuration Confirmation Modal */}
+      <StartQuizModal
+        isOpen={isConfigModalOpen}
+        quiz={convertedQuizObj}
+        onClose={() => setIsConfigModalOpen(false)}
+        onConfirm={handleConfirmStart}
+      />
     </div>
   );
 };
