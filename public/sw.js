@@ -1,5 +1,5 @@
-const CACHE_NAME = 'quiz-player-v1';
-const DYNAMIC_CACHE_NAME = 'quiz-player-dynamic-v1';
+const CACHE_NAME = 'quiz-player-v2';
+const DYNAMIC_CACHE_NAME = 'quiz-player-dynamic-v2';
 
 // Dynamically determine the base path from the service worker's own location
 const BASE_PATH = self.location.pathname.substring(0, self.location.pathname.lastIndexOf('/') + 1);

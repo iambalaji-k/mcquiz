@@ -1,10 +1,71 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-outfit: 'Outfit', system-ui, -apple-system, sans-serif;
+  /* Type: system sans for UI, a serif for reading. No webfont downloads,
+     so first paint never waits on Google Fonts. */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Brand: Warm Amber & Bronze / Charcoal */
+  --color-brand-50: #fdf8ee;
+  --color-brand-100: #faebd0;
+  --color-brand-200: #f5d59e;
+  --color-brand-300: #edb968;
+  --color-brand-400: #e49b38;
+  --color-brand-500: #d97d1b;
+  --color-brand-600: #b95f12;
+  --color-brand-700: #944613;
+  --color-brand-800: #773715;
+  --color-brand-900: #5f2d15;
+  --color-brand-950: #331508;
+
+  /* Accent: Warm Copper / Terracotta */
+  --color-accent-50: #fff7ed;
+  --color-accent-100: #ffedd5;
+  --color-accent-200: #fed7aa;
+  --color-accent-300: #fdba74;
+  --color-accent-400: #fb923c;
+  --color-accent-500: #f97316;
+  --color-accent-600: #ea580c;
+  --color-accent-700: #c2410c;
+  --color-accent-800: #9a3412;
+  --color-accent-900: #7c2d12;
+  --color-accent-950: #431407;
+
+  /* White: Pure white for text-white and dark mode */
+  --color-white: #ffffff;
+
+  /* Paper: Dynamic warm parchment in light mode, obsidian in dark mode */
+  --color-paper-50: var(--paper-50);
+  --color-paper-100: var(--paper-100);
+  --color-paper-200: var(--paper-200);
+  --color-paper-300: var(--paper-300);
+
+  /* Ink: Charcoal dark canvas & dark card surfaces */
+  --color-ink-900: #18181b;
+  --color-ink-950: #0f0f11;
+  --color-ink: var(--color-ink-val);
+
+  /* Neutrals: Dynamic sepia-stone in light mode, clean crisp zinc in dark mode */
+  --color-slate-50: var(--slate-50);
+  --color-slate-100: var(--slate-100);
+  --color-slate-200: var(--slate-200);
+  --color-slate-300: var(--slate-300);
+  --color-slate-400: var(--slate-400);
+  --color-slate-500: var(--slate-500);
+  --color-slate-600: var(--slate-600);
+  --color-slate-700: var(--slate-700);
+  --color-slate-800: var(--slate-800);
+  --color-slate-900: var(--slate-900);
+  --color-slate-950: var(--slate-950);
+
   --animate-fade-in: fade-in 0.3s ease-out;
-  --animate-slide-up: slide-up 0.35s ease-out;
+  --animate-slide-up: slide-up 0.3s ease-out;
+  --animate-question-in: question-in 0.25s cubic-bezier(0.2, 0, 0, 1);
+  --animate-modal-pop: modal-pop 0.28s cubic-bezier(0.2, 0, 0, 1);
+  --animate-icon-swap: icon-swap 0.3s cubic-bezier(0.2, 0, 0, 1);
+  --animate-skeleton: skeleton 1.2s ease-in-out infinite;
 
   @keyframes fade-in {
     from {
@@ -25,18 +86,233 @@
       transform: translateY(0);
     }
   }
+
+  /* Question arrival: light lift, settles fast. */
+  @keyframes question-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Modal / dialog entrance: scale 0.97 up with a slight lift, sharp settle. */
+  @keyframes modal-pop {
+    from {
+      opacity: 0;
+      transform: scale(0.97) translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  /* Icon swap: fade the old out, bring the new in. */
+  @keyframes icon-swap {
+    from {
+      opacity: 0;
+      transform: scale(0.25);
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes skeleton {
+    0% {
+      background-color: var(--color-slate-100);
+    }
+    50% {
+      background-color: var(--color-slate-200);
+    }
+    100% {
+      background-color: var(--color-slate-100);
+    }
+  }
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Additional CSS customization if needed */
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
+:root {
+  /* Light Mode: Deep warm golden sand & sepia book canvas */
+  --paper-50: #e3d6be;
+  --paper-100: #d6c7ab;
+  --paper-200: #c7b594;
+  --paper-300: #b6a27e;
+
+  --slate-50: #dccdb0;
+  --slate-100: #cfbe9d;
+  --slate-200: #beab87;
+  --slate-300: #aa9570;
+  --slate-400: #8e7954;
+  --slate-500: #715f3e;
+  --slate-600: #57482d;
+  --slate-700: #41351e;
+  --slate-800: #2c2311;
+  --slate-900: #191206;
+  --slate-950: #0c0802;
+
+  --color-ink-val: #181105;
+  --card-surface: #eee3cf;
 }
 
-/* Custom styles for transitions and glassmorphism scrollbars */
+:root:not(.dark) .bg-white {
+  background-color: #eee3cf;
+}
+
+.dark {
+  /* Dark Mode: Crisp, sleek obsidian black & clean zinc-charcoal */
+  --paper-50: #0f1015;
+  --paper-100: #171821;
+  --paper-200: #232533;
+  --paper-300: #36394c;
+
+  --slate-50: #fafaf9;
+  --slate-100: #f4f4f5;
+  --slate-200: #e4e4e7;
+  --slate-300: #d4d4d8;
+  --slate-400: #a1a1aa;
+  --slate-500: #71717a;
+  --slate-600: #52525b;
+  --slate-700: #3f3f46;
+  --slate-800: #262833;
+  --slate-900: #171821;
+  --slate-950: #0f1015;
+
+  --color-ink-val: #f4f4f5;
+  --card-surface: #171821;
+}
+
+/* Press feedback: the press state scales 0.98 and settles back at 150ms.
+   Wired to the interactive .btn utility; reduced-motion keeps colors only. */
+.btn {
+  transition: transform 150ms cubic-bezier(0.2, 0, 0, 1), background-color 150ms ease-out, border-color 150ms ease-out;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: background-color 100ms ease-out, border-color 100ms ease-out;
+  }
+}
+
+/* Expandable regions: smooth height + opacity. Driven by a grid row trick
+   so no layout-property animation is needed. */
+.reveal {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 300ms cubic-bezier(0.2, 0, 0, 1), opacity 300ms ease-out;
+}
+.reveal > * {
+  min-height: 0;
+  overflow: hidden;
+}
+.reveal[data-open="false"] {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+  }
+}
+
+/* Printing always shows the expanded contents, even for collapsed cards. */
+@media print {
+  .reveal,
+  .reveal[data-open="false"] {
+    display: block !important;
+    grid-template-rows: none !important;
+    opacity: 1 !important;
+  }
+  .reveal > * {
+    overflow: visible !important;
+  }
+}
+
+/* Touch: remove the double-tap zoom delay on controls and keep the
+   highlight honest instead of a default gray flash. */
+button, a, input, select, textarea, label[for], [role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(216, 131, 31, 0.18);
+}
+
+/* Reading surfaces (explanations, review text) set in the serif. */
+.font-read {
+  font-family: var(--font-serif);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  /* Keep fixed/edge content clear of notches and home indicators. */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Keyboard focus: one visible ring everywhere. 2px, offset, 3:1 contrast.
+   The accent ring is amber; on amber surfaces it swaps to the dark brand
+   so it never disappears into the element it marks. */
+*:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-600);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Dark theme: a lighter amber ring reads better on the ink canvas. */
+.dark :focus-visible {
+  outline-color: var(--color-accent-400);
+}
+
+/* Skip link: first focusable element, jumps straight to the content. */
+.skip-link {
+  position: absolute;
+  inset-inline-start: -999px;
+  top: 8px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--color-brand-800);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+.skip-link:focus {
+  inset-inline-start: 16px;
+}
+
+/* Dialogs and menus: scrolling inside never scrolls the page behind. */
+[role="dialog"],
+[role="alertdialog"] {
+  overscroll-behavior: contain;
+}
+
+/* Respect the OS motion preference for every entrance animation. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom styles for transitions and scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

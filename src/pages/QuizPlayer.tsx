@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuiz } from '../hooks/useQuiz';
+import { ConfirmDialog } from '../components/ConfirmDialog';
 import { 
   ArrowRight, 
   Check, 
@@ -10,8 +11,6 @@ import {
   Home, 
   Flag, 
   Info,
-  CheckCircle2,
-  XCircle,
   Sun,
   Moon
 } from 'lucide-react';
@@ -33,12 +32,14 @@ export const QuizPlayer: React.FC = () => {
 
   const navigate = useNavigate();
 
-  const PAGE_SIZE = 20;
+  const PAGE_SIZE = 50;
   const totalQuestions = quiz?.questions.length ?? 0;
   const totalPages = Math.max(1, Math.ceil(totalQuestions / PAGE_SIZE));
   const defaultPage = Math.floor(currentQuestionIndex / PAGE_SIZE);
   const [selectedPage, setSelectedPage] = useState<number | null>(null);
   const currentPage = Math.max(0, Math.min(selectedPage !== null ? selectedPage : defaultPage, totalPages - 1));
+  const [isExitDialogOpen, setIsExitDialogOpen] = useState(false);
+  const [isSubmitDialogOpen, setIsSubmitDialogOpen] = useState(false);
 
   // Redirect to home if no quiz is loaded
   useEffect(() => {
@@ -125,248 +126,217 @@ export const QuizPlayer: React.FC = () => {
   };
 
   const handleFinishQuiz = () => {
-    // Confirm if they haven't answered all questions
-    if (totalAnswered < totalQuestions) {
-      const confirmSubmit = window.confirm(
-        `You have only answered ${totalAnswered} out of ${totalQuestions} questions. Do you want to submit and complete the quiz?`
-      );
-      if (!confirmSubmit) return;
-    }
     completeQuiz();
     navigate('/result');
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-6 md:py-10 flex flex-col min-h-screen">
+    <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex flex-col min-h-screen">
       {/* Top Header Controls */}
-      <header className="flex items-center justify-between mb-6 border-b border-slate-200 dark:border-slate-800 pb-4">
+      <header className="flex flex-wrap items-center justify-between gap-y-2 mb-3 border-b border-slate-200 dark:border-slate-800 pb-2.5">
         <button
-          onClick={() => {
-            if (window.confirm('Are you sure you want to exit? Your current progress will be kept in memory.')) {
-              navigate('/');
-            }
-          }}
-          className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors focus:outline-none cursor-pointer"
+          onClick={() => setIsExitDialogOpen(true)}
+          className="flex items-center gap-1.5 text-xs md:text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors cursor-pointer py-1"
         >
           <Home className="h-4 w-4" />
-          <span>Exit to Home</span>
+          <span>Exit</span>
         </button>
 
-        <h2 className="text-xs md:text-sm font-bold text-slate-800 dark:text-slate-300 max-w-[50%] truncate text-center font-outfit">
+        <h1 className="text-xs md:text-sm font-bold text-slate-800 dark:text-slate-300 max-w-[50%] md:max-w-[40%] truncate text-center order-last md:order-none w-full md:w-auto">
           {quiz.title}
-        </h2>
+        </h1>
 
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs md:text-sm font-semibold text-slate-700 dark:text-slate-300">
-            <Clock className="h-3.5 w-3.5 text-indigo-500" />
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-ink-900 border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300">
+            <Clock className="h-3.5 w-3.5 text-brand-600 dark:text-brand-400" />
             <span>{formatTime(timeSpent)}</span>
           </div>
-          
+
           <button
             onClick={toggleTheme}
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 print:hidden"
+            className="p-1.5 rounded-lg bg-slate-100 dark:bg-ink-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors cursor-pointer print:hidden"
           >
-            {theme === 'dark' ? <Sun className="h-4.5 w-4.5" /> : <Moon className="h-4.5 w-4.5" />}
+            {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
         </div>
       </header>
 
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left Side: Question and Options Panel (8 cols) */}
-        <main className="lg:col-span-8 space-y-6">
-          {/* Progress Section */}
-          <div className="space-y-2">
-            <div className="flex justify-between items-end text-xs md:text-sm font-semibold">
-              <span className="text-indigo-600 dark:text-indigo-400 font-bold">
-                Question {currentQuestionIndex + 1} of {totalQuestions}
-              </span>
-              <span className="text-slate-500 dark:text-slate-400">
-                {progressPercent}% Complete
-              </span>
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+        {/* Left Side: Question, Options, and Explanation Panel (Stable Min Height) */}
+        <main className="lg:col-span-8 xl:col-span-9 flex flex-col min-h-[460px] md:min-h-[520px]">
+          <div className="space-y-3.5 flex-1">
+            {/* Progress Section */}
+            <div className="space-y-1">
+              <div className="flex justify-between items-end text-xs font-semibold">
+                <span className="text-brand-700 dark:text-brand-400 font-bold">
+                  Q {currentQuestionIndex + 1} of {totalQuestions}
+                </span>
+                <span className="text-slate-500 dark:text-slate-400">
+                  {progressPercent}%
+                </span>
+              </div>
+              {/* Progress Bar */}
+              <div className="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                <div
+                  className="bg-brand-600 h-full rounded-full transition-all duration-300 ease-out"
+                  style={{ width: `${progressPercent}%` }}
+                ></div>
+              </div>
             </div>
-            {/* Progress Bar */}
-            <div className="h-2.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-              <div 
-                className="h-full bg-gradient-to-r from-indigo-500 to-violet-600 rounded-full transition-all duration-300 ease-out" 
-                style={{ width: `${progressPercent}%` }}
-              ></div>
-            </div>
+
+            {/* Question Card */}
+            <section className="bg-white dark:bg-ink-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 md:p-5 shadow-sm space-y-3.5">
+              <div className="space-y-1.5">
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex px-2 py-0.5 rounded-md text-[11px] font-bold bg-brand-50 text-brand-800 dark:bg-brand-950/50 dark:text-brand-300 border border-brand-100 dark:border-brand-900/30">
+                    {currentQuestion.category}
+                  </span>
+                </div>
+                <h2 className="font-read text-base md:text-lg font-medium text-slate-900 dark:text-white leading-relaxed">
+                  {currentQuestion.question}
+                </h2>
+              </div>
+
+              {/* Options List (2-column layout to reclaim vertical space) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                {currentQuestion.options.map((option, idx) => {
+                  const isSelected = currentSelection === idx;
+                  const isCorrect = idx === currentQuestion.answer;
+                  
+                  let optionStyle = 'border-slate-200 dark:border-slate-700/80 hover:border-slate-300 dark:hover:border-slate-600 bg-white dark:bg-ink-900 text-slate-800 dark:text-slate-200 hover:bg-slate-50/50 dark:hover:bg-slate-800/40';
+                  let iconElement = null;
+
+                  if (isAnswered) {
+                    if (isCorrect) {
+                      optionStyle = 'border-emerald-500/50 bg-emerald-500/10 dark:bg-emerald-950/20 text-emerald-900 dark:text-emerald-300 font-semibold';
+                      iconElement = <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400 shrink-0" />;
+                    } else if (isSelected) {
+                      optionStyle = 'border-rose-500/50 bg-rose-500/10 dark:bg-rose-950/20 text-rose-900 dark:text-rose-300 font-semibold';
+                      iconElement = <X className="h-4 w-4 text-rose-600 dark:text-rose-400 shrink-0" />;
+                    } else {
+                      optionStyle = 'opacity-50 border-slate-100 dark:border-slate-800/60 text-slate-400';
+                    }
+                  }
+
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => handleOptionSelect(idx)}
+                      disabled={isAnswered}
+                      className={`w-full p-2.5 md:p-3 rounded-lg border text-left flex items-center justify-between gap-2.5 transition-colors ${optionStyle} ${
+                        !isAnswered ? 'cursor-pointer active:scale-[0.99] btn' : 'cursor-default'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                        <span className={`h-6 w-6 rounded-md flex items-center justify-center text-xs font-bold border shrink-0 ${
+                          isSelected 
+                            ? 'bg-brand-700 border-brand-700 text-white' 
+                            : isAnswered && isCorrect
+                            ? 'bg-emerald-600 border-emerald-600 text-white'
+                            : 'bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400'
+                        }`}>
+                          {String.fromCharCode(65 + idx)}
+                        </span>
+                        <span className="text-xs md:text-sm text-slate-800 dark:text-slate-200 leading-snug">
+                          {option}
+                        </span>
+                      </div>
+                      {iconElement}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Explanation (Inside/attached seamlessly to question card) */}
+              {isAnswered && (
+                <div className="bg-paper-100 dark:bg-ink-950/70 border border-slate-200 dark:border-slate-800/80 rounded-lg p-3.5 space-y-1 animate-fade-in">
+                  <div className="flex items-center gap-1.5 text-brand-700 dark:text-brand-400 font-bold text-[11px] uppercase tracking-wider">
+                    <Info className="h-3.5 w-3.5" />
+                    <span>Explanation</span>
+                  </div>
+                  <p className="font-read text-xs md:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                    {currentQuestion.explanation}
+                  </p>
+                </div>
+              )}
+            </section>
           </div>
 
-          {/* Question Card */}
-          <section className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/80 rounded-3xl p-6 md:p-8 shadow-xl shadow-slate-100/50 dark:shadow-none space-y-4">
-            {/* Category Badge */}
-            <div>
-              <span className="inline-flex px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700 dark:bg-indigo-950/40 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-900/30">
-                {currentQuestion.category}
-              </span>
-            </div>
-
-            {/* Question Text */}
-            <h3 className="text-lg md:text-xl font-extrabold text-slate-900 dark:text-white leading-relaxed font-outfit">
-              {currentQuestion.question}
-            </h3>
-
-            {/* Options List */}
-            <div className="space-y-3 pt-2">
-              {currentQuestion.options.map((option, idx) => {
-                const isCorrect = currentQuestion.answer === idx;
-                const isSelected = currentSelection === idx;
-                
-                let optionStyle = 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-indigo-500 dark:hover:border-indigo-500/50 hover:bg-slate-50/50 dark:hover:bg-slate-800/30';
-                let iconElement = null;
-
-                if (isAnswered) {
-                  if (isCorrect) {
-                    optionStyle = 'border-emerald-500 bg-emerald-500/10 dark:bg-emerald-950/30 text-emerald-950 dark:text-emerald-300 font-semibold ring-2 ring-emerald-500/20';
-                    iconElement = <Check className="h-5 w-5 text-emerald-600 dark:text-emerald-400 shrink-0" />;
-                  } else if (isSelected) {
-                    optionStyle = 'border-rose-500 bg-rose-500/10 dark:bg-rose-950/30 text-rose-950 dark:text-rose-300 font-semibold ring-2 ring-rose-500/20';
-                    iconElement = <X className="h-5 w-5 text-rose-600 dark:text-rose-400 shrink-0" />;
-                  } else {
-                    optionStyle = 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 opacity-60';
-                  }
-                }
-
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => handleOptionSelect(idx)}
-                    disabled={isAnswered}
-                    className={`w-full p-4 rounded-2xl border text-left flex justify-between items-center gap-3 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500 ${optionStyle} ${
-                      !isAnswered ? 'cursor-pointer hover:scale-[1.005]' : 'cursor-default'
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className={`h-8 w-8 rounded-xl flex items-center justify-center text-xs md:text-sm font-bold border transition-colors shrink-0 ${
-                        isSelected 
-                          ? 'bg-indigo-600 border-indigo-600 text-white' 
-                          : isAnswered && isCorrect
-                          ? 'bg-emerald-600 border-emerald-600 text-white'
-                          : 'bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 group-hover:bg-indigo-50'
-                      }`}>
-                        {String.fromCharCode(65 + idx)}
-                      </span>
-                      <span className="text-sm md:text-base text-slate-800 dark:text-slate-200">
-                        {option}
-                      </span>
-                    </div>
-                    {iconElement}
-                  </button>
-                );
-              })}
-            </div>
-          </section>
-
-          {/* Correct / Incorrect Notification + Explanation (Conditional) */}
-          {isAnswered && (
-            <section className="space-y-4 animate-fade-in">
-              {/* Outcome Banner */}
-              <div className={`flex items-center gap-3 p-4 rounded-2xl border ${
-                currentSelection === currentQuestion.answer
-                  ? 'bg-emerald-500/10 border-emerald-500/25 text-emerald-800 dark:text-emerald-300'
-                  : 'bg-rose-500/10 border-rose-500/25 text-rose-800 dark:text-rose-300'
-              }`}>
-                {currentSelection === currentQuestion.answer ? (
-                  <>
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                    <span className="text-sm font-bold">Correct Answer!</span>
-                  </>
-                ) : (
-                  <>
-                    <XCircle className="h-5 w-5 text-rose-600 dark:text-rose-400 shrink-0" />
-                    <span className="text-sm font-bold">Incorrect Answer!</span>
-                  </>
-                )}
-              </div>
-
-              {/* Explanation Card */}
-              <div className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 md:p-6 space-y-2">
-                <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold text-xs md:text-sm">
-                  <Info className="h-4 w-4" />
-                  <span>EXPLANATION</span>
-                </div>
-                <p className="text-xs md:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
-                  {currentQuestion.explanation}
-                </p>
-              </div>
-            </section>
-          )}
-
-          {/* Navigation Controls */}
-          <section className="flex items-center justify-between gap-4 pt-4">
+          {/* Navigation Controls (Anchored cleanly at bottom, pushes down only if question is very long) */}
+          <section className="flex items-stretch justify-between gap-2 pt-3 mt-auto">
             <button
               onClick={prevQuestion}
               disabled={currentQuestionIndex === 0}
-              className="px-5 py-3 rounded-2xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 disabled:opacity-40 disabled:hover:bg-transparent font-bold text-sm flex items-center gap-2 cursor-pointer transition-all active:scale-95 focus:outline-none"
+              className="flex-1 md:flex-none px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 disabled:opacity-40 disabled:hover:bg-transparent font-bold text-sm flex items-center justify-center gap-1.5 cursor-pointer transition-colors btn"
             >
               <ChevronLeft className="h-4 w-4" />
               <span>Prev</span>
             </button>
 
             <button
-              onClick={handleFinishQuiz}
-              className="px-6 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm cursor-pointer shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all active:scale-95 flex items-center gap-2 focus:outline-none"
+              onClick={() => {
+                if (totalAnswered < totalQuestions) {
+                  setIsSubmitDialogOpen(true);
+                } else {
+                  handleFinishQuiz();
+                }
+              }}
+              className="flex-1 md:flex-none px-5 md:px-7 py-2.5 rounded-lg bg-accent-600 hover:bg-accent-700 text-white font-bold text-sm cursor-pointer flex items-center justify-center gap-2 transition-colors btn"
             >
               <Flag className="h-4 w-4 fill-white" />
-              <span>Submit Exam</span>
+              <span>Submit</span>
             </button>
 
             <button
               onClick={nextQuestion}
               disabled={currentQuestionIndex === totalQuestions - 1}
-              className="px-5 py-3 rounded-2xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 disabled:opacity-40 disabled:hover:bg-transparent font-bold text-sm flex items-center gap-2 cursor-pointer transition-all active:scale-95 focus:outline-none"
+              className="flex-1 md:flex-none px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 disabled:opacity-40 disabled:hover:bg-transparent font-bold text-sm flex items-center justify-center gap-1.5 cursor-pointer transition-colors btn"
             >
               <span>Next</span>
               <ArrowRight className="h-4 w-4" />
             </button>
           </section>
-
-          {/* Keyboard Shortcut Instructions (Desktop only) */}
-          <p className="hidden md:block text-[10px] text-center text-slate-400 dark:text-slate-500 font-semibold pt-2">
-            Tip: Press keyboard numbers 1–6 to select answers. Use Left/Right arrows to flip questions.
-          </p>
         </main>
 
-        {/* Right Side: Question Navigation Palette (4 cols) */}
-        <aside className="lg:col-span-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 md:p-6 shadow-sm space-y-4">
+        {/* Right Side: Question Navigation Palette */}
+        <aside className="lg:col-span-4 xl:col-span-3 bg-white dark:bg-ink-900 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 md:p-4 space-y-3 self-start lg:sticky lg:top-4 max-h-[calc(100vh-2rem)] overflow-y-auto">
           <div className="flex justify-between items-center">
-            <h4 className="text-xs md:text-sm font-bold text-slate-950 dark:text-white font-outfit">
-              Question Palette
+            <h4 className="text-xs md:text-sm font-bold text-slate-950 dark:text-white">
+              Palette
             </h4>
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-              {totalAnswered} / {totalQuestions} Done
+              {totalAnswered}/{totalQuestions}
             </span>
           </div>
 
           {/* Palette Pagination Controls (Conditional) */}
           {totalPages > 1 && (
-            <div className="flex items-center justify-between gap-2 bg-slate-50 dark:bg-slate-950 p-2.5 rounded-2xl border border-slate-100 dark:border-slate-800/60 print:hidden mb-2">
+            <div className="flex items-center justify-between gap-1.5 bg-slate-50 dark:bg-ink-900 p-1.5 rounded-lg border border-slate-100 dark:border-slate-800/60 print:hidden mb-1">
               <button
                 onClick={() => setSelectedPage(Math.max(0, currentPage - 1))}
                 disabled={currentPage === 0}
-                className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-900 disabled:opacity-40 transition-all cursor-pointer"
+                className="p-1 rounded-md border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-ink-900 disabled:opacity-40 transition-colors cursor-pointer"
                 aria-label="Previous palette page"
               >
-                <ChevronLeft className="h-4 w-4" />
+                <ChevronLeft className="h-3.5 w-3.5" />
               </button>
-              <span className="text-[10px] md:text-xs font-bold text-slate-700 dark:text-slate-300">
-                Page {currentPage + 1} of {totalPages} (Q{startIndex + 1}-{endIndex})
+              <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
+                P{currentPage + 1}/{totalPages} (Q{startIndex + 1}-{endIndex})
               </span>
               <button
                 onClick={() => setSelectedPage(Math.min(totalPages - 1, currentPage + 1))}
                 disabled={currentPage === totalPages - 1}
-                className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-900 disabled:opacity-40 transition-all cursor-pointer"
+                className="p-1 rounded-md border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-ink-900 disabled:opacity-40 transition-colors cursor-pointer"
                 aria-label="Next palette page"
               >
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-3.5 w-3.5" />
               </button>
             </div>
           )}
 
-          {/* Palette Grid */}
-          <div className="grid grid-cols-5 xs:grid-cols-6 md:grid-cols-8 lg:grid-cols-4 gap-2">
+          {/* Palette Grid: 5 in a row (10 rows for 50 items) */}
+          <div className="grid grid-cols-5 gap-1.5">
             {pageQuestions.map((q, localIdx) => {
               const actualIdx = startIndex + localIdx;
               const qAns = answers[q.id];
@@ -374,7 +344,7 @@ export const QuizPlayer: React.FC = () => {
               const isQAnswered = qAns !== undefined;
               const isQCorrect = isQAnswered && qAns === q.answer;
 
-              let btnStyle = 'bg-slate-50 hover:bg-slate-100 text-slate-700 dark:bg-slate-800/40 dark:hover:bg-slate-800/80 dark:text-slate-300 border-slate-200 dark:border-slate-700/50';
+              let btnStyle = 'bg-slate-50 hover:bg-slate-100 text-slate-700 dark:bg-ink-900/60 dark:hover:bg-ink-900 dark:text-slate-300 border-slate-200 dark:border-slate-700/50';
 
               if (isQAnswered) {
                 if (isQCorrect) {
@@ -389,9 +359,9 @@ export const QuizPlayer: React.FC = () => {
                   key={q.id}
                   onClick={() => jumpToQuestion(actualIdx)}
                   aria-label={`Jump to question ${actualIdx + 1}`}
-                  className={`aspect-square rounded-xl border flex items-center justify-center text-xs md:text-sm font-extrabold transition-all cursor-pointer ${btnStyle} ${
+                  className={`h-8 w-full rounded-md border flex items-center justify-center text-xs font-bold transition-colors cursor-pointer btn ${btnStyle} ${
                     isCurrent 
-                      ? 'ring-2 ring-indigo-500 ring-offset-2 dark:ring-offset-slate-950 font-black scale-105 border-indigo-500' 
+                      ? 'ring-2 ring-accent-500 ring-offset-1 dark:ring-offset-slate-950 border-accent-500 text-slate-900 dark:text-white' 
                       : ''
                   }`}
                 >
@@ -402,22 +372,48 @@ export const QuizPlayer: React.FC = () => {
           </div>
 
           {/* Palette Legend */}
-          <div className="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2 text-xs text-slate-500 dark:text-slate-400 font-semibold">
-            <div className="flex items-center gap-2.5">
-              <span className="h-3.5 w-3.5 rounded bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/50 shrink-0"></span>
-              <span>Not visited / Unanswered</span>
+          <div className="pt-2.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] text-slate-500 dark:text-slate-400 font-semibold">
+            <div className="flex items-center gap-1">
+              <span className="h-2.5 w-2.5 rounded bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 shrink-0"></span>
+              <span>Pending</span>
             </div>
-            <div className="flex items-center gap-2.5">
-              <span className="h-3.5 w-3.5 rounded bg-emerald-500/15 border border-emerald-500/30 shrink-0"></span>
-              <span className="text-emerald-700 dark:text-emerald-400">Answered correctly</span>
+            <div className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
+              <span className="h-2.5 w-2.5 rounded bg-emerald-500/20 border border-emerald-500/40 shrink-0"></span>
+              <span>Correct</span>
             </div>
-            <div className="flex items-center gap-2.5">
-              <span className="h-3.5 w-3.5 rounded bg-rose-500/15 border border-rose-500/30 shrink-0"></span>
-              <span className="text-rose-700 dark:text-rose-400">Answered incorrectly</span>
+            <div className="flex items-center gap-1 text-rose-600 dark:text-rose-400">
+              <span className="h-2.5 w-2.5 rounded bg-rose-500/20 border border-rose-500/40 shrink-0"></span>
+              <span>Wrong</span>
             </div>
           </div>
         </aside>
       </div>
+
+      {/* Exit confirmation */}
+      <ConfirmDialog
+        isOpen={isExitDialogOpen}
+        title="Exit to home?"
+        message="Your attempt is saved and can be resumed from Home."
+        confirmLabel="Exit"
+        onConfirm={() => {
+          setIsExitDialogOpen(false);
+          navigate('/');
+        }}
+        onCancel={() => setIsExitDialogOpen(false)}
+      />
+
+      {/* Submit confirmation (only when questions remain unanswered) */}
+      <ConfirmDialog
+        isOpen={isSubmitDialogOpen}
+        title="Submit quiz?"
+        message={`${totalQuestions - totalAnswered} of ${totalQuestions} questions are unanswered.`}
+        confirmLabel="Submit"
+        onConfirm={() => {
+          setIsSubmitDialogOpen(false);
+          handleFinishQuiz();
+        }}
+        onCancel={() => setIsSubmitDialogOpen(false)}
+      />
     </div>
   );
 };

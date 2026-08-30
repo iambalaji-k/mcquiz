@@ -52,9 +52,11 @@ ehthumbs.db
 Thumbs.db
 [Dd]esktop.ini
 
-# Caches
+# Caches & Test Artifacts
 .eslintcache
 .stylelintcache
 .vite/
 .turbo/
+.playwright-cli/
+.commandcode/
 

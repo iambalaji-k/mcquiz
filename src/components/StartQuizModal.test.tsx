@@ -75,7 +75,6 @@ describe('StartQuizModal Component', () => {
     );
 
     expect(screen.getByText('Sample Test Quiz')).toBeInTheDocument();
-    expect(screen.getByText('Practice Setup')).toBeInTheDocument();
     expect(screen.getByText('5 of 5')).toBeInTheDocument();
     expect(screen.getByText('Math')).toBeInTheDocument();
     expect(screen.getByText('Science')).toBeInTheDocument();
@@ -135,6 +134,37 @@ describe('StartQuizModal Component', () => {
 
     const cancelBtn = screen.getByRole('button', { name: /Cancel/i });
     fireEvent.click(cancelBtn);
+    expect(onCloseMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('calls onClose when Escape key is pressed', () => {
+    const onCloseMock = vi.fn();
+    render(
+      <StartQuizModal
+        isOpen={true}
+        quiz={mockQuiz}
+        onClose={onCloseMock}
+        onConfirm={vi.fn()}
+      />
+    );
+
+    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(onCloseMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('calls onClose when clicking backdrop outside the dialog box', () => {
+    const onCloseMock = vi.fn();
+    render(
+      <StartQuizModal
+        isOpen={true}
+        quiz={mockQuiz}
+        onClose={onCloseMock}
+        onConfirm={vi.fn()}
+      />
+    );
+
+    const dialogBackdrop = screen.getByRole('dialog');
+    fireEvent.click(dialogBackdrop);
     expect(onCloseMock).toHaveBeenCalledTimes(1);
   });
 });

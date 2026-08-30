@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Trash2 } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Trash2, ChevronDown, ChevronUp } from 'lucide-react';
 import { 
   ACTIVE_SESSION_KEY, 
   ACTIVE_QUIZ_KEY, 
@@ -15,16 +15,18 @@ interface Props {
 interface State {
   hasError: boolean;
   error: Error | null;
+  showDetails: boolean;
 }
 
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
     error: null,
+    showDetails: false,
   };
 
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error, showDetails: false };
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -38,7 +40,7 @@ export class ErrorBoundary extends Component<Props, State> {
   private handleReset = () => {
     if (
       window.confirm(
-        'This will clear all active sessions and themes, resetting the application to its default state. Proceed?'
+        'This clears your saved quizzes, active sessions, progress, and theme preference. The app returns to a clean state. Proceed?'
       )
     ) {
       localStorage.removeItem(ACTIVE_SESSION_KEY);
@@ -52,29 +54,44 @@ export class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col justify-center items-center px-4 py-12 text-center">
-          <div className="max-w-md w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 shadow-xl space-y-6">
+        <div className="min-h-screen bg-paper-50 dark:bg-ink-950 flex flex-col justify-center items-center px-4 py-12 text-center">
+          <div className="max-w-md w-full bg-white dark:bg-ink-900 border border-slate-200 dark:border-slate-800 rounded-xl p-8 shadow-xl space-y-6">
             
             {/* Warning Icon */}
-            <div className="mx-auto h-16 w-16 rounded-2xl bg-rose-500/10 flex items-center justify-center text-rose-600 dark:text-rose-400">
+            <div className="mx-auto h-16 w-16 rounded-xl bg-rose-500/10 flex items-center justify-center text-rose-600 dark:text-rose-400">
               <AlertTriangle className="h-9 w-9" />
             </div>
 
             {/* Title & Description */}
             <div className="space-y-2">
-              <h1 className="text-xl md:text-2xl font-black text-slate-800 dark:text-white font-outfit">
+              <h1 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white">
                 Something went wrong
               </h1>
               <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-semibold">
-                An unexpected error occurred in the application. This could be due to a corrupt data model or active session cache.
+                An unexpected error occurred. It could be caused by a corrupt quiz file or saved session. Reloading usually fixes it.
               </p>
             </div>
 
-            {/* Error Message Details (if available) */}
+            {/* Error Message Details (collapsed by default) */}
             {this.state.error && (
-              <div className="bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-900 rounded-2xl p-4 text-left font-mono text-[11px] text-rose-700 dark:text-rose-400 overflow-x-auto max-h-[120px]">
-                <strong className="block font-sans font-bold text-slate-600 dark:text-slate-400 mb-1">Error Message:</strong>
-                {this.state.error.name}: {this.state.error.message}
+              <div className="bg-slate-50 dark:bg-ink-900 border border-slate-100 dark:border-slate-900 rounded-xl overflow-hidden text-left">
+                <button
+                  onClick={() => this.setState((prev) => ({ showDetails: !prev.showDetails }))}
+                  aria-expanded={this.state.showDetails}
+                  className="w-full px-4 py-3 flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors cursor-pointer"
+                >
+                  Technical details
+                  {this.state.showDetails ? (
+                    <ChevronUp className="h-4 w-4" />
+                  ) : (
+                    <ChevronDown className="h-4 w-4" />
+                  )}
+                </button>
+                {this.state.showDetails && (
+                  <div className="px-4 pb-4 font-mono text-[11px] text-rose-700 dark:text-rose-400 overflow-x-auto">
+                    {this.state.error.name}: {this.state.error.message}
+                  </div>
+                )}
               </div>
             )}
 
@@ -82,18 +99,18 @@ export class ErrorBoundary extends Component<Props, State> {
             <div className="flex flex-col gap-2 pt-2">
               <button
                 onClick={this.handleReload}
-                className="w-full py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm cursor-pointer shadow-lg shadow-indigo-500/10 hover:shadow-indigo-500/25 transition-all active:scale-98 flex items-center justify-center gap-2 focus:outline-none"
+                className="w-full py-3 rounded-lg bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm cursor-pointer transition-colors flex items-center justify-center gap-2"
               >
                 <RefreshCw className="h-4 w-4" />
-                Reload Web App
+                Reload web app
               </button>
               
               <button
                 onClick={this.handleReset}
-                className="w-full py-3 rounded-2xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 text-red-600 dark:text-red-400 font-bold text-sm cursor-pointer transition-all active:scale-98 flex items-center justify-center gap-2 focus:outline-none"
+                className="w-full py-3 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 text-red-600 dark:text-red-400 font-bold text-sm cursor-pointer transition-colors flex items-center justify-center gap-2"
               >
                 <Trash2 className="h-4 w-4" />
-                Reset Application Data
+                Reset application data
               </button>
             </div>
             

@@ -20,11 +20,8 @@ import {
   Play, 
   RefreshCw, 
   AlertCircle, 
-  Info,
   Sun,
   Moon,
-  HelpCircle,
-  Globe,
   ChevronRight,
   ChevronDown,
   X,
@@ -38,7 +35,6 @@ interface TreeNodeProps {
   onToggle: (path: string) => void;
   selectedFile: QuizTreeNode | null;
   onSelectFile: (file: QuizTreeNode) => void;
-  searchTerm: string;
 }
 
 const TreeNodeItem: React.FC<TreeNodeProps> = ({
@@ -48,40 +44,28 @@ const TreeNodeItem: React.FC<TreeNodeProps> = ({
   onToggle,
   selectedFile,
   onSelectFile,
-  searchTerm,
 }) => {
   const isExpanded = !!expandedNodes[node.id];
   const isFile = node.type === 'file';
   const isSelected = isFile && selectedFile?.id === node.id;
-
-  const formatBytes = (bytes?: number) => {
-    if (!bytes || bytes === 0) return '0 B';
-    const k = 1024;
-    const sizes = ['B', 'KB', 'MB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
-  };
+  const displayName = node.name.replace(/\.json$/i, '');
 
   if (isFile) {
     return (
       <button
         onClick={() => onSelectFile(node)}
-        className={`w-full flex items-center justify-between py-2 px-3 rounded-xl border text-left cursor-pointer transition-all duration-150 focus:outline-none ${
+        className={`w-full flex items-center justify-between p-2.5 rounded-lg border text-left cursor-pointer transition-colors duration-150 btn ${
           isSelected
-            ? 'border-indigo-500 bg-indigo-500/10 dark:bg-indigo-950/30 text-indigo-950 dark:text-indigo-200 ring-2 ring-indigo-500/20 font-bold'
+            ? 'border-brand-600 bg-brand-50 dark:bg-brand-950/40 text-brand-900 dark:text-brand-200 font-bold'
             : 'border-slate-100 hover:border-slate-200 dark:border-slate-800/80 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50 text-slate-700 dark:text-slate-300'
         }`}
-        style={{ marginLeft: depth > 0 ? `${depth * 14}px` : undefined }}
       >
-        <div className="flex items-center gap-2.5 min-w-0 pr-2">
-          <FileJson className={`h-4 w-4 shrink-0 ${isSelected ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400 dark:text-slate-500'}`} />
-          <span className="text-xs md:text-sm truncate">
-            {node.name}
+        <div className="flex items-center gap-2.5 min-w-0 flex-1 pr-2">
+          <FileJson className={`h-4 w-4 shrink-0 ${isSelected ? 'text-brand-700 dark:text-brand-400' : 'text-slate-400 dark:text-slate-500'}`} />
+          <span className="text-xs md:text-sm font-medium truncate">
+            {displayName}
           </span>
         </div>
-        <span className="text-[10px] text-slate-400 dark:text-slate-500 font-bold shrink-0">
-          {formatBytes(node.size)}
-        </span>
       </button>
     );
   }
@@ -95,56 +79,53 @@ const TreeNodeItem: React.FC<TreeNodeProps> = ({
       {/* Folder Header Row */}
       <button
         onClick={() => onToggle(node.id)}
-        className={`w-full flex items-center justify-between p-2.5 rounded-xl border transition-all text-left font-semibold text-xs md:text-sm cursor-pointer focus:outline-none ${
+        className={`w-full flex items-center justify-between p-2.5 rounded-lg border transition-colors text-left font-semibold text-xs md:text-sm cursor-pointer btn ${
           isExpanded
-            ? 'bg-slate-100/70 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white'
-            : 'bg-slate-50/50 dark:bg-slate-900/30 hover:bg-slate-100/50 dark:hover:bg-slate-800/40 border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-200'
+            ? 'bg-slate-100/80 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white'
+            : 'bg-slate-50/50 dark:bg-ink-900/30 hover:bg-slate-100/50 dark:hover:bg-slate-800/40 border-slate-100 dark:border-slate-800 text-slate-800 dark:text-slate-200'
         }`}
-        style={{ marginLeft: depth > 0 ? `${depth * 14}px` : undefined }}
       >
-        <div className="flex items-center gap-2 min-w-0">
+        <div className="flex items-center gap-2 min-w-0 flex-1 pr-2">
           {isExpanded ? (
-            <ChevronDown className="h-4 w-4 text-indigo-500 shrink-0" />
+            <ChevronDown className="h-4 w-4 text-brand-600 dark:text-brand-400 shrink-0" />
           ) : (
             <ChevronRight className="h-4 w-4 text-slate-400 dark:text-slate-500 shrink-0" />
           )}
 
           {isExpanded ? (
-            <FolderOpen className="h-4.5 w-4.5 text-indigo-500 shrink-0" />
+            <FolderOpen className="h-4 w-4 text-brand-600 dark:text-brand-400 shrink-0" />
           ) : (
-            <Folder className="h-4.5 w-4.5 text-indigo-500/80 shrink-0" />
+            <Folder className="h-4 w-4 text-brand-600/80 shrink-0" />
           )}
 
-          <span className="font-bold tracking-tight font-outfit truncate">
+          <span className="font-bold tracking-tight truncate">
             {node.name}
           </span>
         </div>
 
-        <div className="flex items-center gap-1.5 shrink-0">
+        <div className="flex items-center shrink-0">
           <span className="text-[10px] bg-slate-200/60 dark:bg-slate-800 px-2 py-0.5 rounded-full text-slate-600 dark:text-slate-400 font-bold">
             {quizzesCount} {quizzesCount === 1 ? 'quiz' : 'quizzes'}
           </span>
         </div>
       </button>
 
-      {/* Recursive Sub-tree */}
-      {isExpanded && children.length > 0 && (
-        <div 
-          className="space-y-1 pt-1 pb-1 pl-2.5 border-l-2 border-slate-200/80 dark:border-slate-800"
-          style={{ marginLeft: depth > 0 ? `${depth * 14 + 10}px` : '10px' }}
-        >
-          {children.map((child) => (
-            <TreeNodeItem
-              key={child.id}
-              node={child}
-              depth={depth + 1}
-              expandedNodes={expandedNodes}
-              onToggle={onToggle}
-              selectedFile={selectedFile}
-              onSelectFile={onSelectFile}
-              searchTerm={searchTerm}
-            />
-          ))}
+      {/* Recursive Sub-tree: smooth expand/collapse with single clean indent guide */}
+      {children.length > 0 && (
+        <div className="reveal" data-open={isExpanded}>
+          <div className="space-y-1 py-1 pl-3.5 ml-2 border-l border-slate-200/80 dark:border-slate-800">
+            {children.map((child) => (
+              <TreeNodeItem
+                key={child.id}
+                node={child}
+                depth={depth + 1}
+                expandedNodes={expandedNodes}
+                onToggle={onToggle}
+                selectedFile={selectedFile}
+                onSelectFile={onSelectFile}
+              />
+            ))}
+          </div>
         </div>
       )}
     </div>
@@ -264,18 +245,20 @@ export const QuizExplorer: React.FC = () => {
     }));
   };
 
-  // 3. Expand / Collapse All
-  const handleToggleAll = (expand: boolean) => {
-    if (!expand) {
+  // 3. Merged Expand / Collapse All Toggle
+  const allFolderIds = useMemo(() => getAllFolderIds(rootNodes), [getAllFolderIds, rootNodes]);
+  const areAllExpanded = allFolderIds.length > 0 && allFolderIds.every(id => !!expandedNodes[id]);
+
+  const handleToggleExpandAll = () => {
+    if (areAllExpanded) {
       setExpandedNodes({});
-      return;
+    } else {
+      const newExpanded: Record<string, boolean> = {};
+      allFolderIds.forEach(id => {
+        newExpanded[id] = true;
+      });
+      setExpandedNodes(newExpanded);
     }
-    const allIds = getAllFolderIds(rootNodes);
-    const newExpanded: Record<string, boolean> = {};
-    allIds.forEach(id => {
-      newExpanded[id] = true;
-    });
-    setExpandedNodes(newExpanded);
   };
 
   // 4. Select file and fetch JSON content for preview with AbortController
@@ -356,20 +339,14 @@ export const QuizExplorer: React.FC = () => {
     return merged;
   }, [expandedNodes, searchTerm, matchingPaths]);
 
-  // Breadcrumbs calculation for selected file
+  // Breadcrumbs calculation for selected file (clean without .json)
   const breadcrumbSegments = useMemo(() => {
     if (!selectedFile) return [];
-    return selectedFile.path.split('/').filter(Boolean);
+    return selectedFile.path
+      .split('/')
+      .filter(Boolean)
+      .map(segment => segment.replace(/\.json$/i, ''));
   }, [selectedFile]);
-
-  // Formatter for file size
-  const formatBytes = (bytes?: number) => {
-    if (!bytes || bytes === 0) return '0 B';
-    const k = 1024;
-    const sizes = ['B', 'KB', 'MB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
-  };
 
   // Total count of all available quizzes across all directories
   const totalRepositoryQuizzes = useMemo(() => {
@@ -380,73 +357,62 @@ export const QuizExplorer: React.FC = () => {
   }, [rootNodes]);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8 md:py-12 flex flex-col min-h-screen">
+    <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-6 flex flex-col min-h-screen">
       {/* Page Header */}
-      <header className="flex items-center justify-between mb-8 border-b border-slate-200 dark:border-slate-800 pb-4">
+      <header className="flex flex-wrap items-center justify-between gap-y-2 mb-6 border-b border-slate-200 dark:border-slate-800 pb-3">
         <button
           onClick={() => navigate('/')}
-          className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors cursor-pointer"
+          className="flex items-center gap-2 text-xs md:text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors cursor-pointer py-1"
         >
           <ArrowLeft className="h-4 w-4" />
-          <span>Back to Home</span>
+          <span>Back to home</span>
         </button>
 
         <div className="flex items-center gap-2">
-          <FolderTree className="h-4 w-4 text-indigo-500" />
-          <h1 className="text-sm md:text-base font-extrabold text-slate-900 dark:text-white font-outfit">
-            Browse Repository Quizzes
+          <FolderTree className="h-4 w-4 text-brand-600 dark:text-brand-400" />
+          <h1 className="text-sm md:text-base font-bold text-slate-900 dark:text-white">
+            Quiz
           </h1>
         </div>
 
         <button
           onClick={toggleTheme}
           aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-          className="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-sm focus:outline-none"
+          className="p-2 rounded-lg bg-slate-100 dark:bg-ink-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors cursor-pointer"
         >
-          {theme === 'dark' ? <Sun className="h-4.5 w-4.5" /> : <Moon className="h-4.5 w-4.5" />}
+          {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
         </button>
       </header>
 
       {/* Main Grid Workspace */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start flex-1">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start flex-1">
         
-        {/* Left Side: Multi-level Tree Explorer (7 cols) */}
+        {/* Left Side: Tree Explorer (7 cols) */}
         <main className="lg:col-span-7 space-y-6">
-          <section className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 md:p-6 shadow-sm space-y-4">
+          <section className="bg-white dark:bg-ink-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 md:p-5 shadow-sm space-y-4">
             
             {/* Header controls inside explorer */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div className="flex items-center gap-2 text-slate-800 dark:text-slate-200 font-bold text-sm md:text-base font-outfit">
-                <Globe className="h-5 w-5 text-indigo-500" />
-                <h2>Repository Hierarchy</h2>
+            <div className="flex items-center justify-between gap-3">
+              <div>
                 {totalRepositoryQuizzes > 0 && (
-                  <span className="text-[10px] bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 px-2.5 py-0.5 rounded-full border border-indigo-100 dark:border-indigo-900/40 font-bold">
-                    {totalRepositoryQuizzes} total
+                  <span className="text-xs text-slate-500 dark:text-slate-400 font-bold">
+                    {totalRepositoryQuizzes} {totalRepositoryQuizzes === 1 ? 'quiz' : 'quizzes'}
                   </span>
                 )}
               </div>
 
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => handleToggleAll(true)}
-                  className="text-[11px] font-semibold text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 px-2 py-1 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-                  title="Expand all nested folders"
+                  onClick={handleToggleExpandAll}
+                  className="text-xs font-semibold text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 px-2.5 py-1 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer border border-slate-200 dark:border-slate-800"
                 >
-                  Expand All
-                </button>
-                <span className="text-slate-300 dark:text-slate-700">|</span>
-                <button
-                  onClick={() => handleToggleAll(false)}
-                  className="text-[11px] font-semibold text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 px-2 py-1 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-                  title="Collapse all folders"
-                >
-                  Collapse All
+                  {areAllExpanded ? 'Collapse All' : 'Expand All'}
                 </button>
                 <button
                   onClick={() => loadTree(true)}
                   disabled={loading}
-                  aria-label="Refresh Directory"
-                  className="flex items-center justify-center p-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer disabled:opacity-50"
+                  aria-label="Refresh directory from GitHub"
+                  className="flex items-center justify-center p-1.5 rounded-md border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer disabled:opacity-50"
                   title="Refresh from GitHub"
                 >
                   <RefreshCw className={`h-3.5 w-3.5 ${loading ? 'animate-spin' : ''}`} />
@@ -457,7 +423,7 @@ export const QuizExplorer: React.FC = () => {
             {/* Search Input bar */}
             <div className="relative">
               <label htmlFor="explorer-search" className="sr-only">Search nested files and folders</label>
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
                 <Search className="h-4 w-4" />
               </div>
               <input
@@ -466,7 +432,7 @@ export const QuizExplorer: React.FC = () => {
                 placeholder="Search folders, sub-folders, or quiz files..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 text-xs md:text-sm text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full pl-9 pr-9 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-ink-900 text-sm md:text-base text-slate-800 dark:text-slate-200 transition-colors"
               />
               {searchTerm && (
                 <button
@@ -483,41 +449,47 @@ export const QuizExplorer: React.FC = () => {
             {searchTerm.trim() && (
               <div className="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 px-1 font-semibold">
                 <span>Filtering by: <strong className="text-slate-800 dark:text-slate-200 font-bold">"{searchTerm}"</strong></span>
-                <span className="text-indigo-600 dark:text-indigo-400 font-bold">{matchedCount} {matchedCount === 1 ? 'quiz file match' : 'quiz files matched'}</span>
+                <span className="text-brand-700 dark:text-brand-400 font-bold">{matchedCount} {matchedCount === 1 ? 'quiz file match' : 'quiz files matched'}</span>
               </div>
+            )}
+            {/* Announced when search changes the visible tree. */}
+            {searchTerm.trim() && (
+              <p role="status" className="sr-only">
+                {matchedCount} {matchedCount === 1 ? 'quiz file matches' : 'quiz files match'} the search
+              </p>
             )}
 
             {/* Loading Indicator */}
             {loading && rootNodes.length === 0 && (
-              <div className="space-y-3 py-6">
+              <div className="space-y-2.5 py-5">
                 {[1, 2, 3, 4].map((n) => (
-                  <div key={n} className="h-11 w-full bg-slate-100 dark:bg-slate-800/60 animate-pulse rounded-xl"></div>
+                  <div key={n} className="h-10 w-full animate-skeleton rounded-lg"></div>
                 ))}
               </div>
             )}
 
             {/* Explorer Level Error */}
             {explorerError && (
-              <div className="bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/40 rounded-2xl p-5 space-y-2">
+              <div role="alert" className="bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/40 rounded-xl p-4 space-y-2">
                 <div className="flex items-center gap-2 text-rose-600 dark:text-rose-400 font-bold text-sm">
-                  <AlertCircle className="h-4.5 w-4.5 shrink-0" />
-                  <h3>Connection Error</h3>
+                  <AlertCircle className="h-4 w-4 shrink-0" />
+                  <h3>Connection error</h3>
                 </div>
                 <p className="text-xs text-rose-700 dark:text-rose-300 leading-relaxed font-semibold">
                   {explorerError}
                 </p>
                 <button
                   onClick={() => loadTree(true)}
-                  className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-semibold cursor-pointer active:scale-95 transition-all"
+                  className="px-3.5 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-md text-xs font-semibold cursor-pointer transition-colors"
                 >
-                  Retry Connection
+                  Retry connection
                 </button>
               </div>
             )}
 
             {/* Empty Tree State */}
             {!loading && !explorerError && filteredTreeNodes.length === 0 && (
-              <div className="text-center py-12 text-slate-400 dark:text-slate-500 text-xs md:text-sm space-y-2">
+              <div className="text-center py-10 text-slate-400 dark:text-slate-500 text-xs md:text-sm space-y-2">
                 <p>No matching questionnaires found.</p>
                 <p className="text-[11px]">Ensure there are valid <code className="font-mono text-slate-600 dark:text-slate-400">.json</code> files inside the <code className="font-mono text-slate-600 dark:text-slate-400">questions/</code> folder on GitHub.</p>
               </div>
@@ -525,7 +497,7 @@ export const QuizExplorer: React.FC = () => {
 
             {/* Multi-level Tree Hierarchy Rendering */}
             {!explorerError && filteredTreeNodes.length > 0 && (
-              <div className="space-y-2 max-h-[560px] overflow-y-auto pr-1">
+              <div className="space-y-1.5 max-h-[560px] overflow-y-auto pr-1">
                 {filteredTreeNodes.map((node) => (
                   <TreeNodeItem
                     key={node.id}
@@ -535,7 +507,6 @@ export const QuizExplorer: React.FC = () => {
                     onToggle={handleToggleNode}
                     selectedFile={selectedFile}
                     onSelectFile={handleSelectFile}
-                    searchTerm={searchTerm}
                   />
                 ))}
               </div>
@@ -544,34 +515,29 @@ export const QuizExplorer: React.FC = () => {
         </main>
 
         {/* Right Side: Quiz Info Preview & Play Panel (5 cols) */}
-        <aside className="lg:col-span-5">
+        <aside className="lg:col-span-5 lg:sticky lg:top-6">
           
           {/* Default view when no file is selected */}
           {!selectedFile && (
-            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 text-center space-y-4 shadow-sm min-h-[340px] flex flex-col items-center justify-center">
-              <div className="p-4 bg-slate-50 dark:bg-slate-800/40 rounded-full text-slate-400 dark:text-slate-600">
-                <HelpCircle className="h-10 w-10" />
+            <div className="bg-white dark:bg-ink-900 border border-slate-200 dark:border-slate-800 rounded-xl p-8 text-center space-y-3 shadow-sm min-h-[300px] flex flex-col items-center justify-center">
+              <div className="p-3 bg-slate-50 dark:bg-slate-800/40 rounded-full text-slate-400 dark:text-slate-500">
+                <FolderTree className="h-8 w-8" />
               </div>
-              <div className="space-y-1.5 max-w-xs">
-                <h3 className="font-bold text-sm md:text-base text-slate-800 dark:text-slate-200">
-                  Select a Quiz Set
-                </h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-semibold">
-                  Expand any folder or sub-folder in the hierarchy on the left and choose a quiz to inspect and practice.
-                </p>
-              </div>
+              <p className="font-bold text-sm text-slate-700 dark:text-slate-300">
+                Select a quiz to preview
+              </p>
             </div>
           )}
 
           {/* Preview view for loaded quiz info */}
           {selectedFile && (
-            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
+            <div className="bg-white dark:bg-ink-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 md:p-6 shadow-sm space-y-5">
               <div className="space-y-4">
                 
                 {/* Header info in right preview panel */}
-                <div className="space-y-2 pb-2 border-b border-slate-100 dark:border-slate-800">
+                <div className="space-y-2 pb-3 border-b border-slate-100 dark:border-slate-800">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400 dark:text-slate-500 flex-wrap">
-                    <FolderTree className="h-3.5 w-3.5 shrink-0 text-indigo-500" />
+                    <FolderTree className="h-3.5 w-3.5 shrink-0 text-brand-600 dark:text-brand-400" />
                     {breadcrumbSegments.map((segment, idx) => (
                       <React.Fragment key={idx}>
                         <span className="truncate max-w-[120px] font-medium">{segment}</span>
@@ -580,29 +546,25 @@ export const QuizExplorer: React.FC = () => {
                     ))}
                   </div>
 
-                  <h3 className="text-lg md:text-xl font-black text-slate-900 dark:text-white font-outfit break-words">
-                    {selectedFile.name}
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white break-words">
+                    {selectedFile.name.replace(/\.json$/i, '')}
                   </h3>
-
-                  <div className="flex items-center gap-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                    <span>Size: {formatBytes(selectedFile.size)}</span>
-                  </div>
                 </div>
 
                 {/* Loading state for individual quiz parsing */}
                 {loadingQuizContent && (
-                  <div className="space-y-4 py-8 text-center">
-                    <RefreshCw className="h-8 w-8 text-indigo-500 animate-spin mx-auto" />
-                    <p className="text-xs text-slate-400 font-bold">Downloading and verifying quiz contents...</p>
+                  <div className="space-y-3 py-8 text-center">
+                    <RefreshCw className="h-6 w-6 text-brand-600 dark:text-brand-400 animate-spin mx-auto" />
+                    <p className="text-xs text-slate-400 font-semibold">Loading quiz...</p>
                   </div>
                 )}
 
                 {/* Quiz schema errors box */}
                 {previewErrors.length > 0 && (
-                  <div className="bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/40 rounded-2xl p-5 space-y-2">
+                  <div role="alert" className="bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/40 rounded-xl p-4 space-y-2">
                     <div className="flex items-center gap-2 text-rose-600 dark:text-rose-400 font-bold text-sm">
-                      <AlertCircle className="h-4.5 w-4.5 shrink-0" />
-                      <h3>Validation Failed</h3>
+                      <AlertCircle className="h-4 w-4 shrink-0" />
+                      <h3>Validation failed</h3>
                     </div>
                     <p className="text-xs text-rose-700 dark:text-rose-300">
                       The file downloaded successfully but is not valid. The following issues were found:
@@ -619,35 +581,26 @@ export const QuizExplorer: React.FC = () => {
                 {!loadingQuizContent && quizPreviewData && (
                   <div className="space-y-4 animate-fade-in">
                     <div className="space-y-1">
-                      <h4 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wide">
-                        Quiz Title
-                      </h4>
-                      <h3 className="text-base md:text-lg font-black text-slate-900 dark:text-white font-outfit leading-snug">
+                      <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white leading-snug">
                         {quizPreviewData.title}
                       </h3>
-                    </div>
-
-                    {quizPreviewData.description && (
-                      <div className="space-y-1">
-                        <h4 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wide">
-                          Description
-                        </h4>
-                        <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-semibold">
+                      {quizPreviewData.description && (
+                        <p className="font-read text-xs md:text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
                           {quizPreviewData.description}
                         </p>
-                      </div>
-                    )}
+                      )}
+                    </div>
 
-                    <div className="grid grid-cols-2 gap-4 pt-1">
-                      <div className="bg-slate-50 dark:bg-slate-950 p-3 rounded-xl border border-slate-100 dark:border-slate-900/60">
+                    <div className="grid grid-cols-2 gap-3 pt-1">
+                      <div className="bg-slate-50 dark:bg-ink-900 p-3 rounded-lg border border-slate-100 dark:border-slate-900/60">
                         <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">
                           Questions
                         </span>
-                        <span className="text-base font-black text-slate-800 dark:text-white font-outfit">
-                          {quizPreviewData.questions.length} Sets
+                        <span className="text-base font-bold text-slate-800 dark:text-white">
+                          {quizPreviewData.questions.length} Qs
                         </span>
                       </div>
-                      <div className="bg-slate-50 dark:bg-slate-950 p-3 rounded-xl border border-slate-100 dark:border-slate-900/60">
+                      <div className="bg-slate-50 dark:bg-ink-900 p-3 rounded-lg border border-slate-100 dark:border-slate-900/60">
                         <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">
                           Categories
                         </span>
@@ -655,7 +608,7 @@ export const QuizExplorer: React.FC = () => {
                           const distinctCategories = Array.from(new Set(quizPreviewData.questions.map((q) => q.category)));
                           return (
                             <span 
-                              className="text-xs font-black text-slate-800 dark:text-white font-outfit truncate block" 
+                              className="text-xs font-bold text-slate-800 dark:text-white truncate block" 
                               title={distinctCategories.join(', ')}
                             >
                               {distinctCategories.length} {distinctCategories.length === 1 ? 'Topic' : 'Topics'}
@@ -663,14 +616,6 @@ export const QuizExplorer: React.FC = () => {
                           );
                         })()}
                       </div>
-                    </div>
-
-                    {/* Offline support tip */}
-                    <div className="bg-slate-50 dark:bg-slate-950/40 p-3 rounded-2xl border border-slate-100 dark:border-slate-800/40 flex items-start gap-2.5">
-                      <Info className="h-4.5 w-4.5 text-indigo-500 shrink-0 mt-0.5" />
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400 leading-relaxed font-semibold">
-                        Once started, the questions are cached in your local session so you can complete the attempt even without internet.
-                      </p>
                     </div>
                   </div>
                 )}
@@ -680,10 +625,10 @@ export const QuizExplorer: React.FC = () => {
               {!loadingQuizContent && quizPreviewData && (
                 <button
                   onClick={handleStartPlay}
-                  className="w-full mt-6 py-3.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs md:text-sm cursor-pointer shadow-lg shadow-indigo-500/20 active:scale-98 flex items-center justify-center gap-2 focus:outline-none transition-all"
+                  className="w-full mt-4 py-2.5 rounded-lg bg-accent-600 hover:bg-accent-700 text-white font-bold text-xs md:text-sm cursor-pointer flex items-center justify-center gap-2 transition-colors btn"
                 >
                   <Play className="h-4 w-4 fill-white" />
-                  <span>Start Practice Attempt</span>
+                  <span>Start Practice</span>
                 </button>
               )}
             </div>
@@ -701,5 +646,3 @@ export const QuizExplorer: React.FC = () => {
     </div>
   );
 };
-
-

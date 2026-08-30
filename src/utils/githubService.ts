@@ -215,7 +215,34 @@ export function clearGithubCache(): void {
 }
 
 /**
- * Filters the multi-level tree by search term, returning matching nodes and paths that should be expanded.
+ * Fuzzy matching helper: matches substrings, token combinations, or character sequences.
+ */
+export function fuzzyMatch(target: string, query: string): boolean {
+  const t = target.toLowerCase();
+  const q = query.trim().toLowerCase();
+  if (!q) return true;
+  if (t.includes(q)) return true;
+
+  // Split query into tokens so multi-word queries match anywhere
+  const tokens = q.split(/\s+/).filter(Boolean);
+  if (tokens.length > 1) {
+    return tokens.every((token) => fuzzyMatch(t, token));
+  }
+
+  // Character subsequence fuzzy match
+  let tIdx = 0;
+  let qIdx = 0;
+  while (tIdx < t.length && qIdx < q.length) {
+    if (t[tIdx] === q[qIdx]) {
+      qIdx++;
+    }
+    tIdx++;
+  }
+  return qIdx === q.length;
+}
+
+/**
+ * Filters the multi-level tree by search term using fuzzy matching, returning matching nodes and paths that should be expanded.
  */
 export function filterTree(
   nodes: QuizTreeNode[],
@@ -230,8 +257,9 @@ export function filterTree(
   }
 
   function filterNode(node: QuizTreeNode): QuizTreeNode | null {
+    const cleanName = node.name.replace(/\.json$/i, '');
     if (node.type === 'file') {
-      if (node.name.toLowerCase().includes(normalized)) {
+      if (fuzzyMatch(cleanName, normalized) || fuzzyMatch(node.name, normalized)) {
         matchingPaths.add(node.id);
         matchedCount++;
         return node;
@@ -239,7 +267,7 @@ export function filterTree(
       return null;
     }
 
-    const isSelfMatch = node.name.toLowerCase().includes(normalized);
+    const isSelfMatch = fuzzyMatch(node.name, normalized);
     const filteredChildren: QuizTreeNode[] = [];
 
     if (node.children) {

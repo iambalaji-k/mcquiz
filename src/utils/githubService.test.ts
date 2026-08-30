@@ -70,6 +70,17 @@ describe('githubService - filterTree', () => {
     expect(matchingPaths.has('questions/ADVITT/Semester 1/Chapter 1/Intro.json')).toBe(true);
   });
 
+  it('should fuzzy match approximate queries and multi-word terms', () => {
+    // "1 foren" matches "1 Forensic.json"
+    const { filtered: match1, matchedCount: count1 } = filterTree(tree, '1 foren');
+    expect(count1).toBe(1);
+    expect(match1).toHaveLength(1);
+
+    // "int" matches "Intro.json"
+    const { matchedCount: count2 } = filterTree(tree, 'int');
+    expect(count2).toBe(1);
+  });
+
   it('should return empty matches when search term is not found', () => {
     const { filtered, matchedCount } = filterTree(tree, 'NonExistentXYZ');
     expect(matchedCount).toBe(0);
