@@ -1,0 +1,722 @@
+{
+  "title": "Review of Financial Information (SRE 2400 / SRE 2410)",
+  "description": "Comprehensive CA Final Audit MCQs covering Review of Financial Information, SRE 2400, and SRE 2410.",
+  "version": "1.0",
+  "questions": [
+    {
+      "id": 1,
+      "category": "Audit vs Review - Level of Assurance and Nature",
+      "question": "Consider the following comparative statements regarding an 'Audit' versus a 'Review' of historical financial statements:\n\n**Statement 1:** An audit is a reasonable assurance engagement providing a reasonable level of assurance, whereas a review is a limited assurance engagement providing a lower level of assurance than an audit.\n**Statement 2:** In an audit, the practitioner performs extensive procedures including tests of controls and substantive procedures, whereas a review engagement primarily focuses on inquiry and analytical procedures.\n**Statement 3:** An audit enables drawing reasonable conclusions on the basis of sufficient appropriate audit evidence, whereas a review enables drawing limited conclusions on the basis of sufficient appropriate evidence.\n**Statement 4:** The language of an audit opinion is negatively worded ('nothing has come to our attention...'), whereas the language of an assurance conclusion in a review is positively worded ('in our opinion...').\n\nWhich of the above statements are correct?",
+      "options": [
+        "1 and 2 only",
+        "1, 2 and 3 only",
+        "2, 3 and 4 only",
+        "All of the above"
+      ],
+      "answer": 1,
+      "explanation": "Statements 1, 2, and 3 are correct. Under the foundational principles of assurance engagements, an audit is a reasonable assurance engagement designed to obtain reasonable assurance through extensive procedures (tests of controls and substantive procedures) to draw reasonable conclusions, while a review is a limited assurance engagement providing a lower level of assurance through fewer procedures (primarily inquiry and analytical procedures) to draw limited conclusions. Statement 4 is incorrect because an audit report provides an assurance opinion that is positively worded ('in our opinion, the financial statements give a true and fair view...'), whereas a review report provides an assurance conclusion that is framed in a negative form ('nothing has come to our attention that causes us to believe that the financial statements do not give a true and fair view...')."
+    },
+    {
+      "id": 2,
+      "category": "Audit vs Review - Form of Assurance",
+      "question": "**Assertion (A):** The practitioner's conclusion in a review of financial statements under SRE 2400 is expressed in a negative form of expression rather than a positive opinion.\n**Reason (R):** A review engagement involves fewer procedures primarily restricted to inquiry and analytical procedures, which provide only limited assurance rather than reasonable assurance, thereby supporting only limited conclusions.",
+      "options": [
+        "Both A and R are correct, and R correctly explains A",
+        "Both A and R are correct, but R does not correctly explain A",
+        "A is correct, but R is incorrect",
+        "A is incorrect, but R is correct"
+      ],
+      "answer": 0,
+      "explanation": "Both Assertion (A) and Reason (R) are correct, and Reason (R) correctly explains Assertion (A). In an audit, extensive substantive procedures and tests of controls provide reasonable assurance that enables the auditor to state a positive opinion ('in our opinion, the financial statements give a true and fair view'). Conversely, in a review engagement under SRE 2400, the practitioner does not perform comprehensive audit procedures; instead, the procedures are primarily inquiries and analytical review. Because limited procedures yield a lower (limited) level of assurance, the practitioner cannot give a positive affirmation, but only a negative conclusion that nothing has come to attention indicating the financial statements do not present fairly."
+    },
+    {
+      "id": 3,
+      "category": "Applicability of SRE 2400 vs SRE 2410",
+      "question": "A chartered accountancy firm is approached for two independent review assignments:\n1. Assignment X: Alpha Ltd., an unlisted public company, requests CA Vikram (who is NOT the statutory auditor of Alpha Ltd.) to conduct a review of its complete set of annual historical financial statements for the year ended March 31, 2026, for submission to a private equity consortium.\n2. Assignment Y: Beta Ltd., a listed entity, requests its appointed statutory auditor, CA Raman, to perform a review of its interim condensed financial statements for the quarter ended September 30, 2026, for stock exchange filing.\n\nWhich Standards on Review Engagements apply to Assignment X and Assignment Y respectively?",
+      "options": [
+        "SRE 2400 applies to Assignment X, and SRE 2410 applies to Assignment Y.",
+        "SRE 2410 applies to Assignment X, and SRE 2400 applies to Assignment Y.",
+        "SRE 2400 applies to both Assignment X and Assignment Y because both are review engagements.",
+        "SRE 2410 applies to both Assignment X and Assignment Y because both involve historical financial information."
+      ],
+      "answer": 0,
+      "explanation": "SRE 2400 ('Engagements to Review Historical Financial Statements') deals with the practitioner's responsibilities when performing a review of historical financial statements when the practitioner is not the statutory auditor of the entity's financial statements. Therefore, Assignment X falls squarely under SRE 2400. In contrast, SRE 2410 ('Review of Interim Financial Information Performed by Independent Auditor of Entity') explicitly deals with the auditor's professional responsibilities when the auditor undertakes an engagement to review interim financial information of an existing audit client. Thus, Assignment Y is governed by SRE 2410."
+    },
+    {
+      "id": 4,
+      "category": "SRE 2400 - Acceptance Factors",
+      "question": "**CASE:** Zenith Textiles Ltd. approached CA Amit to undertake a review of its annual financial statements under SRE 2400. During the initial discussion, management stated that the company is required by a specific statutory regulation to have its financial statements audited by an independent auditor. However, the management prefers a review engagement instead of an audit because a review takes less time and costs less.\n\nUnder SRE 2400, how should CA Amit respond to this proposal?",
+      "options": [
+        "CA Amit can accept the review engagement provided the engagement letter clearly records that the management specifically requested a review instead of an audit.",
+        "CA Amit shall not accept the review engagement because he is satisfied that there is no rational purpose for the engagement, as law or regulation requires the financial statements to be audited.",
+        "CA Amit must accept the engagement but issue an adverse review report citing non-compliance with the statutory audit requirement.",
+        "CA Amit may accept the engagement after obtaining approval from the Registrar of Companies to substitute an audit with a review."
+      ],
+      "answer": 1,
+      "explanation": "According to SRE 2400, a practitioner shall not accept a review engagement if the practitioner is satisfied that there is no rational purpose for the engagement. The standard explicitly provides as an example that where law or regulation requires the financial statements to be audited, a review cannot substitute for a required audit, meaning there is no rational purpose for accepting a review engagement. Therefore, CA Amit must decline the engagement."
+    },
+    {
+      "id": 5,
+      "category": "SRE 2400 - Acceptance Factors",
+      "question": "**CASE:** Apex Infotech Ltd., an unlisted technology company, approached CA Neha to review its historical financial statements for the past financial year. During preliminary discussions, CA Neha observed the following circumstances:\n(i) Management stated that two key operational divisions maintain handwritten records that were severely damaged in a monsoon flood, and the accounting software database has missing transaction logs for 5 months.\n(ii) Management expressly informed CA Neha that she would not be permitted to speak with the former Chief Financial Officer who resigned abruptly, nor would she be granted access to the internal bank reconciliations.\n(iii) Management requested that CA Neha undertake the engagement and simply disclaim her conclusion in the review report.\n\nEvaluating the above against SRE 2400, which of the following represents the MOST appropriate course of action for CA Neha?",
+      "options": [
+        "CA Neha should accept the engagement because SRE 2400 provides a specific reporting mechanism to issue a disclaimer of conclusion when records are unavailable.",
+        "CA Neha shall not accept the review engagement because the information needed to perform the review is likely to be unavailable or unreliable, and management has imposed a limitation on the scope of work that will result in disclaiming a conclusion.",
+        "CA Neha should accept the engagement provided management pays an upfront professional fee and indemnifies her against regulatory scrutiny.",
+        "CA Neha should accept the review engagement but convert it into an agreed-upon procedures engagement without informing management."
+      ],
+      "answer": 1,
+      "explanation": "SRE 2400 specifically prohibits a practitioner from accepting a review engagement if: (1) the practitioner's preliminary understanding indicates that information needed to perform the review engagement is likely to be unavailable or unreliable; or (2) management or those charged with governance impose a limitation on the scope of the practitioner's work such that the practitioner believes that the limitation will result in disclaiming a conclusion on the financial statements. Furthermore, cause to doubt management's integrity or failure of ethical/independence requirements also mandates non-acceptance. CA Neha cannot accept an engagement knowing from the outset that she will have to disclaim a conclusion due to management-imposed scope restrictions and unavailable records."
+    },
+    {
+      "id": 6,
+      "category": "SRE 2400 - Acceptance Factors",
+      "question": "Under SRE 2400, a practitioner shall NOT accept a review engagement under which of the following circumstances?\n\n1. The practitioner is satisfied that there is no rational purpose for the engagement (e.g., law or regulation requires the financial statements to be audited).\n2. The practitioner is satisfied that a review engagement is not appropriate in the circumstances (where he may recommend another type of engagement).\n3. The practitioner has reason to believe that ethical requirements, including independence, will not be satisfied.\n4. The practitioner's preliminary understanding indicates that information needed to perform the review engagement is likely to be unavailable or unreliable.\n5. The practitioner has cause to doubt management's integrity.\n6. Management or TCWG impose a limitation on the scope of the practitioner's work such that the practitioner believes that the limitation will result in disclaiming a conclusion on the financial statements.\n\nSelect the correct combination:",
+      "options": [
+        "1, 3, 5 and 6 only",
+        "1, 2, 3, 4 and 5 only",
+        "1, 2, 4 and 6 only",
+        "All 1, 2, 3, 4, 5 and 6"
+      ],
+      "answer": 3,
+      "explanation": "Under SRE 2400, all six listed circumstances are explicit grounds where the practitioner shall not accept a review engagement. Specifically, the practitioner shall decline if: (i) there is no rational purpose; (ii) the review engagement is not appropriate in the circumstances; (iii) ethical/independence requirements will not be satisfied; (iv) information needed is likely to be unavailable or unreliable; (v) the practitioner has cause to doubt management's integrity; or (vi) management or TCWG impose a scope limitation that will result in a disclaimer of conclusion."
+    },
+    {
+      "id": 7,
+      "category": "SRE 2400 - Preconditions for Acceptance",
+      "question": "Which of the following is NOT one of the preconditions for accepting a review engagement under SRE 2400?",
+      "options": [
+        "Determining whether the financial reporting framework applied in the preparation of the financial statements is acceptable.",
+        "Obtaining agreement from management acknowledging its responsibility for the preparation and presentation of financial statements in accordance with the applicable FRF.",
+        "Obtaining an absolute guarantee from management that internal control is completely effective and will prevent all errors and frauds.",
+        "Obtaining agreement from management acknowledging its responsibility to provide the practitioner with all relevant information, additional requested information, and unrestricted access to persons within the entity."
+      ],
+      "answer": 2,
+      "explanation": "Under SRE 2400, the preconditions for accepting a review engagement require the practitioner to: (1) determine whether the financial reporting framework applied is acceptable; and (2) obtain agreement from management acknowledging its responsibility for: (i) preparation and presentation of financial statements as per the applicable FRF; (ii) design, implementation, and maintenance of internal control to enable preparation of financial statements free from material misstatement; and (iii) providing the practitioner with all relevant information, any requested additional information, and unrestricted access to persons within the entity. Management is never required nor able to provide an 'absolute guarantee' that internal control is completely effective and prevents all errors and frauds, as internal controls have inherent limitations."
+    },
+    {
+      "id": 8,
+      "category": "SRE 2400 - Management Responsibilities (Preconditions)",
+      "question": "In a review engagement under SRE 2400, the practitioner must obtain agreement from management that it acknowledges and understands its responsibility for providing the practitioner with specific access and information. Which of the following correctly describes the components of this responsibility?\n\n**Component 1:** All information relevant to the preparation and presentation of the financial statements, such as records, documentation, and other matters.\n**Component 2:** Any additional information that the practitioner requests from management or those charged with governance for the purpose of the review.\n**Component 3:** Unrestricted access to persons within the entity from whom the practitioner determines it is necessary to obtain review evidence.\n\nWhich of the above components must be agreed upon as preconditions?",
+      "options": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "All 1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "Under SRE 2400, the third management responsibility under preconditions explicitly requires management to provide the practitioner with: (i) all information of which management is aware that is relevant to the preparation and presentation of the financial statements; (ii) any additional information that the practitioner requests from management or TCWG; and (iii) unrestricted access to persons within the entity from whom the practitioner determines it is necessary to obtain evidence. All three components are mandatory preconditions."
+    },
+    {
+      "id": 9,
+      "category": "SRE 2400 - Terms of Engagement and Post-Acceptance Preconditions",
+      "question": "**CASE:** CA Sunita accepted a review engagement of Delta Private Ltd. under SRE 2400 after recording the agreed terms in an engagement letter signed prior to performing the engagement. Two weeks into the review procedures, CA Sunita discovered that the financial reporting framework adopted by the company was an arbitrary hybrid method that failed to qualify as an acceptable financial reporting framework under accounting standards, and management refused to grant access to the head of procurement.\n\nAccording to SRE 2400, after accepting an engagement, if the practitioner is not satisfied regarding any of the preconditions, what steps must the practitioner take?",
+      "options": [
+        "The practitioner must immediately issue a disclaimer of conclusion without discussing the matter with management or those charged with governance.",
+        "The practitioner shall discuss the matter with management or those charged with governance and determine: (i) whether the matter can be resolved, (ii) whether it is appropriate to continue with the engagement, and (iii) whether and how to communicate the matter in the practitioner's report.",
+        "The practitioner is legally bound by the signed engagement letter to complete the engagement and issue an unmodified report with an Emphasis of Matter paragraph.",
+        "The practitioner must unilaterally convert the review engagement into a statutory audit engagement without discussing it with management."
+      ],
+      "answer": 1,
+      "explanation": "SRE 2400 specifically provides that if, after accepting the engagement, the practitioner is not satisfied regarding any precondition (such as acceptability of the FRF or management providing necessary access and information), the practitioner shall discuss the matter with management or TCWG. The practitioner must then determine: (1) whether the matter can be resolved; (2) whether it is appropriate to continue with the review engagement; and (3) whether and how to communicate the matter in the practitioner's report. Immediate disclaimer or unilateral conversion without discussion is contrary to the Standard."
+    },
+    {
+      "id": 10,
+      "category": "SRE 2400 - Overview of Review Process",
+      "question": "Which of the following represents the correct sequence of steps to be performed by a practitioner after acceptance of a review engagement under SRE 2400?\n\n1. Obtain an understanding of the entity and applicable FRF to identify areas of material misstatements.\n2. Determine materiality for the financial statements as a whole.\n3. Design and perform inquiry and analytical procedures.\n4. Design and perform additional procedures if the practitioner becomes aware that financial statements may be materially misstated.\n5. Evaluate whether sufficient appropriate evidence has been obtained to form a conclusion on the financial statements.",
+      "options": [
+        "1 → 2 → 3 → 4 → 5",
+        "2 → 1 → 3 → 5 → 4",
+        "1 → 3 → 2 → 4 → 5",
+        "3 → 1 → 2 → 5 → 4"
+      ],
+      "answer": 0,
+      "explanation": "Under SRE 2400, the logical sequence of performing a review engagement after its acceptance is clearly structured into five consecutive phases. First, the practitioner obtains an understanding of the entity and its applicable FRF to identify areas where material misstatements are likely to arise. Second, the practitioner determines materiality for the financial statements as a whole. Third, the practitioner designs and performs inquiry and analytical procedures as the primary review evidence-gathering procedures. Fourth, if the practitioner becomes aware of matters that cause the financial statements to be materially misstated, additional procedures must be designed and performed. Finally, the practitioner evaluates the evidence obtained to determine whether sufficient appropriate evidence has been obtained to form a conclusion on the financial statements."
+    },
+    {
+      "id": 11,
+      "category": "SRE 2400 - Role and Value of Inquiry",
+      "question": "In a review engagement under SRE 2400, inquiry is a foundational procedure. Consider the following statements regarding the role and characteristics of inquiry:\n\n**Statement 1:** In a review, inquiry includes seeking information from management and other persons within the entity as the practitioner considers appropriate.\n**Statement 2:** Evidence obtained through inquiry is the principal source of evidence about management intent.\n**Statement 3:** Management's stated reasons for choosing a particular action may provide relevant information to corroborate evidence obtained.\n**Statement 4:** Performing inquiry procedures assists the practitioner in obtaining an understanding of the entity and its environment and identifying areas where material misstatements are likely to arise in the financial statements.\n\nWhich of the above statements are correct?",
+      "options": [
+        "1, 2 and 4 only",
+        "2, 3 and 4 only",
+        "1, 3 and 4 only",
+        "All 1, 2, 3 and 4"
+      ],
+      "answer": 3,
+      "explanation": "All four statements are explicitly highlighted in SRE 2400. In a review engagement, inquiry extends beyond senior management to other persons within the entity as appropriate. It serves as the principal source of evidence regarding management intent, and management's stated rationale can corroborate other evidence. Furthermore, inquiry assists the practitioner in understanding the entity and its environment and identifying areas where material misstatements are likely to arise in the financial statements."
+    },
+    {
+      "id": 12,
+      "category": "SRE 2400 - Analytical Procedures",
+      "question": "**CASE:** During the review of Sigma Ltd. under SRE 2400, CA Rajesh observed that the gross profit margin jumped from 14% in the previous year to 28% in the current year, whereas industry margins remained steady at 15%. CA Rajesh carried out analytical procedures comparing monthly gross margins, inventory turnover, and product-wise revenue. Management explained that the improvement was due to operational efficiencies, but CA Rajesh noted that raw material purchase prices and selling prices remained unchanged.\n\nAccording to SRE 2400, which of the following correctly describes the objectives and function of analytical procedures in a review engagement?",
+      "options": [
+        "Analytical procedures in a review are performed solely to replace tests of controls and provide conclusive proof of transaction validity.",
+        "Analytical procedures assist the practitioner in identifying inconsistencies from expected trends or values, understanding the entity, identifying potential misstatement areas, corroborating inquiries, and serving as additional procedures when aware of potential material misstatements.",
+        "Analytical procedures are optional in a review engagement and should only be performed if management fails to provide written representations.",
+        "Analytical procedures must be restricted solely to the balance sheet items and cannot be applied to income statement trends."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2400, analytical procedures serve critical purposes in a review: (1) identifying inconsistencies from expected trends or values in the financial statements; (2) obtaining an understanding of the entity and its environment to identify areas where material misstatements are likely to arise; (3) providing corroborative evidence for inquiries already performed; and (4) serving as additional procedures when the practitioner becomes aware of matters causing him to believe the financial statements may be materially misstated. CA Rajesh's identification of an abnormal margin jump is a classic application of identifying inconsistencies from expected trends."
+    },
+    {
+      "id": 13,
+      "category": "SRE 2400 - Specific Circumstances: Fraud and Non-Compliance",
+      "question": "**CASE:** During the review of Horizon Logistics Ltd. under SRE 2400, practitioner CA Harish obtained indications that the company had systematically evaded state carriage taxes by utilizing forged electronic transit passes, involving an amount that is material to the financial statements. The Managing Director requested CA Harish to ignore this issue since a review does not constitute an audit and does not involve tests of details.\n\nAccording to SRE 2400, what is the mandatory course of action for CA Harish regarding indications of fraud and non-compliance with laws or regulations?",
+      "options": [
+        "CA Harish must ignore the issue because SRE 2400 limits practitioner procedures strictly to inquiries, and practitioners have no responsibility for detecting or reporting fraud.",
+        "CA Harish shall communicate the matter to Those Charged with Governance (TCWG) and determine whether there is any responsibility to report the matter to a party outside the entity.",
+        "CA Harish must immediately file a criminal complaint before the jurisdictional magistrate without informing Those Charged with Governance.",
+        "CA Harish should complete the review engagement and issue an unmodified report with a private side letter to the statutory auditor."
+      ],
+      "answer": 1,
+      "explanation": "SRE 2400 explicitly stipulates that if there is an indication that fraud or non-compliance with laws or regulations has occurred, the practitioner shall communicate this matter to Those Charged with Governance (TCWG). Furthermore, the practitioner must determine whether there is any statutory, regulatory, or professional responsibility to report the occurrence to an appropriate authority or party outside the entity."
+    },
+    {
+      "id": 14,
+      "category": "SRE 2400 - Specific Circumstances: Related Parties",
+      "question": "**CASE:** CA Meera is performing a review of Zenith Crafts Pvt. Ltd. under SRE 2400. While inspecting minutes of board meetings and performing analytical review of major consultancy expenses, CA Meera identified significant payments made to 'Aura Global Advisory', a firm owned by the spouse of the Managing Director. This relationship and the transactions were not previously disclosed or identified by management in the draft financial statements or in the initial information package.\n\nUnder SRE 2400, what is the practitioner's responsibility regarding related party relationships and transactions?",
+      "options": [
+        "The practitioner has no responsibility regarding related parties because SRE 2400 does not apply to transactions with directors' relatives.",
+        "During the review, the practitioner shall remain alert for information that may indicate the existence of related party relationships or transactions that management has not previously identified or disclosed to the practitioner.",
+        "The practitioner must immediately withdraw from the engagement without asking management to explain the omitted transactions.",
+        "The practitioner must assume management fraud and disclaim a conclusion without performing any further inquiries."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2400, during the review, the practitioner shall remain alert for information that may indicate the existence of related party relationships or transactions that management has not previously identified or disclosed to the practitioner. Upon encountering such undisclosed transactions, the practitioner must evaluate their implications, inquire into them, and ensure proper accounting and disclosure as per the applicable financial reporting framework."
+    },
+    {
+      "id": 15,
+      "category": "SRE 2400 - Specific Circumstances: Subsequent Events",
+      "question": "**CASE:** CA Varun completed the field review procedures for the financial statements of Nova Ltd. for the year ended March 31, 2026, on April 25, 2026. On May 2, 2026, prior to signing the review report on May 10, 2026, a major warehouse fire occurred, destroying 60% of the company's uninsured inventory. Furthermore, regarding subsequent events occurring after the date of the review report, the management raised doubts about CA Varun's responsibilities.\n\nUnder SRE 2400, what are the practitioner's responsibilities regarding subsequent events occurring (i) between the date of the financial statements and the date of the review report, and (ii) after the date of the review report?",
+      "options": [
+        "The practitioner has no responsibility for any subsequent events in a review engagement because it is only a limited assurance engagement.",
+        "For events between the date of the financial statements and the date of the review report that require adjustment or disclosure, the practitioner shall request management to make the adjustment or disclosure; for events occurring after the date of the review report, the responsibilities are the same as under SA 560.",
+        "The practitioner must re-perform the complete review engagement from inception whenever any subsequent event comes to light.",
+        "The practitioner must immediately issue an adverse conclusion because subsequent events automatically invalidate the financial statements."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2400: (1) If the practitioner becomes aware of events occurring between the date of the financial statements and the date of the review report that require adjustment or disclosure in the financial statements, the practitioner shall request management for the necessary adjustment or disclosure. (2) For subsequent events occurring after the date of the review report, the practitioner's considerations and responsibilities are the same as those outlined under SA 560 ('Subsequent Events')."
+    },
+    {
+      "id": 16,
+      "category": "SRE 2400 - Specific Circumstances: Going Concern",
+      "question": "**CASE:** While conducting a review of Pioneer Aviation Ltd. under SRE 2400, CA Suresh identified several adverse indicators: default on principal repayment of term loans, grounded aircraft due to lease defaults, and negative operating cash flows for two consecutive years.\n\nAccording to SRE 2400, when a practitioner becomes aware of events or conditions that may cast significant doubt about the entity's ability to continue as a going concern, what procedures must the practitioner perform?",
+      "options": [
+        "The practitioner must immediately issue a disclaimer of conclusion without discussing the plans with management.",
+        "The practitioner shall inquire of management about plans for future actions and their feasibility, and evaluate the results of those inquiries to consider whether management's responses provide a sufficient basis to continue to present the financial statements on a going concern basis or conclude whether the financial statements are materially misstated regarding going concern.",
+        "The practitioner must arrange external capital or financing for the client to mitigate the going concern threat before issuing the review report.",
+        "The practitioner must convert the review into an insolvency advisory assignment."
+      ],
+      "answer": 1,
+      "explanation": "SRE 2400 explicitly lays down mandatory procedures when events or conditions cast significant doubt on going concern. First, the practitioner must inquire of management regarding their future action plans and evaluate the feasibility of those plans. Second, the practitioner evaluates the results of these inquiries to determine whether management's responses provide a sufficient basis to continue preparing the financial statements on a going concern basis, or whether the financial statements are materially misstated regarding going concern. Merely disclaiming a conclusion or arranging external finance is improper and outside the practitioner's remit."
+    },
+    {
+      "id": 17,
+      "category": "SRE 2400 - Using the Work of Others",
+      "question": "In performing a review of financial statements under SRE 2400, the practitioner engages an independent certified gemologist to assess the valuation of diamond inventory and utilizes the review work performed by another practitioner on a foreign branch. Which of the following correctly states the practitioner's responsibility under SRE 2400 when using the work of others?",
+      "options": [
+        "The practitioner is strictly prohibited from using the work performed by other practitioners or experts in a review engagement.",
+        "The practitioner may use the work of others, and doing so automatically relieves the practitioner of all responsibility for the conclusion on the financial statements.",
+        "If the practitioner uses work performed by another practitioner or an expert, he shall take appropriate steps to be satisfied that the work performed is adequate for his purposes.",
+        "The practitioner must mention the name of the expert in the conclusion paragraph and express a joint conclusion with the expert."
+      ],
+      "answer": 2,
+      "explanation": "SRE 2400 states that in performing a review, it may be necessary for the practitioner to use work performed by other practitioners or an expert. If the practitioner uses work performed by others, the practitioner shall take appropriate steps to be satisfied that the work performed is adequate for his purposes. The practitioner cannot abdicate responsibility or blindly rely on others without taking steps to evaluate adequacy."
+    },
+    {
+      "id": 18,
+      "category": "SRE 2400 - Additional Procedures",
+      "question": "**CASE:** During the review of Om Agro Industries Ltd. under SRE 2400, practitioner CA Deepa noticed an abnormal discrepancy: trade receivables aged over 3 years were classified as current assets and shown without any provision, despite legal notices issued to debtors having been returned undelivered. The amount involved is material. When inquired, the accountant gave evasive answers.\n\nAccording to SRE 2400, what are the practitioner's obligations and procedural options upon becoming aware of matters that cause the financial statements to be materially misstated?",
+      "options": [
+        "The practitioner must resign immediately because SRE 2400 does not permit any procedures beyond standard inquiries and analytical procedures.",
+        "The practitioner shall design and perform additional procedures to enable her to conclude that the matter is not likely to cause the financial statements as a whole to be materially misstated, or determine that the matter causes the financial statements as a whole to be materially misstated; these procedures may include additional inquiries/analytical procedures or other procedures such as tests of details or external confirmations.",
+        "The practitioner must ignore the matter because substantive testing or external confirmations are strictly prohibited in review engagements.",
+        "The practitioner should adjust the books of account directly and prepare revised financial statements on behalf of management."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2400, if the practitioner becomes aware of matters that cause the financial statements to be materially misstated, the practitioner shall design and perform additional procedures to enable him/her to: (i) conclude that the matter is not likely to cause the financial statements as a whole to be materially misstated; or (ii) determine that the matter causes the financial statements as a whole to be materially misstated. SRE 2400 clarifies that additional procedures focus on obtaining evidence to form a conclusion on those matters, and may include additional detailed inquiry/analytical procedures or other types of procedures such as tests of details or external confirmations."
+    },
+    {
+      "id": 19,
+      "category": "SRE 2400 - Evaluating Evidence Obtained",
+      "question": "Under SRE 2400, after performing the planned review procedures, the practitioner must evaluate whether sufficient appropriate evidence has been obtained. If the practitioner considers that the evidence obtained is NOT sufficient and appropriate to form a conclusion on the financial statements, what actions may the practitioner take under SRE 2400?\n\n1. Extend the work performed.\n2. Perform other procedures necessary in the circumstances.\n3. Alter the materiality threshold arbitrarily to make the evidence appear sufficient.\n4. Issue an unmodified report with an oral disclaimer to the audit committee.\n\nSelect the correct combination:",
+      "options": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 4 only",
+        "1, 2 and 4 only"
+      ],
+      "answer": 0,
+      "explanation": "Under SRE 2400 ('Evaluating evidence obtained from procedures performed'), the practitioner shall evaluate whether sufficient appropriate evidence has been obtained from the procedures performed. If the practitioner considers that the evidence obtained is not sufficient and appropriate to form a conclusion on the financial statements, the practitioner may: (1) extend the work performed, or (2) perform other procedures necessary in the circumstances. Arbitrarily altering materiality or providing oral disclaimers is unethical and non-compliant."
+    },
+    {
+      "id": 20,
+      "category": "SRE 2400 - Integrated Inquiry and Analytical Procedures",
+      "question": "**Assertion (A):** In a review of financial statements under SRE 2400, the practitioner may perform procedures typically associated with an audit, such as external confirmations or tests of details.\n**Reason (R):** When the practitioner becomes aware of matters that cause him to believe the financial statements may be materially misstated, SRE 2400 requires him to design and perform additional procedures, which may include tests of details or external confirmations, to form a conclusion on those matters.",
+      "options": [
+        "Both A and R are correct, and R correctly explains A",
+        "Both A and R are correct, but R does not correctly explain A",
+        "A is correct, but R is incorrect",
+        "A is incorrect, but R is correct"
+      ],
+      "answer": 0,
+      "explanation": "Both Assertion (A) and Reason (R) are correct, and R correctly explains A. While a review engagement under SRE 2400 primarily focuses on inquiry and analytical procedures, it does not bar the practitioner from using tests of details or external confirmations when necessary. Specifically, SRE 2400 mandates that if the practitioner becomes aware of matters that cause the financial statements to be materially misstated, he shall design and perform additional procedures. The Standard explicitly recognizes that these additional procedures may consist of tests of details or external confirmations to enable the practitioner to conclude whether the matter causes the financial statements as a whole to be materially misstated."
+    },
+    {
+      "id": 21,
+      "category": "SRE 2400 - Written Representations: Core Content",
+      "question": "Under SRE 2400, written representations constitute an indispensable source of review evidence. Which of the following representations are explicitly required to be requested from management under SRE 2400?\n\n1. Management has fulfilled its responsibility for the preparation of the financial statements in accordance with the applicable financial reporting framework.\n2. Management has provided the practitioner with all information and access as agreed in the terms of the engagement.\n3. All transactions have been recorded in the financial statements.\n4. Management guarantees that the entity will remain profitable and meet all budget targets over the next three financial years.\n\nSelect the correct combination:",
+      "options": [
+        "1, 2 and 3 only",
+        "1, 3 and 4 only",
+        "2 and 3 only",
+        "All 1, 2, 3 and 4"
+      ],
+      "answer": 0,
+      "explanation": "Under SRE 2400, the practitioner shall request management to provide written representations that: (i) Management has fulfilled its responsibility for the preparation of financial statements in accordance with the applicable FRF; (ii) Management has provided the practitioner with all information and access agreed in the terms of the engagement; and (iii) All transactions have been recorded in the financial statements. Management is never asked to guarantee future profitability or budget achievements (Item 4), as such assertions are speculative and outside the scope of historical financial statements."
+    },
+    {
+      "id": 22,
+      "category": "SRE 2400 - Written Representations: Specific Disclosures",
+      "question": "In addition to general responsibilities, SRE 2400 requires the practitioner to request written representations that management has disclosed specific critical matters. Which of the following matters are explicitly required to be covered in such written representations?\n\n(i) Significant facts relating to any frauds or suspected frauds.\n(ii) Non-compliance with laws and regulations.\n(iii) All related party relationships and transactions.\n(iv) That subsequent events requiring adjustment or disclosure have been adjusted or disclosed.\n(v) All information relevant to the use of the going concern assumption.",
+      "options": [
+        "i, ii, iii and iv only",
+        "i, iii, iv and v only",
+        "ii, iii, iv and v only",
+        "All i, ii, iii, iv and v"
+      ],
+      "answer": 3,
+      "explanation": "According to SRE 2400 ('Written Representations'), the practitioner shall specifically request written representations that management has disclosed to the practitioner: (1) significant facts relating to any frauds or suspected frauds; (2) non-compliance with laws and regulations; (3) all related party relationships and transactions; (4) that subsequent events requiring adjustment or disclosure have been adjusted or disclosed; and (5) all information relevant to the use of the going concern assumption. All five items are mandatory specific disclosures."
+    },
+    {
+      "id": 23,
+      "category": "SRE 2400 - Management Refusal of Written Representations",
+      "question": "**CASE:** During the review of Sparkle Gems Pvt. Ltd. under SRE 2400, CA Vineet requested written representations regarding whether all related party transactions had been disclosed and whether significant facts relating to any suspected frauds had been communicated. The CEO flatly refused to sign the written representation letter, stating that written representations are only mandatory in a statutory audit under SA 580 and have no legal standing in a limited assurance review engagement under SRE 2400.\n\nEvaluating the CEO's contention against SRE 2400, what are the mandatory steps CA Vineet must take?",
+      "options": [
+        "CA Vineet should accept the CEO's argument, dispense with the representation letter, and issue an unmodified report because a review provides only limited assurance.",
+        "CA Vineet shall discuss the matter with management, re-evaluate the integrity of management, and take appropriate actions, including determining the possible effect on the conclusion in the practitioner's report in accordance with SRE 2400.",
+        "CA Vineet must immediately initiate criminal proceedings against the CEO for non-compliance with accounting standards.",
+        "CA Vineet should obtain oral representations on an audio recording device and treat that as a complete substitute for written representations."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2400, written representations are mandatory. The standard explicitly provides that if management does not provide the requested written representations, the practitioner shall: (1) discuss the matter with management; (2) re-evaluate the integrity of management; and (3) take appropriate actions, including determining the possible effect on the conclusion in the practitioner's report as per this SRE (which may lead to qualifying or disclaiming a conclusion or withdrawing from the engagement). The CEO's contention that written representations are not required in a review is completely erroneous."
+    },
+    {
+      "id": 24,
+      "category": "SRE 2400 - Types of Modified Conclusions",
+      "question": "Match the circumstances in Column I with the appropriate conclusion to be expressed by the practitioner under SRE 2400 in Column II:\n\n**Column I (Circumstances)**\nA. Misstatements are material but not pervasive to the financial statements, based on sufficient appropriate evidence obtained.\nB. Practitioner is unable to obtain sufficient appropriate evidence, and concludes that possible effects of undetected misstatements could be both material and pervasive.\nC. Misstatements are both material and pervasive to the financial statements, based on sufficient appropriate evidence obtained.\nD. Practitioner is unable to obtain sufficient appropriate evidence, but concludes that possible effects of undetected misstatements could be material but not pervasive.\n\n**Column II (Conclusion)**\n1. Adverse Conclusion\n2. Qualified Conclusion\n3. Disclaimer of Conclusion",
+      "options": [
+        "A-2, B-3, C-1, D-2",
+        "A-1, B-2, C-3, D-1",
+        "A-2, B-1, C-3, D-2",
+        "A-3, B-2, C-1, D-3"
+      ],
+      "answer": 0,
+      "explanation": "Under SRE 2400 ('Modified Conclusion'):\n- A Qualified Conclusion (2) is expressed when: (i) having obtained sufficient appropriate evidence, the practitioner concludes misstatements are material but not pervasive (A-2); OR (ii) being unable to obtain sufficient appropriate evidence, concludes possible effects of undetected misstatements could be material but not pervasive (D-2).\n- An Adverse Conclusion (1) is expressed when, having obtained sufficient appropriate evidence, the practitioner concludes that misstatements are both material and pervasive (C-1).\n- A Disclaimer of Conclusion (3) is expressed when the practitioner is unable to obtain sufficient appropriate evidence and concludes that possible effects of undetected misstatements could be both material and pervasive (B-3).\nTherefore, the correct matching is A-2, B-3, C-1, D-2."
+    },
+    {
+      "id": 25,
+      "category": "SRE 2400 - Specific Phrasing of Conclusions",
+      "question": "Which of the following phrases correctly reflects the wording used in the Conclusion paragraph of a review report (Fair Presentation Framework) under SRE 2400 for an Adverse Conclusion?",
+      "options": [
+        "\"Based on our review, nothing has come to our attention that causes us to believe that the financial statements do not give a true and fair view in accordance with the applicable FRF.\"",
+        "\"Based on our review, except for the effects of the matter described in the Basis for Qualified Conclusion paragraph, nothing has come to our attention that causes us to believe that the financial statements do not give a true and fair view in accordance with the applicable FRF.\"",
+        "\"Based on our review, due to the significance of the matter described in the Basis for Adverse Conclusion paragraph, the financial statements do not give a true and fair view in accordance with the applicable FRF.\"",
+        "\"We do not express a conclusion on the financial statements. Due to the significance of the matter described in the Basis for Disclaimer of Conclusion paragraph, we are unable to obtain sufficient appropriate evidence to form a conclusion on the financial statements.\""
+      ],
+      "answer": 2,
+      "explanation": "Under SRE 2400 ('Phrases used in Framing of Conclusion Para of Review Report - Fair Presentation Framework'):\n- Unmodified: 'Based on our review, nothing has come to our attention that causes us to believe that FS do not give a true and fair view...'\n- Qualified: 'Based on our review, except for the effects of the matter described in Basis for Qualified Conclusion paragraph, nothing has come to our attention that causes us to believe that FS do not give a true and fair view...'\n- Adverse: 'Based on our review, due to significance of matter described in Basis for Adverse Conclusion paragraph, FS do not give a true and fair view...'\n- Disclaimer: 'We do not express a conclusion on FS. Due to significance of matter described in Basis for Disclaimer of Conclusion paragraph, we are unable to obtain sufficient appropriate evidence to form a conclusion on FS.'\nTherefore, Option C represents the exact framing for an adverse conclusion."
+    },
+    {
+      "id": 26,
+      "category": "SRE 2400 - Basis for Modified Conclusion Content",
+      "question": "**CASE:** CA Pankaj is drafting a modified review report under SRE 2400 for Galaxy Trading Ltd. The company did not recognize depreciation on its plant and machinery amounting to Rs. 45 Lakhs (which is material but not pervasive) and failed to disclose the terms of a material contingent liability relating to a pending customs dispute.\n\nAccording to SRE 2400, which of the following requirements must be complied with when drafting the 'Basis for Modified Conclusion' paragraph?\n\n1. Describe and quantify the financial effect of the misstatement if it relates to a specific amount in the financial statements.\n2. Explain how the disclosures are misstated if the misstatement relates to disclosures.\n3. Describe the nature of omitted information if the misstatement relates to non-disclosure.\n4. Mention the names and home addresses of the board members responsible for the non-disclosure.",
+      "options": [
+        "1 and 2 only",
+        "1, 2 and 3 only",
+        "2, 3 and 4 only",
+        "All 1, 2, 3 and 4"
+      ],
+      "answer": 1,
+      "explanation": "SRE 2400 specifically prescribes the matters to be included in the 'Basis for Modified Conclusion' paragraph:\n- Describe and quantify the financial effect of the misstatements if they relate to a specific amount in the financial statements;\n- Explain how disclosures are misstated if the misstatement relates to disclosures; and\n- Describe the nature of omitted information if the misstatement relates to non-disclosure.\nIt does not require publishing personal addresses or naming specific board members (Item 4). Therefore, statements 1, 2, and 3 are correct."
+    },
+    {
+      "id": 27,
+      "category": "SRE 2400 - Elements of Practitioner's Review Report",
+      "question": "A practitioner's written review report under SRE 2400 must contain specific standard elements. Which of the following is NOT an element required to be included in the review report under SRE 2400?",
+      "options": [
+        "A description of the review of financial statements and its limitations, stating that a review consists primarily of inquiries and analytical procedures and is substantially less than an audit.",
+        "A statement that the practitioner conducted the review in accordance with SRE 2400 and does not express an audit opinion on the financial statements.",
+        "A section titled 'Key Audit Matters' (KAM) identifying the matters of most significance in the review, strictly in accordance with SA 701.",
+        "A paragraph under the heading 'Conclusion' containing the practitioner's conclusion on the financial statements."
+      ],
+      "answer": 2,
+      "explanation": "Under SRE 2400, the review report contains: Title, Addressee, Introductory paragraph, Description of responsibility of management, Description of practitioner's responsibility, Description of review of FS and its limitations (limited assurance, primarily inquiry and analytical procedures, substantially less than audit, no audit opinion expressed), Conclusion paragraph, Basis for modification (if applicable), Emphasis of Matter/Other Matter (if any), Practitioner's signature, Place, and Date. 'Key Audit Matters' under SA 701 is an audit-specific requirement for audits of complete sets of general purpose financial statements of listed entities and is NOT an element of a review report under SRE 2400."
+    },
+    {
+      "id": 28,
+      "category": "SRE 2400 - Documentation Requirements",
+      "question": "Under SRE 2400, the practitioner shall document aspects of the engagement in a timely manner. In documenting the nature, timing, and extent (NTE) of procedures performed, which of the following specific details must be recorded by the practitioner?\n\n**Detail 1:** Who performed the work and the date such work was completed.\n**Detail 2:** Who reviewed the work performed and the period and extent of review.\n**Detail 3:** The results obtained from the procedures and the practitioner's conclusions formed on the basis of those results.\n**Detail 4:** Significant matters arising during the engagement, the practitioner's conclusions thereon, and significant professional judgments made in reaching those conclusions.\n\nWhich of the above details are mandatory documentation under SRE 2400?",
+      "options": [
+        "1 and 2 only",
+        "1, 2 and 3 only",
+        "3 and 4 only",
+        "All 1, 2, 3 and 4"
+      ],
+      "answer": 3,
+      "explanation": "SRE 2400 explicitly mandates the practitioner to document in a timely manner: (1) The NTE of procedures performed to comply with SRE 2400 and applicable legal requirements; and while doing so, record: (i) who performed the work and date such work was completed, and (ii) who reviewed the work performed and period and extent of review; (2) Results obtained from procedures, and practitioner conclusions formed on the basis of those results; and (3) Significant matters arising during the engagement, practitioner conclusions, and significant judgments made in reaching those conclusions. All four details are mandatory."
+    },
+    {
+      "id": 29,
+      "category": "SRE 2400 - Framing of Qualified Conclusion",
+      "question": "**CASE:** CA Sneha conducted a review of Zenith Exports Ltd. under SRE 2400. During the review, CA Sneha obtained sufficient appropriate evidence that the company overstated export incentives receivable by Rs. 22 Lakhs, resulting in a material misstatement. However, the misstatement is confined to that single account balance and is not pervasive to the financial statements as a whole. The management declined to make any correction.\n\nWhich of the following represents the MOST appropriate Conclusion paragraph to be issued by CA Sneha in her review report under SRE 2400?",
+      "options": [
+        "\"Based on our review, the financial statements give a true and fair view except for the overstatement of export incentives.\"",
+        "\"Based on our review, except for the effects of the matter described in the Basis for Qualified Conclusion paragraph, nothing has come to our attention that causes us to believe that the financial statements do not give a true and fair view in accordance with the applicable financial reporting framework.\"",
+        "\"We disclaim our conclusion on the financial statements because export incentives receivable are misstated.\"",
+        "\"Due to the significance of the matter described in the Basis for Adverse Conclusion paragraph, the financial statements do not present fairly in all material respects.\""
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2400, when a qualified conclusion is warranted because misstatements are material but not pervasive, the standardized conclusion wording under a fair presentation framework is explicitly prescribed. The required wording states: 'Based on our review, except for the effects of the matter described in the Basis for Qualified Conclusion paragraph, nothing has come to our attention that causes us to believe that the financial statements do not give a true and fair view in accordance with the applicable financial reporting framework.' Option A incorrectly uses positive audit-style language ('give a true and fair view') rather than a negative assurance form. Option C is a disclaimer of conclusion, which is reserved strictly for situations where evidence cannot be obtained and the possible effects are pervasive. Option D is an adverse conclusion, which applies only when misstatements are both material and pervasive."
+    },
+    {
+      "id": 30,
+      "category": "SRE 2400 - Disclaimer of Conclusion Framing",
+      "question": "**CASE:** CA Arvind was engaged to review the financial statements of Ocean Transport Ltd. under SRE 2400. The company's principal accounting records and physical asset registers for ships operating in international waters were seized by maritime enforcement authorities. CA Arvind was unable to obtain sufficient appropriate review evidence regarding assets and revenues comprising 85% of the total assets and 90% of the total turnover of the company. CA Arvind concluded that the possible effects of undetected misstatements could be both material and pervasive.\n\nHow should CA Arvind formulate the Conclusion paragraph in his review report under SRE 2400?",
+      "options": [
+        "\"Based on our review, we have concluded that the financial statements do not give a true and fair view due to missing records.\"",
+        "\"Based on our review, except for the missing ship records, nothing has come to our attention that causes us to believe that the financial statements do not give a true and fair view.\"",
+        "\"We do not express a conclusion on the financial statements. Due to the significance of the matter described in the Basis for Disclaimer of Conclusion paragraph, we are unable to obtain sufficient appropriate evidence to form a conclusion on the financial statements.\"",
+        "\"In our opinion, proper books of account have not been kept by the company as required by maritime law.\""
+      ],
+      "answer": 2,
+      "explanation": "Under SRE 2400, when the practitioner is unable to obtain sufficient appropriate evidence and concludes that the possible effects of undetected misstatements could be both material and pervasive, the practitioner must disclaim a conclusion. The required phrasing for a Disclaimer of Conclusion under SRE 2400 is: 'We do not express a conclusion on the financial statements. Due to the significance of the matter described in the Basis for Disclaimer of Conclusion paragraph, we are unable to obtain sufficient appropriate evidence to form a conclusion on the financial statements.' Option C exactly reflects this mandated phrasing."
+    },
+    {
+      "id": 31,
+      "category": "SRE 2410 - Scope and Definition of Interim Financial Information",
+      "question": "Which of the following statements correctly captures the scope and core concepts of SRE 2410?\n\n**Statement 1:** SRE 2410 deals with the auditor's professional responsibilities when an auditor undertakes an engagement to review interim financial information of an audit client.\n**Statement 2:** SRE 2410 applies equally when a practitioner who is NOT the statutory auditor of the entity is engaged to review interim financial information.\n**Statement 3:** Interim financial information is financial information prepared and presented in accordance with an applicable financial reporting framework and comprises either a complete or a condensed set of financial statements for a period shorter than the entity's financial year.\n**Statement 4:** The objective of an engagement to review interim financial information under SRE 2410 is to enable the auditor to obtain reasonable assurance that the interim financial information is free from material misstatement.\n\nWhich of the above statements are correct?",
+      "options": [
+        "1 and 3 only",
+        "1, 2 and 3 only",
+        "2 and 4 only",
+        "1, 3 and 4 only"
+      ],
+      "answer": 0,
+      "explanation": "Statements 1 and 3 are correct. SRE 2410 specifically deals with the auditor's responsibilities when reviewing interim financial information of an audit client (where the practitioner is already the independent statutory auditor). Interim financial information comprises a complete or condensed set of financial statements for a period shorter than the entity's financial year. Statement 2 is incorrect because if the practitioner is not the statutory auditor of the entity, SRE 2400 applies, not SRE 2410. Statement 4 is incorrect because the objective of a review under SRE 2410 is to obtain limited assurance (not reasonable assurance) through inquiry, analytical, and other review procedures; it is not designed to obtain reasonable assurance that interim financial information is free from material misstatement."
+    },
+    {
+      "id": 32,
+      "category": "SRE 2410 - Objectives vs Audit",
+      "question": "**Assertion (A):** An engagement to review interim financial information under SRE 2410 does not provide all the evidence that is required in an audit conducted in accordance with Standards on Auditing (SAs).\n**Reason (R):** The objective of a review of interim financial information is to enable the auditor to express a limited assurance conclusion, and the review is not designed to obtain reasonable assurance that the interim financial information is free from material misstatement.",
+      "options": [
+        "Both A and R are correct, and R correctly explains A",
+        "Both A and R are correct, but R does not correctly explain A",
+        "A is correct, but R is incorrect",
+        "A is incorrect, but R is correct"
+      ],
+      "answer": 0,
+      "explanation": "Both Assertion (A) and Reason (R) are correct, and R correctly explains A. SRE 2410 explicitly emphasizes that the objective of a review differs significantly from an audit conducted in accordance with SAs. A review is designed to obtain limited assurance through inquiry, analytical, and other review procedures, enabling the auditor to express a conclusion. Because it is not designed to obtain reasonable assurance, a review does not provide all the evidence required in an audit, which is why Assertion A holds."
+    },
+    {
+      "id": 33,
+      "category": "SRE 2410 - Updating Understanding of Entity",
+      "question": "Under SRE 2410, the auditor performs procedures to update their understanding of the entity and its environment, including its internal control. Which of the following procedures are explicitly included among these update procedures?\n\n1. Reading documentation of the preceding year's audit and prior interim period reviews to identify matters that may affect current period interim financial information.\n2. Reading the most recent prior period interim financial information.\n3. Considering any significant risks identified in the prior year's financial statement audit.\n4. Inquiring of management about changes in the entity's business activities, significant changes in internal control, and the process by which interim financial information has been prepared.\n5. Considering results of any internal audit performed and subsequent actions taken by management, and considering materiality with reference to the applicable FRF.\n\nSelect the correct combination:",
+      "options": [
+        "1, 2, 3 and 4 only",
+        "1, 3, 4 and 5 only",
+        "2, 3, 4 and 5 only",
+        "All 1, 2, 3, 4 and 5"
+      ],
+      "answer": 3,
+      "explanation": "All five listed procedures are explicitly specified under SRE 2410 for updating the auditor's understanding of the entity and its environment, including its internal control. They include: reading preceding year audit/interim documentation; reading recent prior interim information; considering prior significant audit risks; considering internal audit results and management actions; inquiring about business activity changes, internal control changes, and interim preparation processes; and considering materiality with reference to the applicable FRF."
+    },
+    {
+      "id": 34,
+      "category": "SRE 2410 - Specific Inquiries of Management",
+      "question": "**CASE:** CA Arvind is conducting a review of the Q2 interim financial information of Kuber Ltd., an existing statutory audit client, under SRE 2410. During the inquiry stage, CA Arvind inquired of management responsible for financial and accounting matters regarding whether the interim financial information had been prepared as per the applicable FRF and whether there were any changes in accounting principles.\n\nUnder SRE 2410, which of the following additional matters must the auditor specifically inquire about from management responsible for financial and accounting matters?\n\n(i) Whether the interim financial information contains any known uncorrected misstatements.\n(ii) Knowledge of any fraud or suspected fraud, or non-compliance with laws and regulations having a material effect on interim financial information.\n(iii) Significant changes in commitments, contractual obligations, and contingent liabilities.\n(iv) Significant transactions occurring in the last several days of the interim period, and significant assumptions relevant to fair value measurement or disclosures.\n(v) Whether related party transactions have been appropriately accounted for and disclosed, and whether management has identified all subsequent events up to the date of the review report.\n(vi) Management's assessment of the entity's ability to continue as a going concern.",
+      "options": [
+        "i, ii, iii, and iv only",
+        "ii, iii, iv, and v only",
+        "i, iii, v, and vi only",
+        "All i, ii, iii, iv, v, and vi"
+      ],
+      "answer": 3,
+      "explanation": "SRE 2410 explicitly specifies an extensive list of inquiries directed to management responsible for financial and accounting matters. These include: (i) compliance with FRF; (ii) changes in accounting principles; (iii) known uncorrected misstatements; (iv) knowledge of fraud or non-compliance with laws/regulations; (v) significant changes in commitments, contractual obligations, and contingent liabilities; (vi) significant transactions in the last several days of the interim period; (vii) significant fair value assumptions/disclosures; (viii) appropriate accounting/disclosure of related party transactions; (ix) identification of all subsequent events up to the report date; and (x) management assessment of the entity's ability to continue as a going concern. All six listed items are mandatory."
+    },
+    {
+      "id": 35,
+      "category": "SRE 2410 - Analytical and Other Review Procedures",
+      "question": "Which of the following represents an accurate list of review procedures performed by the auditor under SRE 2410 in addition to inquiries of management?\n\n1. Applying analytical procedures to identify relationships and individual items that appear to be unusual.\n2. Reading minutes of meetings of shareholders and Those Charged with Governance to identify matters that may affect interim financial information, and inquiring about matters for which minutes are not yet available.\n3. Considering the effect of matters giving rise to modifications at the time of previous audits or reviews.\n4. Communicating with other auditors who are performing a review of the entity's significant components.\n5. Reading the interim financial information and considering whether anything causes the auditor to believe that it is not prepared in accordance with the applicable FRF.\n\nSelect the correct combination:",
+      "options": [
+        "1, 2, 3 and 5 only",
+        "1, 3, 4 and 5 only",
+        "2, 3, 4 and 5 only",
+        "All 1, 2, 3, 4 and 5"
+      ],
+      "answer": 3,
+      "explanation": "Under SRE 2410, the auditor's review procedures comprise: (1) Inquiries of management regarding accounting and operational matters; (2) Applying analytical procedures to identify unusual relationships and items; (3) Reading minutes of shareholders and TCWG meetings and inquiring about unminuted meetings; (4) Considering the effect of prior audit/review modifications; (5) Communicating with other auditors reviewing significant components; and (6) Reading the interim financial information to consider whether anything causes the auditor to believe it is not prepared as per the applicable FRF. All five items are explicitly required review procedures under SRE 2410."
+    },
+    {
+      "id": 36,
+      "category": "SRE 2410 - Management Representations",
+      "question": "Under SRE 2410, the auditor shall obtain written representations from management. Which of the following is NOT one of the management representations explicitly specified in SRE 2410?",
+      "options": [
+        "Interim financial information is prepared and presented in accordance with the applicable financial reporting framework.",
+        "Management acknowledges its responsibility for the design and implementation of internal control to prevent and detect fraud and error.",
+        "Management has disclosed to the auditor all known significant facts relating to any frauds, known non-compliance with laws and regulations, and all subsequent events.",
+        "Management guarantees that the interim financial performance will be replicated across all remaining quarters of the financial year without deviation."
+      ],
+      "answer": 3,
+      "explanation": "Under SRE 2410 ('Management Representations'), the auditor obtains written representations confirming that: (1) interim financial information is prepared as per the applicable FRF; (2) management acknowledges its responsibility for design and implementation of internal control; (3) management has disclosed all known significant facts relating to any frauds; (4) management has disclosed all known non-compliance with laws and regulations; and (5) management has disclosed all subsequent events. Management is never expected or asked to guarantee future quarter performances (Option D)."
+    },
+    {
+      "id": 37,
+      "category": "SRE 2410 - Communication Escalation Protocol",
+      "question": "**CASE:** During the review of the Q3 interim financial information of Neptune Infra Ltd., statutory auditor CA Shalini identified that the company recognized Rs. 50 Crores of unbilled revenue from a disputed construction claim where arbitration proceedings had just ruled against the company. This revenue recognition is a material departure from Ind AS 115 / applicable FRF.\n\nAccording to SRE 2410, what is the correct hierarchical communication process CA Shalini must follow, and what considerations arise if Those Charged with Governance fail to respond within a reasonable period?",
+      "options": [
+        "CA Shalini must directly withdraw from both the review and annual audit without discussing the matter with management or Those Charged with Governance.",
+        "CA Shalini shall communicate the matter to management requesting material adjustment; if management does not respond appropriately, she should inform TCWG; if TCWG do not respond within a reasonable period, she shall consider: (i) whether to modify the report, (ii) the possibility of withdrawing from the review engagement, and (iii) the possibility of resigning from appointment to audit the annual financial statements.",
+        "CA Shalini must immediately publish an alert on the National Stock Exchange portal without issuing any report to the company.",
+        "CA Shalini should ignore the issue during the interim review and wait to raise it during the annual audit."
+      ],
+      "answer": 1,
+      "explanation": "SRE 2410 ('Communication') outlines a clear escalation protocol: (1) When a matter causes the auditor to believe that a material adjustment is necessary for the interim financial information to be prepared as per the applicable FRF, the auditor communicates this to management. (2) If management does not respond appropriately within a reasonable period, the auditor informs Those Charged with Governance (TCWG). (3) If TCWG also do not respond within a reasonable period, the auditor shall consider: whether to modify the review report, the possibility of withdrawing from the review engagement, and the possibility of resigning from the appointment to audit the annual financial statements."
+    },
+    {
+      "id": 38,
+      "category": "SRE 2410 - Elements of Review Report",
+      "question": "Which of the following statements regarding the contents and elements of an auditor's review report on interim financial information under SRE 2410 is INCORRECT?",
+      "options": [
+        "The review report is addressed to the Board of Directors of the entity.",
+        "The report contains a statement that management is responsible for the preparation and presentation of the interim financial information in accordance with the applicable FRF.",
+        "The report contains a statement that a review of interim financial information consists of making inquiries and applying analytical and other review procedures, and is substantially less in scope than an audit conducted in accordance with SAs.",
+        "The report must express an opinion on whether the internal financial controls with reference to interim financial reporting were operating effectively throughout the quarter."
+      ],
+      "answer": 3,
+      "explanation": "Under SRE 2410 ('The Auditor's Review Report'), the report includes: Title, Addressee (specifically addressed to the Board of Directors), Identification of interim financial information and period covered, Statement of management responsibility for preparation/presentation under applicable FRF, Statement of auditor responsibility to express a conclusion, Statement that the review was conducted as per SRE 2410, Statement that the review is substantially less in scope than an audit conducted as per SAs, Conclusion paragraph, EOM/OM paragraphs (if any), Signature, Place, and Date. An audit opinion on the operating effectiveness of internal financial controls (IFCoFR under Section 143(3)(i)) is a statutory audit requirement for annual financial statements and is NOT an element of an interim review report under SRE 2410."
+    },
+    {
+      "id": 39,
+      "category": "SRE 2410 - Departure from Applicable FRF",
+      "question": "**CASE:** In the review of interim financial information of Dynamic Power Ltd. under SRE 2410, the auditor CA Ramesh identified that the company failed to capitalize borrowing costs of Rs. 18 Crores directly attributable to the construction of a qualifying asset, in direct departure from Ind AS 23. The misstatement is material to the interim financial information. Management refused to correct the interim figures, arguing that interim figures are approximate and full adjustments are only required at year-end.\n\nUnder SRE 2410, how should CA Ramesh address this departure from the applicable FRF in the review report?",
+      "options": [
+        "CA Ramesh must accept management's argument because interim reporting standards permit deferral of all adjustments to the fourth quarter.",
+        "CA Ramesh shall modify the review report by expressing a qualified conclusion or an adverse conclusion, depending on whether the effect of the departure is pervasive to the interim financial information.",
+        "CA Ramesh must issue an unmodified conclusion with an Emphasis of Matter paragraph drawing attention to Ind AS 23.",
+        "CA Ramesh is required to issue a disclaimer of conclusion because management refused to make an adjustment."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2410 ('Departure from Applicable FRF'), if matters come to the auditor's attention that cause the auditor to believe that the interim financial information is materially affected by a departure from the applicable financial reporting framework, and management does not correct the interim financial information, the auditor shall modify the review report. The modification will be either a qualified conclusion (if material but not pervasive) or an adverse conclusion (if both material and pervasive). An Emphasis of Matter paragraph is inappropriate for an uncorrected material departure, and a disclaimer is only for scope limitations where evidence cannot be obtained."
+    },
+    {
+      "id": 40,
+      "category": "SRE 2410 - Addressee of Interim Review Report",
+      "question": "**Assertion (A):** The auditor's review report issued under SRE 2410 on interim financial information is ordinarily addressed to the Board of Directors of the entity.\n**Reason (R):** SRE 2410 deals with the review of interim financial information conducted by the independent auditor of the entity, where interim financial information is prepared by management and submitted to the Board of Directors for approval prior to publication or filing with regulatory authorities.",
+      "options": [
+        "Both A and R are correct, and R correctly explains A",
+        "Both A and R are correct, but R does not correctly explain A",
+        "A is correct, but R is incorrect",
+        "A is incorrect, but R is correct"
+      ],
+      "answer": 0,
+      "explanation": "Both Assertion (A) and Reason (R) are correct, and R correctly explains A. Under SRE 2410, the specified addressee of the auditor's review report on interim financial information is the Board of Directors. This reflects the corporate governance reality that interim financial information is prepared by management and reviewed for and submitted to the Board of Directors (or its Audit Committee) for approval before dissemination to stock exchanges or shareholders, unlike the annual audit report which is addressed to the members (shareholders) of the company."
+    },
+    {
+      "id": 41,
+      "category": "SRE 2410 - Scope Limitation: Management-Imposed Before Acceptance",
+      "question": "**CASE:** Royal Hospitality Ltd. approached its statutory auditor, CA Ananya, to undertake the review of its interim financial statements for the half-year ended September 30, 2026. However, during engagement acceptance discussions, management stipulated a formal condition in the draft terms that the auditor would not be allowed to perform analytical procedures on room revenues from the overseas resort division or inquire into customer loyalty points obligations.\n\nUnder SRE 2410, how should CA Ananya deal with this management-imposed limitation prior to acceptance?",
+      "options": [
+        "CA Ananya should accept the engagement and issue an immediate disclaimer of conclusion on the date of appointment.",
+        "CA Ananya shall not accept an engagement to review interim financial information if there is a limitation on the scope of the auditor's review imposed by management.",
+        "CA Ananya can accept the engagement provided the engagement fee is increased to compensate for the higher professional risk.",
+        "CA Ananya should accept the review engagement and conduct it as an agreed-upon procedures engagement instead."
+      ],
+      "answer": 1,
+      "explanation": "SRE 2410 explicitly lays down that an auditor shall not accept an engagement to review interim financial information if there is a limitation on the scope of the auditor's review imposed by management. Accepting an engagement knowing that management has restricted the scope of review undermines the very purpose of limited assurance and is prohibited."
+    },
+    {
+      "id": 42,
+      "category": "SRE 2410 - Scope Limitation: Management-Imposed After Acceptance",
+      "question": "**CASE:** Prism Telecom Ltd. engaged its statutory auditor, CA Rohit, to review its interim financial information under SRE 2410. After the engagement had commenced, management restricted CA Rohit from reviewing the inter-operator billing settlements and refused access to the revenue assurance logs. CA Rohit requested management to remove the limitation, but management and Those Charged with Governance (TCWG) categorically refused. As a result, CA Rohit is unable to complete the review and express a conclusion.\n\nUnder SRE 2410, what are the mandatory actions and considerations for CA Rohit?",
+      "options": [
+        "CA Rohit must issue an unmodified conclusion because scope limitations imposed during interim periods do not affect the statutory auditor.",
+        "CA Rohit is unable to express a conclusion and shall consider the possibility of withdrawing from the review engagement and the annual audit; furthermore, he shall consider legal and regulatory responsibilities regarding whether there is a requirement to issue a report before withdrawing (and if mandatory, such as in a listed entity, issue a disclaimer of conclusion in the report).",
+        "CA Rohit must immediately file an FIR against the management for criminal breach of trust.",
+        "CA Rohit should issue a qualified conclusion and ignore the impact on the annual statutory audit."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2410 ('Limitation on Scope Imposed by Management'): If management imposes a limitation after accepting the engagement, the auditor requests its removal. If management/TCWG refuses, the auditor is unable to express a conclusion. The auditor shall consider the possibility of withdrawing from the review engagement and the audit. The auditor shall also consider legal and regulatory responsibilities regarding whether there is a requirement to issue a report before withdrawing. If there is such a requirement (which is mandatory in a listed entity under securities regulations), the auditor shall issue a disclaimer of conclusion in the review report."
+    },
+    {
+      "id": 43,
+      "category": "SRE 2410 - Scope Limitation: Other than Management-Imposed",
+      "question": "**CASE:** During the interim review of coastal power company Oceanic Energy Ltd. under SRE 2410, a localized cyclone flooded the sub-station at Port Blair, destroying physical coal consumption logs and local billing registers for that specific plant. The coal inventory and billing of that plant are material to the interim financial information, but the rest of the company's 14 power plants across India operated normally and complete records are available for them. The auditor is unable to obtain sufficient appropriate evidence regarding the Port Blair unit, but concludes that the matter is confined to that unit and is not pervasive to the interim financial statements as a whole.\n\nUnder SRE 2410, how should the auditor report on this scope limitation?",
+      "options": [
+        "The auditor must issue a disclaimer of conclusion because any limitation on scope mandates a disclaimer.",
+        "The auditor must withdraw from both the interim review and the annual audit appointment.",
+        "If the limitation on scope occurs due to circumstances other than those imposed by management and is confined to matters that are material but not pervasive, the auditor modifies the review report by qualifying the conclusion.",
+        "The auditor must issue an adverse conclusion stating that the financial statements are completely false."
+      ],
+      "answer": 2,
+      "explanation": "SRE 2410 ('Limitation on Scope - Other Case') provides that a limitation on scope may occur due to circumstances other than those imposed by management. If the limitation is confined to matters that are material but not pervasive to the interim financial information, the auditor modifies the review report by qualifying the conclusion. A disclaimer of conclusion is only required when the undetected misstatements could be both material and pervasive."
+    },
+    {
+      "id": 44,
+      "category": "SRE 2410 - Going Concern: Adequate Disclosure Made",
+      "question": "**CASE:** While reviewing the interim financial information of Jetway Logistics Ltd. under SRE 2410, statutory auditor CA Vikram discovered that the company's major debt restructuring plan had stalled, credit facilities were frozen, and net worth was fully eroded. However, management conducted a comprehensive assessment and included an elaborate, transparent note in the interim financial information adequately disclosing the material uncertainty related to events and conditions casting significant doubt on the company's ability to continue as a going concern, along with its mitigation plans.\n\nAccording to SRE 2410, what is the appropriate reporting action for CA Vikram in the interim review report?",
+      "options": [
+        "CA Vikram must express an adverse conclusion because the company is facing severe going concern uncertainties.",
+        "CA Vikram shall modify the review report by adding an Emphasis of Matter (EOM) paragraph highlighting the material uncertainty regarding going concern adequately disclosed in the interim financial information.",
+        "CA Vikram must express a qualified conclusion because any going concern doubt requires qualification.",
+        "CA Vikram must issue an unmodified report without adding any Emphasis of Matter paragraph so as not to panic the stock market."
+      ],
+      "answer": 1,
+      "explanation": "SRE 2410 ('Going Concern and Significant Uncertainties') explicitly states: If, as a result of inquiries or other review procedures, a material uncertainty relating to an event or condition comes to the auditor's attention that may cast significant doubt on the entity's ability to continue as a going concern, and adequate disclosure is made in the interim financial information, the auditor shall modify the review report by adding an Emphasis of Matter (EOM) paragraph. An adverse or qualified conclusion is only warranted if the material uncertainty is not adequately disclosed."
+    },
+    {
+      "id": 45,
+      "category": "SRE 2410 - Going Concern: Inadequate Disclosure",
+      "question": "**CASE:** In the review of interim financial statements of Zenith Metals Ltd. under SRE 2410, the auditor CA Kavita identified that the entity's primary manufacturing license had been cancelled by the environmental tribunal, threatening operational closure. Despite this material uncertainty casting significant doubt on the entity's ability to continue as a going concern, management refused to make any disclosure in the interim financial information, asserting that they have appealed to the Supreme Court.\n\nAccording to SRE 2410, how should CA Kavita report on this matter?",
+      "options": [
+        "CA Kavita must issue an unmodified conclusion with an Other Matter paragraph.",
+        "CA Kavita shall express a qualified or adverse conclusion on the interim financial information because the material uncertainty casting significant doubt about the entity's ability to continue as a going concern is not adequately disclosed.",
+        "CA Kavita must issue an Emphasis of Matter paragraph describing the appeal filed in the Supreme Court.",
+        "CA Kavita should withhold the review report indefinitely until the Supreme Court delivers its final judgment."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2410, if a material uncertainty that casts significant doubt about the entity's ability to continue as a going concern is NOT adequately disclosed in the interim financial information, the auditor shall express a qualified conclusion or an adverse conclusion, depending on the pervasiveness of the non-disclosure. An Emphasis of Matter paragraph is only appropriate when the disclosure in the financial statements is adequate."
+    },
+    {
+      "id": 46,
+      "category": "SRE 2410 - Auditor's Responsibility for Accompanying Other Information",
+      "question": "**CASE:** Pioneer Pharma Ltd. released its Q1 financial results along with an accompanying 'Management Discussion and Analysis' (MD&A) report. In the interim financial statements reviewed by statutory auditor CA Ritu, the operating profit was Rs. 20 Crores. However, in the accompanying MD&A, the CEO reported: 'Our operational review shows an unprecedented operating profit of Rs. 120 Crores for the quarter.' CA Ritu identified this glaring material inconsistency. Upon being requested to amend the MD&A, management refused.\n\nUnder SRE 2410, what are the auditor's responsibilities and options when an amendment is necessary in the other information and management refuses to make the amendment?",
+      "options": [
+        "The auditor has no responsibility for accompanying information because SRE 2410 applies exclusively to numbers within the interim financial statements.",
+        "The auditor considers including an additional paragraph in the review report describing the material inconsistency, withholding the issuance of the review report, or withdrawing from the engagement.",
+        "The auditor must immediately issue an adverse opinion on the interim financial statements even though the financial statements themselves are correct.",
+        "The auditor must amend the MD&A herself and re-upload the corrected document to the stock exchange portal."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2410 ('Auditor's Responsibility for Accompanying Information'): The auditor should read other information that accompanies interim financial information to consider whether it is materially inconsistent. If the auditor identifies a material inconsistency and determines that an amendment is necessary in the other information (while interim financial information is correct) and management refuses to make the amendment, the auditor considers: (1) including an additional paragraph in the review report describing the material inconsistency, or (2) withholding the issuance of the review report, or (3) withdrawing from the engagement."
+    },
+    {
+      "id": 47,
+      "category": "SRE 2410 - Material Inconsistency: Amendment Needed in Interim Financial Information",
+      "question": "**CASE:** During the review of interim financial results of Apex Retail Ltd. under SRE 2410, auditor CA Sanjay identified a material inconsistency between the unaudited revenue figures in the interim financial statements and the accompanying segment revenue schedule. Upon examination, CA Sanjay determined that the interim financial information itself was incorrect due to double-counting of store sales, requiring a material amendment of Rs. 35 Crores. Management refused to amend the interim financial statements.\n\nUnder SRE 2410, what must the auditor consider when an amendment is necessary in the interim financial information and management refuses to make such amendment?",
+      "options": [
+        "The auditor should consider the implications for the review report, which will require modifying the conclusion (qualified or adverse) due to departure from the applicable FRF.",
+        "The auditor should issue a standard unmodified review report and report the matter only in the annual audit report nine months later.",
+        "The auditor must include an Emphasis of Matter paragraph stating that segment schedules are voluntary disclosures.",
+        "The auditor must file a complaint with the police authorities for fraudulent accounting."
+      ],
+      "answer": 0,
+      "explanation": "SRE 2410 states that if the auditor identifies a material inconsistency and determines that the amendment is necessary in the interim financial information (i.e., the interim financial information is materially misstated) and management refuses to make such amendment, the auditor considers the implications for the review report. Because the interim financial information contains an uncorrected material misstatement / departure from the applicable FRF, the auditor must modify the review report (expressing a qualified or adverse conclusion)."
+    },
+    {
+      "id": 48,
+      "category": "SRE 2410 - Auditor Association: Unincluded Review Report",
+      "question": "**CASE:** Trident Infotech Ltd. published an investor presentation and quarterly booklet containing its interim financial results. The booklet explicitly stated on the cover: 'Interim Financial Information duly reviewed by our Statutory Auditors, M/s ABC & Co., Chartered Accountants.' However, the company omitted to include M/s ABC & Co.'s review report anywhere in the booklet.\n\nAccording to SRE 2410, what is the auditor's responsibility regarding auditor association in such circumstances?",
+      "options": [
+        "The auditor has no reason to act because mentioning the auditor's name enhances the firm's goodwill.",
+        "If any document containing interim financial information indicates that such information has been reviewed by the entity's auditor, the review report will also be included in the document; if management has not included the review report, the auditor should take legal advice for determining the appropriate action.",
+        "The auditor must immediately publish a public apology in national newspapers.",
+        "The auditor should immediately issue a fresh clean audit opinion on the entire prior year."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2410 ('Auditor Association'): If any document containing interim financial information indicates that such information has been reviewed by the entity's auditor, the review report must also be included in that document. If management has published such a document without including the review report, the auditor should seek legal advice to determine the appropriate course of action."
+    },
+    {
+      "id": 49,
+      "category": "SRE 2410 - Auditor Association: Unincluded Modified Review Report",
+      "question": "**CASE:** CA Bhavesh, statutory auditor of Sterling Alloys Ltd., conducted an interim review under SRE 2410 and issued a Modified Review Report containing an adverse conclusion due to massive unrecorded inventory write-downs. Subsequently, management published the interim financial information on the company's website and distributed copies to financial institutions, stating that the interim information was reviewed by CA Bhavesh, but deliberately suppressed and excluded the modified review report.\n\nAccording to SRE 2410, what specific steps should CA Bhavesh take?",
+      "options": [
+        "CA Bhavesh should modify his fees and demand double the remuneration for the breach of trust.",
+        "If the auditor has issued a modified review report and management issues the interim financial information without including the modified review report, the auditor should take legal advice for determining appropriate action and the possibility of resigning from appointment to audit the annual financial statements.",
+        "CA Bhavesh should silently accept the omission since interim reports are superseded by the annual audit report anyway.",
+        "CA Bhavesh should issue a press statement taking full responsibility for the company's financial figures."
+      ],
+      "answer": 1,
+      "explanation": "SRE 2410 explicitly provides that if the auditor has issued a modified review report and management issues the interim financial information without including that modified review report, the auditor should take legal advice for determining the appropriate action, and consider the possibility of resigning from the appointment to audit the annual financial statements. Suppressing a modified interim review report is a severe governance breach that impacts the auditor's relationship and ability to continue as statutory auditor."
+    },
+    {
+      "id": 50,
+      "category": "Integrated Comparison - SRE 2400 vs SRE 2410",
+      "question": "Which of the following comparative statements correctly distinguishes SRE 2400 from SRE 2410?\n\n**Statement 1:** SRE 2400 applies when a practitioner is engaged to review historical financial statements and is NOT the statutory auditor of the entity, whereas SRE 2410 applies when the review of interim financial information is performed by the existing independent auditor of the entity.\n**Statement 2:** In SRE 2400, the review report is ordinarily addressed to the intended addressee specified in the engagement letter (such as the members or management), whereas in SRE 2410, the review report is specifically addressed to the Board of Directors.\n**Statement 3:** SRE 2400 involves reasonable assurance, whereas SRE 2410 involves limited assurance.\n**Statement 4:** Under SRE 2410, if management imposes a scope limitation after acceptance that cannot be resolved, the auditor may consider resigning from the appointment to audit the annual financial statements, a consideration that does not arise under SRE 2400 because the practitioner is not the annual auditor.\n\nWhich of the above statements are correct?",
+      "options": [
+        "1 and 2 only",
+        "1, 2 and 4 only",
+        "2, 3 and 4 only",
+        "All 1, 2, 3 and 4"
+      ],
+      "answer": 1,
+      "explanation": "Statements 1, 2, and 4 are correct. Statement 1 states the defining boundary of both standards. Statement 2 reflects the specific reporting structure where SRE 2410 specifies the Board of Directors as addressee. Statement 4 captures a key practical consequence: under SRE 2410, the practitioner is already the statutory auditor of the annual financial statements, so scope limitations or suppressed modified reports create the critical consideration of whether to resign from the annual audit appointment, whereas under SRE 2400, the practitioner is not the entity's auditor. Statement 3 is completely incorrect because BOTH SRE 2400 and SRE 2410 are review engagements that provide LIMITED assurance, not reasonable assurance."
+    },
+    {
+      "id": 51,
+      "category": "SRE 2400 & SRE 2410 - Integrated Scenario: Scope Limitation and Reporting",
+      "question": "**CASE:** Reliable Industries Ltd. (a listed manufacturing corporation) prepares both annual historical financial statements and quarterly condensed interim financial statements. The statutory auditor, CA Sundaram, conducts the annual statutory audit and reviews the quarterly interim financial statements.\n\nDuring the Q2 interim review under SRE 2410, management instructed CA Sundaram not to examine the valuation and cut-off of overseas coal shipments in transit valued at Rs. 40 Crores (a material amount, but strictly localized to the imported fuels head and not pervasive to the interim results as a whole). Management refused to remove this limitation. CA Sundaram completed all other review procedures.\n\nSimultaneously, an unlisted subsidiary of the group, FastTrack Cargo Ltd., approached an outside chartered accountant, CA Dev, to conduct a review of its annual financial statements under SRE 2400. In that engagement, management placed an identical scope limitation prior to acceptance, stating that foreign branch records would not be made available.\n\nEvaluate the required actions of CA Sundaram under SRE 2410 and CA Dev under SRE 2400 respectively:",
+      "options": [
+        "CA Sundaram must issue an unmodified interim report with an Emphasis of Matter; CA Dev should accept the engagement and issue a disclaimer of conclusion.",
+        "CA Sundaram is unable to express a conclusion and shall consider withdrawing from the review and audit, but if required by regulation (as in a listed entity) must issue a disclaimer of conclusion; CA Dev shall not accept the review engagement because management-imposed scope limitations that prevent obtaining necessary evidence mandate declining acceptance.",
+        "Both CA Sundaram and CA Dev must issue qualified review conclusions and ignore any other legal or acceptance considerations.",
+        "CA Sundaram must issue an adverse opinion; CA Dev must accept the engagement and convert it into a statutory audit."
+      ],
+      "answer": 1,
+      "explanation": "This scenario integrates the management-imposed scope limitation rules under both SRE 2410 and SRE 2400. Under SRE 2410, when management imposes a limitation after acceptance and refuses to remove it, the auditor is unable to express a conclusion and considers withdrawing from the review and the annual audit; if legal/regulatory requirements mandate issuing a report before withdrawing (which is mandatory for listed entities under LODR/SEBI norms), the auditor issues a disclaimer of conclusion. Under SRE 2400, a practitioner shall not accept a review engagement if management imposes a scope limitation that the practitioner believes will result in disclaiming a conclusion. Therefore, CA Dev must decline acceptance, while CA Sundaram must follow the withdrawal/disclaimer protocol."
+    },
+    {
+      "id": 52,
+      "category": "SRE 2400 & SRE 2410 - Integrated Scenario: Going Concern and Uncertainties",
+      "question": "**CASE:** Reliable Industries Ltd. (a listed manufacturing corporation) prepares both annual historical financial statements and quarterly condensed interim financial statements. The statutory auditor, CA Sundaram, conducts the annual statutory audit and reviews the quarterly interim financial statements.\n\nDuring the Q3 interim review under SRE 2410, CA Sundaram identified that a sudden regulatory ban on single-use plastics caused the shutdown of two of the company's major manufacturing plants, threatening the entity's going concern status. Management prepared comprehensive cash flow projections demonstrating a viable pivot to biodegradable packaging and included an elaborate, transparent note in the interim financial information adequately disclosing the material uncertainty relating to going concern.\n\nSimultaneously, CA Dev, reviewing FastTrack Cargo Ltd. under SRE 2400, discovered that FastTrack lost its primary freight contract, creating significant doubt about its going concern. FastTrack's management, however, refused to provide any disclosure or note regarding this uncertainty in its financial statements, insisting that a review practitioner has no authority over disclosures.\n\nWhich of the following correctly describes the appropriate reporting response for CA Sundaram under SRE 2410 and CA Dev under SRE 2400?",
+      "options": [
+        "CA Sundaram shall modify the interim review report by adding an Emphasis of Matter (EOM) paragraph; CA Dev shall express a qualified or adverse conclusion in his review report due to the non-disclosure of the material uncertainty.",
+        "Both CA Sundaram and CA Dev must issue an unmodified conclusion without any additional paragraphs because going concern is strictly an annual audit matter.",
+        "Both CA Sundaram and CA Dev must issue a disclaimer of conclusion.",
+        "CA Sundaram must issue an adverse conclusion; CA Dev must issue an Emphasis of Matter paragraph."
+      ],
+      "answer": 0,
+      "explanation": "Under SRE 2410, when a material uncertainty casting significant doubt on going concern comes to the auditor's attention and adequate disclosure is made in the interim financial information, the auditor modifies the review report by adding an Emphasis of Matter (EOM) paragraph. Under SRE 2400 (as well as SRE 2410), if a material uncertainty that casts significant doubt on the entity's ability to continue as a going concern is NOT adequately disclosed in the financial statements, the financial statements are materially misstated due to omitted disclosure, requiring the practitioner to express a qualified conclusion or an adverse conclusion. Therefore, CA Sundaram adds an EOM paragraph, while CA Dev must issue a qualified or adverse conclusion."
+    },
+    {
+      "id": 53,
+      "category": "SRE 2400 & SRE 2410 - Integrated Scenario: Accompanying Information vs Representation Refusal",
+      "question": "**CASE:** Reliable Industries Ltd. (a listed manufacturing corporation) prepares both annual historical financial statements and quarterly condensed interim financial statements. The statutory auditor, CA Sundaram, conducts the annual statutory audit and reviews the quarterly interim financial statements.\n\nIn the Q4 interim review of Reliable Industries Ltd., CA Sundaram noted that the unaudited quarterly financial statements correctly reflected an operating profit of Rs. 15 Crores, but the accompanying CEO Press Release published alongside it boldly claimed an operating profit of Rs. 85 Crores. Management refused to amend the press release. CA Sundaram considered the available reporting and procedural remedies under SRE 2410.\n\nMeanwhile, in the review of FastTrack Cargo Ltd. under SRE 2400, CA Dev requested management to provide a written representation confirming that all transactions had been recorded in the financial statements and disclosing all known non-compliances. FastTrack's CEO refused to sign the written representation letter. CA Dev considered his next steps under SRE 2400.\n\nWhich of the following statements accurately identifies the correct course of action for both practitioners?",
+      "options": [
+        "CA Sundaram must change the profit figure in the interim financial statements to Rs. 85 Crores; CA Dev should proceed without written representations.",
+        "CA Sundaram considers including an additional paragraph in the review report describing the material inconsistency, withholding issuance of the report, or withdrawing; CA Dev shall discuss the matter with management, re-evaluate management integrity, and determine the effect on the review conclusion.",
+        "CA Sundaram must file a defamation suit against the CEO; CA Dev must issue an unmodified conclusion with an Other Matter paragraph.",
+        "Both practitioners must immediately issue adverse conclusions without discussing the issues with management."
+      ],
+      "answer": 1,
+      "explanation": "Under SRE 2410 ('Auditor's Responsibility for Accompanying Information'), when other information accompanying interim financial information contains a material inconsistency that management refuses to amend, the auditor considers: (1) including an additional paragraph in the review report describing the material inconsistency, (2) withholding issuance of the review report, or (3) withdrawing from the engagement. Under SRE 2400 ('Written Representations'), if management refuses to provide requested written representations, the practitioner shall: (1) discuss the matter with management, (2) re-evaluate the integrity of management, and (3) determine the possible effect on the conclusion in the report (including qualification, disclaimer, or withdrawal). Both actions match Option B."
+    },
+    {
+      "id": 54,
+      "category": "SRE 2400 & SRE 2410 - Matching Reporting Elements and Rules",
+      "question": "Match the review reporting requirements in Column I with their corresponding standard and description in Column II:\n\n**Column I (Requirement)**\nA. Mandatory Addressee of Review Report is the Board of Directors\nB. Basis for Modified Conclusion must quantify financial effect of misstatements relating to specific amounts\nC. Inquiry is the principal source of evidence about management intent\nD. Auditor considers possibility of resigning from appointment to audit annual financial statements if management publishes interim information without modified review report\n\n**Column II (Standard & Principle)**\n1. SRE 2410 (Auditor Association)\n2. SRE 2410 (Review Report Elements)\n3. SRE 2400 (Reporting Requirements)\n4. SRE 2400 (Inquiry Procedures)",
+      "options": [
+        "A-2, B-3, C-4, D-1",
+        "A-1, B-4, C-3, D-2",
+        "A-2, B-1, C-4, D-3",
+        "A-3, B-2, C-1, D-4"
+      ],
+      "answer": 0,
+      "explanation": "Evaluating each item:\n- A corresponds to SRE 2410, where the interim review report is specifically addressed to the Board of Directors (A-2).\n- B corresponds to SRE 2400, where the Basis for Modified Conclusion paragraph must describe and quantify the financial effect of misstatements relating to specific amounts (B-3).\n- C corresponds to SRE 2400, which explicitly states that evidence obtained through inquiry is the principal source of evidence about management intent (C-4).\n- D corresponds to SRE 2410, where the auditor considers resigning from the appointment to audit the annual financial statements if management issues interim financial information omitting the modified review report (D-1).\nThus, the correct matching is A-2, B-3, C-4, D-1."
+    },
+    {
+      "id": 55,
+      "category": "SRE 2400 & SRE 2410 - Comprehensive True/False Multi-Statement",
+      "question": "Consider the following comprehensive statements regarding SRE 2400 and SRE 2410:\n\n**Statement 1:** Under both SRE 2400 and SRE 2410, a review engagement provides limited assurance, which is lower than the reasonable assurance provided in an audit.\n**Statement 2:** Under SRE 2400, if a practitioner becomes aware of events occurring between the date of the financial statements and the date of the review report that require adjustment or disclosure, the practitioner requests management to adjust or disclose; for events after the date of the review report, the practitioner's considerations are governed by the principles of SA 560.\n**Statement 3:** Under SRE 2410, communication of necessary material adjustments must first be made to management; if management does not respond appropriately, the auditor informs Those Charged with Governance, and if TCWG do not respond within a reasonable period, the auditor considers modifying the report, withdrawing from review, and resigning from the annual audit.\n**Statement 4:** An interim review under SRE 2410 requires the practitioner to express an audit opinion on whether the financial statements give a true and fair view in a positively worded assurance conclusion.\n\nWhich of the above statements are correct?",
+      "options": [
+        "1, 2 and 3 only",
+        "1, 3 and 4 only",
+        "2, 3 and 4 only",
+        "All 1, 2, 3 and 4"
+      ],
+      "answer": 0,
+      "explanation": "Statements 1, 2, and 3 are completely accurate. Statement 1 reflects the limited assurance nature of both review standards. Statement 2 captures the subsequent event rules under SRE 2400 (requesting management for adjustment/disclosure prior to report date, and applying SA 560 principles thereafter). Statement 3 accurately outlines the three-tier communication escalation hierarchy under SRE 2410. Statement 4 is completely false because an interim review under SRE 2410 does NOT express an audit opinion, nor is it positively worded; it expresses a limited assurance conclusion that is negatively worded."
+    }
+  ]
+}
